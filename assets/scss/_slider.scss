@@ -1,0 +1,30 @@
+
+/* =============================================================================
+   Home Page Slider
+   ========================================================================== */
+
+
+.page-template-template-home-php header.banner{
+ background:url(http://lorempixel.com/1680/800/nature) no-repeat center center transparent;
+}
+.sliderblock{
+
+
+}
+.sliderimg {
+	width:66%;
+	float:left;
+	display:block;
+	margin-top:2em;
+	margin-bottom:2em;
+
+
+}
+.slidertext{
+	float:left;
+	width:33%;
+	margin-left:0.2em;
+	margin-top:2em;
+	margin-bottom:2em;
+	background: rgba($brown-glass,0.5);
+}

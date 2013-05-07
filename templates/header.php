@@ -9,4 +9,9 @@
       ?>
     </nav>
   </div>
+  <?php
+    if (is_page_template('template-home.php') ) {
+      get_template_part('templates/home','slider'); 
+    }
+  ?>
 </header>

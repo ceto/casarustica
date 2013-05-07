@@ -1,6 +1,35 @@
 /* ==========================================================================
-   Base basznek nagyon 
+   Base layout 
    ========================================================================== */
+/* line 6, ../scss/_base.scss */
+.footerwrap {
+  background: #403833;
+  color: #fef8d0; }
+
+/* =============================================================================
+   Home Page Slider
+   ========================================================================== */
+/* line 7, ../scss/_slider.scss */
+.page-template-template-home-php header.banner {
+  background: url(http://lorempixel.com/1680/800/nature) no-repeat center center transparent; }
+
+/* line 14, ../scss/_slider.scss */
+.sliderimg {
+  width: 66%;
+  float: left;
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
+/* line 23, ../scss/_slider.scss */
+.slidertext {
+  float: left;
+  width: 33%;
+  margin-left: 0.2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background: rgba(223, 219, 192, 0.5); }
+
 /* =============================================================================
    Header
    ========================================================================== */
@@ -23,20 +52,20 @@
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
    ========================================================================== */
-/* line 70, ../scss/app.scss */
+/* line 68, ../scss/app.scss */
 .aligncenter {
   display: block;
   margin: 0 auto; }
 
-/* line 71, ../scss/app.scss */
+/* line 69, ../scss/app.scss */
 .alignleft {
   float: left; }
 
-/* line 72, ../scss/app.scss */
+/* line 70, ../scss/app.scss */
 .alignright {
   float: right; }
 
-/* line 73, ../scss/app.scss */
+/* line 71, ../scss/app.scss */
 figure.alignnone {
   margin-left: 0;
   margin-right: 0; }

@@ -1,4 +1,4 @@
-<header class="banner navbar navbar-static-top" role="banner">
+<header class="banner navbar navbar-inverse navbar-static-top" role="banner">
   <div class="navbar-inner">
     <div class="container">
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -18,4 +18,9 @@
       </nav>
     </div>
   </div>
+    <?php
+    if (is_page_template('template-home.php') ) {
+      get_template_part('templates/home','slider'); 
+    }
+  ?>
 </header>
