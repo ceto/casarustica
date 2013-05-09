@@ -25,9 +25,10 @@ body {
 
 /* line 37, ../scss/_base.scss */
 .home .kwrap-1 {
-  background-image: none; }
+  background-image: none;
+  padding-bottom: 4em; }
 
-/* line 41, ../scss/_base.scss */
+/* line 42, ../scss/_base.scss */
 .container-fluid {
   max-width: 1170px;
   margin-left: auto;
@@ -192,24 +193,27 @@ body {
     font-family: "Berkshire Swash", cursive;
     font-size: 2.5em; }
 
-/* line 60, ../scss/_posts.scss */
+/* ==========================================================================
+   Post Archive and Blog view
+   ========================================================================== */
+/* line 65, ../scss/_posts.scss */
 .blog .hentry, .archive .hentry {
   margin-bottom: 3em;
   padding-bottom: 2em;
   border-bottom: 1px solid #dfdbc0; }
-  /* line 66, ../scss/_posts.scss */
+  /* line 71, ../scss/_posts.scss */
   .blog .hentry header, .archive .hentry header {
     text-align: center; }
-    /* line 68, ../scss/_posts.scss */
+    /* line 73, ../scss/_posts.scss */
     .blog .hentry header .entry-title, .archive .hentry header .entry-title {
       padding-bottom: 0;
       margin-bottom: 0;
       line-height: 1.25em; }
-  /* line 77, ../scss/_posts.scss */
+  /* line 82, ../scss/_posts.scss */
   .blog .hentry .entry-figure, .archive .hentry .entry-figure {
     margin: 0 0 0 0;
     text-align: center; }
-    /* line 80, ../scss/_posts.scss */
+    /* line 85, ../scss/_posts.scss */
     .blog .hentry .entry-figure img, .archive .hentry .entry-figure img {
       -webkit-border-radius: 90px;
       -moz-border-radius: 90px;
@@ -220,22 +224,71 @@ body {
       -webkit-box-shadow: 0px 0px 5px #333333;
       -moz-box-shadow: 0px 0px 5px #333333;
       box-shadow: 0px 0px 5px #333333; }
-  /* line 86, ../scss/_posts.scss */
+  /* line 91, ../scss/_posts.scss */
   .blog .hentry .entry-meta, .archive .hentry .entry-meta {
     font-family: "Playfair Display", serif;
     margin-bottom: 0.75em; }
-  /* line 93, ../scss/_posts.scss */
+  /* line 98, ../scss/_posts.scss */
   .blog .hentry time, .archive .hentry time {
     font-size: 1.25em;
     font-style: italic; }
-  /* line 98, ../scss/_posts.scss */
+  /* line 103, ../scss/_posts.scss */
   .blog .hentry .byline, .archive .hentry .byline {
     display: inline;
     font-size: 0.75em; }
-    /* line 101, ../scss/_posts.scss */
+    /* line 106, ../scss/_posts.scss */
     .blog .hentry .byline a, .archive .hentry .byline a {
       font-family: "Berkshire Swash", cursive;
       font-size: 2em; }
+
+/* ==========================================================================
+   Home Posts
+   ========================================================================== */
+/* line 119, ../scss/_posts.scss */
+.home .kwrap-2 .main .row-fluid {
+  padding-bottom: 2em;
+  padding-top: 2em; }
+
+/* line 124, ../scss/_posts.scss */
+.home .main {
+  text-align: center; }
+  /* line 128, ../scss/_posts.scss */
+  .home .main h1 {
+    text-align: center;
+    border-top: 1px solid #403833;
+    border-bottom: 1px solid #403833;
+    padding: 0.1em 2em 0.125em 2em;
+    position: relative;
+    display: inline-block; }
+    /* line 136, ../scss/_posts.scss */
+    .home .main h1:before {
+      content: "&";
+      position: absolute;
+      left: 0.5em;
+      top: 0.1em; }
+    /* line 143, ../scss/_posts.scss */
+    .home .main h1:after {
+      content: "&";
+      position: absolute;
+      right: 0.5em;
+      top: 0.1em; }
+  /* line 153, ../scss/_posts.scss */
+  .home .main h2 {
+    font-family: "Berkshire Swash", cursive;
+    text-transform: none;
+    font-weight: normal;
+    padding: 0 2em; }
+  /* line 159, ../scss/_posts.scss */
+  .home .main p, .home .main li {
+    text-align: left; }
+  /* line 163, ../scss/_posts.scss */
+  .home .main a img {
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+    border-radius: 80px;
+    max-width: 120px; }
 
 /* ==========================================================================
    Houses
@@ -250,31 +303,101 @@ body {
     /* line 10, ../scss/_houses.scss */
     .single-house .house-datablock {
       float: none; } }
-/* line 16, ../scss/_houses.scss */
+/* line 19, ../scss/_houses.scss */
 .single-house .house-tabdata {
   clear: left;
   margin-left: 0;
   margin-top: 2em; }
   @media (max-width: 768px) {
-    /* line 16, ../scss/_houses.scss */
+    /* line 19, ../scss/_houses.scss */
     .single-house .house-tabdata {
       clear: none; } }
-/* line 25, ../scss/_houses.scss */
+/* line 28, ../scss/_houses.scss */
 .single-house .actionblock {
   text-align: center;
   margin: 2em 0; }
-  /* line 29, ../scss/_houses.scss */
+  /* line 32, ../scss/_houses.scss */
   .single-house .actionblock .btn {
     font-family: "Playfair Display", serif;
     padding-top: 0.5em;
-    padding-bottom: 0.5em; }
-    /* line 38, ../scss/_houses.scss */
+    padding-bottom: 0.5em;
+    padding: 0.5em 5em; }
+    /* line 42, ../scss/_houses.scss */
     .single-house .actionblock .btn span {
       font-family: "Playfair Display", serif;
       display: block;
       font-size: 1.75em;
       font-weight: bold;
       padding: 0 0 0.25em; }
+
+/*	===========================================
+	House List
+	===========================================   */
+/* line 60, ../scss/_houses.scss */
+.page-template-template-house-list-php article.house {
+  background: #fef8d0;
+  padding: 16px;
+  border: 1px solid #dfdbc0;
+  -webkit-box-shadow: 0 0 5px 0 #dfdbc0;
+  -moz-box-shadow: 0 0 5px 0 #dfdbc0;
+  box-shadow: 0 0 5px 0 #dfdbc0; }
+/* line 70, ../scss/_houses.scss */
+.page-template-template-house-list-php .house-figure {
+  margin: 0;
+  text-align: center; }
+/* line 74, ../scss/_houses.scss */
+.page-template-template-house-list-php .house-title {
+  text-align: center;
+  background: #dfdbc0;
+  margin: 0.666666em -16px; }
+/* line 82, ../scss/_houses.scss */
+.page-template-template-house-list-php .actionblock {
+  text-align: center;
+  margin: 1em 0; }
+  /* line 86, ../scss/_houses.scss */
+  .page-template-template-house-list-php .actionblock .btn {
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    display: block; }
+
+/*	===========================================
+	Featured House
+	===========================================   */
+/* line 102, ../scss/_houses.scss */
+.feathouseblockwrap .feathouseblock {
+  margin-top: 4em;
+  margin-bottom: 4em;
+  text-align: center; }
+  /* line 108, ../scss/_houses.scss */
+  .feathouseblockwrap .feathouseblock .featblock-title {
+    border-top: 1px solid #403833;
+    border-bottom: 1px solid #403833;
+    padding: 0.1em 2em 0.125em 2em;
+    margin-bottom: 1em;
+    position: relative;
+    display: inline-block; }
+    /* line 117, ../scss/_houses.scss */
+    .feathouseblockwrap .feathouseblock .featblock-title:before {
+      content: "&";
+      position: absolute;
+      left: 0.5em;
+      top: 0.1em; }
+    /* line 124, ../scss/_houses.scss */
+    .feathouseblockwrap .feathouseblock .featblock-title:after {
+      content: "&";
+      position: absolute;
+      right: 0.5em;
+      top: 0.1em; }
+
+/* line 138, ../scss/_houses.scss */
+.feathouse {
+  margin-bottom: 2em; }
+  /* line 141, ../scss/_houses.scss */
+  .feathouse .feat-figure {
+    margin: 0; }
+  /* line 148, ../scss/_houses.scss */
+  .feathouse .feat-title {
+    margin: 0; }
 
 /* ==========================================================================
    Sidebar

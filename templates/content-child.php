@@ -7,8 +7,8 @@
       <div class="kwrap-<?php echo ++$itera; ?>">
         <div class="wrap container-fluid" role="document">
           <div class="content row-fluid">
-            <div class="main <?php echo roots_main_class(); ?>" role="main">
-              <h2><?php roots_title(); ?></h2>
+            <div class="main span12" role="main">
+              <h1><?php roots_title(); ?></h1>
               <?php the_content(); ?>
               <?php // wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
             </div><!-- /.main -->

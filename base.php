@@ -16,6 +16,7 @@
  <?php
     if (is_page_template('template-home.php') ) {
       get_template_part('templates/home','slider'); 
+      get_template_part('templates/house','featured');       
     } else {
       get_template_part('templates/header','info'); 
     }

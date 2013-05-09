@@ -12,6 +12,9 @@
 		@include breakpoint($tabletBreak){
 			float:none;
 		}
+		h3 {
+			//text-align: center;
+		}
 	}
 	.house-tabdata {
 		clear:left;
@@ -28,12 +31,13 @@
 		
 		.btn {
 			
-			
+			//display: block;
 			//text-transform: uppercase;
 			font-family: $displayFontFamily;
 			//font-weight:bold;
 			padding-top:0.5em;
 			padding-bottom:0.5em;
+			padding:0.5em 5em;
 			
 			span {
 				font-family: $displayFontFamily;
@@ -46,3 +50,112 @@
 		}
 	}
 }
+
+/*	===========================================
+	House List
+	===========================================   */
+
+.page-template-template-house-list-php {
+	
+	article.house {
+		background: $yellow-glass;
+		padding:16px;
+		border:1px solid $brown-glass;
+		@include box-shadow(0 0 5px 0 $brown-glass );
+	}
+
+
+
+
+	.house-figure {
+		margin:0;
+		text-align: center;
+	}
+	.house-title {
+		text-align: center;
+		background: $brown-glass;
+		margin:0.666666em -16px;
+	}
+
+
+
+	.actionblock {
+		text-align:center;
+		margin:1em 0;
+		
+		.btn {
+			font-family: $displayFontFamily;
+			text-transform: uppercase;
+			display:block;
+		}
+	}
+}
+
+/*	===========================================
+	Featured House
+	===========================================   */
+
+.feathouseblockwrap {
+	//background: $gray-footerold;
+
+
+	.feathouseblock {
+		margin-top: 4em;
+		margin-bottom:4em;
+		text-align: center;
+
+		
+		.featblock-title {
+
+			border-top:1px solid $brown-linea;
+			border-bottom:1px solid $brown-linea;
+			padding:0.1em 2em 0.125em 2em;
+			margin-bottom:1em;
+			position:relative;
+			display: inline-block;
+			
+			&:before {
+				content:"&";
+				position:absolute;
+				left:0.5em;
+				top:0.1em;
+
+			}
+			&:after {
+				content:"&";
+				position:absolute;
+				right:0.5em;
+				top:0.1em;
+			}
+
+		}
+
+
+	}
+
+}
+
+.feathouse {
+	//text-align: left;
+	margin-bottom:2em;
+	.feat-figure{
+		margin:0;
+	}
+	.feat-data {
+		
+
+	}
+	.feat-title {
+		margin:0;
+	}
+
+}
+
+
+
+
+
+
+
+
+

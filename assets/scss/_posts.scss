@@ -57,6 +57,11 @@
 
 }
 
+
+/* ==========================================================================
+   Post Archive and Blog view
+   ========================================================================== */
+
 .blog .hentry, .archive .hentry {
 
 	margin-bottom:3em;
@@ -105,3 +110,60 @@
 	}
 }
 
+
+/* ==========================================================================
+   Home Posts
+   ========================================================================== */
+
+.home .kwrap-2 .main{
+ .row-fluid{
+		padding-bottom:2em;
+		padding-top:2em;
+	}
+}
+.home .main {
+	text-align: center;
+
+		
+	h1 {
+		text-align: center;
+		border-top:1px solid $brown-linea;
+		border-bottom:1px solid $brown-linea;
+		padding:0.1em 2em 0.125em 2em;
+		position:relative;
+		display: inline-block;
+		
+		&:before {
+			content:"&";
+			position:absolute;
+			left:0.5em;
+			top:0.1em;
+
+		}
+		&:after {
+			content:"&";
+			position:absolute;
+			right:0.5em;
+			top:0.1em;
+		}
+	}
+	h3 {
+
+	}
+	h2 {
+		font-family: $scriptFontFamily;
+		text-transform: none;
+		font-weight:normal;
+		padding:0 2em;
+	}
+	p, li {
+		text-align: left;
+	}
+
+	a img {
+		@include border-radius(80px);
+		max-width:120px;
+
+	} 
+
+}

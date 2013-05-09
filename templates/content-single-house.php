@@ -11,7 +11,7 @@
     <div class="entry-content">
       <?php the_content(); ?>
       <p class="actionblock">
-        <a class="btn btn-danger" href="#">ÉRDEKLŐDJÖN TELEFONON<span>+36 70 770 5653</span> vagy ürlapunkon keresztül</a>
+        <a class="btn btn-warning" href="#">ÉRDEKLŐDJÖN TELEFONON<span>+36 70 770 5653</span> vagy ürlapunkon keresztül</a>
 </p>
     </div>
     <footer>
