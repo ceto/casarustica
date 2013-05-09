@@ -13,22 +13,33 @@
     }
   ?>
 
+ <?php
+    if (is_page_template('template-home.php') ) {
+      get_template_part('templates/home','slider'); 
+    } else {
+      get_template_part('templates/header','info'); 
+    }
+  ?>
 
+  <div class="nagywrap">
+    <div class="kwrap-1">
+      <div class="wrap container-fluid" role="document">
+        <div class="content row-fluid">
+          <div class="main <?php echo roots_main_class(); ?>" role="main">
+            <?php include roots_template_path(); ?>
+          </div><!-- /.main -->
+          <?php if (roots_display_sidebar()) : ?>
+          <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+            <?php include roots_sidebar_path(); ?>
+          </aside><!-- /.sidebar -->
+          <?php endif; ?>
+        </div><!-- /.content -->
+      </div><!-- /.wrap -->
+    </div><!-- /.kwrap-1 -->
 
+    <?php get_template_part('templates/content','child');   ?>
+  </div><!-- / .nagywrap -->
 
-  <div class="wrap container" role="document">
-    <div class="content row">
-      <div class="main <?php echo roots_main_class(); ?>" role="main">
-        <?php include roots_template_path(); ?>
-      </div><!-- /.main -->
-      <?php if (roots_display_sidebar()) : ?>
-      <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-        <?php include roots_sidebar_path(); ?>
-      </aside><!-- /.sidebar -->
-      <?php endif; ?>
-    </div><!-- /.content -->
-  </div><!-- /.wrap -->
-  
   <div class="footerwrap">
     <?php get_template_part('templates/footer'); ?>
   </div>

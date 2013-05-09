@@ -1,5 +1,5 @@
 <header class="banner" role="banner">
-  <div class="container">
+  <div class="container-fluid">
     <a class="brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
     <nav class="nav-main" role="navigation">
       <?php
@@ -9,9 +9,4 @@
       ?>
     </nav>
   </div>
-  <?php
-    if (is_page_template('template-home.php') ) {
-      get_template_part('templates/home','slider'); 
-    }
-  ?>
 </header>

@@ -3,7 +3,7 @@
  * Enable theme features
  */
 add_theme_support('root-relative-urls');    // Enable relative URLs
-add_theme_support('rewrites');              // Enable URL rewrites
+//add_theme_support('rewrites');              // Enable URL rewrites
 add_theme_support('bootstrap-top-navbar');  // Enable Bootstrap's top navbar
 add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
 add_theme_support('nice-search');           // Enable /?s= to /search/ redirect
@@ -57,7 +57,8 @@ function roots_display_sidebar() {
     array(
       'is_404',
       'is_front_page',
-      //array('is_page', array('15'))
+      array('is_singular', array('house')),
+      array('is_page', array('26'))
     ),
     /**
      * Page template checks (via is_page_template())
@@ -65,7 +66,8 @@ function roots_display_sidebar() {
      */
     array(
       'template-home.php',
-      'template-no-sidebar.php'
+      'template-no-sidebar.php',
+
     )
   );
 

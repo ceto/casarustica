@@ -1,0 +1,50 @@
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { }
+
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+
+
+.page-header {
+	text-align: center;
+		
+	h1,h2 {
+		text-align: center;
+		border-top:1px solid $brown-linea;
+		border-bottom:1px solid $brown-linea;
+		padding:0.1em 2em 0.125em 2em;
+		position:relative;
+		display: inline-block;
+
+
+		
+		&:before {
+			content:"&";
+			position:absolute;
+			left:0.5em;
+			top:0.1em;
+		}
+		&:after {
+			content:"&";
+			position:absolute;
+			right:0.5em;
+			top:0.1em;
+		}
+	}
+}
+
+
+
+
+

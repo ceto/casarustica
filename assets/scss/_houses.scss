@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Houses
+   ========================================================================== */
+
+.single-house {
+	.house-figure {
+	margin:0;
+	}
+
+	.house-datablock {
+		float:right;
+		@include breakpoint($tabletBreak){
+			float:none;
+		}
+	}
+	.house-tabdata {
+		clear:left;
+		margin-left:0;
+		margin-top:2em;
+
+		@include breakpoint($tabletBreak){
+			clear:none;
+		}
+	}
+	.actionblock {
+		text-align:center;
+		margin:2em 0;
+		
+		.btn {
+			
+			
+			//text-transform: uppercase;
+			font-family: $displayFontFamily;
+			//font-weight:bold;
+			padding-top:0.5em;
+			padding-bottom:0.5em;
+			
+			span {
+				font-family: $displayFontFamily;
+				display:block;
+				font-size:1.75em;
+				//line-height: 1.25em;
+				font-weight: bold;
+				padding:0 0 0.25em;
+			}
+		}
+	}
+}

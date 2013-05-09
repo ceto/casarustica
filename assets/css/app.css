@@ -1,19 +1,108 @@
 /* ==========================================================================
    Base layout 
    ========================================================================== */
-/* line 6, ../scss/_base.scss */
-.footerwrap {
-  background: #403833;
-  color: #fef8d0; }
+/* line 5, ../scss/_base.scss */
+body {
+  padding-top: 40px; }
+  @media (max-width: 979px) {
+    /* line 5, ../scss/_base.scss */
+    body {
+      padding-top: 0; } }
+
+/* line 11, ../scss/_base.scss */
+.nagywrap {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9f6e4), color-stop(100%, #e3dec0));
+  background-image: -webkit-linear-gradient(#f9f6e4, #e3dec0);
+  background-image: -moz-linear-gradient(#f9f6e4, #e3dec0);
+  background-image: -o-linear-gradient(#f9f6e4, #e3dec0);
+  background-image: linear-gradient(#f9f6e4, #e3dec0); }
+
+/* line 15, ../scss/_base.scss */
+.kwrap-1, .kwrap-2, .kwrap3-1 {
+  position: relative;
+  background: url(../images/aljataj.png) repeat-x center bottom transparent;
+  padding-bottom: 8em; }
+
+/* line 37, ../scss/_base.scss */
+.home .kwrap-1 {
+  background-image: none; }
+
+/* line 41, ../scss/_base.scss */
+.container-fluid {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* =============================================================================
+   Header
+   ========================================================================== */
+/* line 10, ../scss/_header.scss */
+.header2 {
+  padding: 0.75em 0 0.75em; }
+
+/* line 13, ../scss/_header.scss */
+.logo {
+  position: absolute;
+  top: 0;
+  height: 145px;
+  width: 230px;
+  z-index: 100; }
+  @media (max-width: 480px) {
+    /* line 13, ../scss/_header.scss */
+    .logo {
+      display: none; } }
+
+/* line 23, ../scss/_header.scss */
+.logotext {
+  opacity: 0; }
+  @media (max-width: 480px) {
+    /* line 23, ../scss/_header.scss */
+    .logotext {
+      opacity: 1; } }
+
+/* line 31, ../scss/_header.scss */
+.langsel {
+  font-weight: bold;
+  float: left; }
+
+/* line 35, ../scss/_header.scss */
+.callmenow {
+  text-align: right;
+  color: #9e2700;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  float: right; }
+
+/* line 43, ../scss/_header.scss */
+.slogan {
+  text-align: right;
+  color: #6d5e53;
+  font-size: 1.5em;
+  font-family: "Berkshire Swash", cursive;
+  margin-top: 1.5em; }
 
 /* =============================================================================
    Home Page Slider
    ========================================================================== */
 /* line 7, ../scss/_slider.scss */
-.page-template-template-home-php header.banner {
-  background: url(http://lorempixel.com/1680/800/nature) no-repeat center center transparent; }
+.sliderwrap {
+  background: url(http://placehold.it/1680x800/e3dec0/f9f6e4/) no-repeat center center transparent;
+  position: relative;
+  margin-bottom: 36px; }
+  /* line 11, ../scss/_slider.scss */
+  .sliderwrap:after {
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    right: 0;
+    content: "";
+    background: url(../images/fogak.jpg) repeat-x center bottom transparent;
+    width: 100%;
+    height: 35px;
+    border-top: 1px solid #dfdbc0; }
 
-/* line 14, ../scss/_slider.scss */
+/* line 28, ../scss/_slider.scss */
 .sliderimg {
   width: 66%;
   float: left;
@@ -21,7 +110,7 @@
   margin-top: 2em;
   margin-bottom: 2em; }
 
-/* line 23, ../scss/_slider.scss */
+/* line 37, ../scss/_slider.scss */
 .slidertext {
   float: left;
   width: 33%;
@@ -30,42 +119,208 @@
   margin-bottom: 2em;
   background: rgba(223, 219, 192, 0.5); }
 
-/* =============================================================================
-   Header
-   ========================================================================== */
 /* ==========================================================================
    Content
    ========================================================================== */
 /* ==========================================================================
    Primary Content
    ========================================================================== */
-/* ==========================================================================
-   Sidebar
-   ========================================================================== */
+/* line 19, ../scss/_content.scss */
+.page-header {
+  text-align: center; }
+  /* line 22, ../scss/_content.scss */
+  .page-header h1, .page-header h2 {
+    text-align: center;
+    border-top: 1px solid #403833;
+    border-bottom: 1px solid #403833;
+    padding: 0.1em 2em 0.125em 2em;
+    position: relative;
+    display: inline-block; }
+    /* line 32, ../scss/_content.scss */
+    .page-header h1:before, .page-header h2:before {
+      content: "&";
+      position: absolute;
+      left: 0.5em;
+      top: 0.1em; }
+    /* line 38, ../scss/_content.scss */
+    .page-header h1:after, .page-header h2:after {
+      content: "&";
+      position: absolute;
+      right: 0.5em;
+      top: 0.1em; }
+
 /* ==========================================================================
    Posts
    ========================================================================== */
+/* line 9, ../scss/_posts.scss */
+.single .hentry header {
+  text-align: center; }
+  /* line 12, ../scss/_posts.scss */
+  .single .hentry header .entry-title {
+    text-align: center;
+    border-top: 1px solid #403833;
+    border-bottom: 1px solid #403833;
+    padding: 0.1em 2em 0.125em 2em;
+    position: relative;
+    display: inline-block; }
+    /* line 20, ../scss/_posts.scss */
+    .single .hentry header .entry-title:before {
+      content: "&";
+      position: absolute;
+      left: 0.5em;
+      top: 0.1em; }
+    /* line 27, ../scss/_posts.scss */
+    .single .hentry header .entry-title:after {
+      content: "&";
+      position: absolute;
+      right: 0.5em;
+      top: 0.1em; }
+/* line 37, ../scss/_posts.scss */
+.single .hentry .entry-meta {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1em; }
+/* line 41, ../scss/_posts.scss */
+.single .hentry time {
+  font-size: 1.75em;
+  font-style: italic; }
+/* line 46, ../scss/_posts.scss */
+.single .hentry .byline {
+  font-size: 0.75em;
+  margin-top: 0.25em; }
+  /* line 49, ../scss/_posts.scss */
+  .single .hentry .byline a {
+    font-family: "Berkshire Swash", cursive;
+    font-size: 2.5em; }
+
+/* line 60, ../scss/_posts.scss */
+.blog .hentry, .archive .hentry {
+  margin-bottom: 3em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #dfdbc0; }
+  /* line 66, ../scss/_posts.scss */
+  .blog .hentry header, .archive .hentry header {
+    text-align: center; }
+    /* line 68, ../scss/_posts.scss */
+    .blog .hentry header .entry-title, .archive .hentry header .entry-title {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      line-height: 1.25em; }
+  /* line 77, ../scss/_posts.scss */
+  .blog .hentry .entry-figure, .archive .hentry .entry-figure {
+    margin: 0 0 0 0;
+    text-align: center; }
+    /* line 80, ../scss/_posts.scss */
+    .blog .hentry .entry-figure img, .archive .hentry .entry-figure img {
+      -webkit-border-radius: 90px;
+      -moz-border-radius: 90px;
+      -ms-border-radius: 90px;
+      -o-border-radius: 90px;
+      border-radius: 90px;
+      border: 5px solid #9e2700;
+      -webkit-box-shadow: 0px 0px 5px #333333;
+      -moz-box-shadow: 0px 0px 5px #333333;
+      box-shadow: 0px 0px 5px #333333; }
+  /* line 86, ../scss/_posts.scss */
+  .blog .hentry .entry-meta, .archive .hentry .entry-meta {
+    font-family: "Playfair Display", serif;
+    margin-bottom: 0.75em; }
+  /* line 93, ../scss/_posts.scss */
+  .blog .hentry time, .archive .hentry time {
+    font-size: 1.25em;
+    font-style: italic; }
+  /* line 98, ../scss/_posts.scss */
+  .blog .hentry .byline, .archive .hentry .byline {
+    display: inline;
+    font-size: 0.75em; }
+    /* line 101, ../scss/_posts.scss */
+    .blog .hentry .byline a, .archive .hentry .byline a {
+      font-family: "Berkshire Swash", cursive;
+      font-size: 2em; }
+
+/* ==========================================================================
+   Houses
+   ========================================================================== */
+/* line 6, ../scss/_houses.scss */
+.single-house .house-figure {
+  margin: 0; }
+/* line 10, ../scss/_houses.scss */
+.single-house .house-datablock {
+  float: right; }
+  @media (max-width: 768px) {
+    /* line 10, ../scss/_houses.scss */
+    .single-house .house-datablock {
+      float: none; } }
+/* line 16, ../scss/_houses.scss */
+.single-house .house-tabdata {
+  clear: left;
+  margin-left: 0;
+  margin-top: 2em; }
+  @media (max-width: 768px) {
+    /* line 16, ../scss/_houses.scss */
+    .single-house .house-tabdata {
+      clear: none; } }
+/* line 25, ../scss/_houses.scss */
+.single-house .actionblock {
+  text-align: center;
+  margin: 2em 0; }
+  /* line 29, ../scss/_houses.scss */
+  .single-house .actionblock .btn {
+    font-family: "Playfair Display", serif;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em; }
+    /* line 38, ../scss/_houses.scss */
+    .single-house .actionblock .btn span {
+      font-family: "Playfair Display", serif;
+      display: block;
+      font-size: 1.75em;
+      font-weight: bold;
+      padding: 0 0 0.25em; }
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+/* line 6, ../scss/_sidebar.scss */
+.sidebar .widget {
+  margin-bottom: 4em; }
+
 /* ==========================================================================
    Footer
    ========================================================================== */
+/* line 5, ../scss/_footer.scss */
+.footerwrap {
+  background: url(../images/keriteske.png) repeat-x center -20px #3b312a;
+  color: #fef8d0;
+  position: relative;
+  padding: 1em 0; }
+  /* line 10, ../scss/_footer.scss */
+  .footerwrap:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    content: "";
+    background: url(../images/keriteske.png) repeat-x center top transparent;
+    height: 20px; }
+
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
    ========================================================================== */
-/* line 68, ../scss/app.scss */
+/* line 27, ../scss/app.scss */
 .aligncenter {
   display: block;
   margin: 0 auto; }
 
-/* line 69, ../scss/app.scss */
+/* line 28, ../scss/app.scss */
 .alignleft {
   float: left; }
 
-/* line 70, ../scss/app.scss */
+/* line 29, ../scss/app.scss */
 .alignright {
   float: right; }
 
-/* line 71, ../scss/app.scss */
+/* line 30, ../scss/app.scss */
 figure.alignnone {
   margin-left: 0;
   margin-right: 0; }

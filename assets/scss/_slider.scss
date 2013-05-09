@@ -4,9 +4,23 @@
    ========================================================================== */
 
 
-.page-template-template-home-php header.banner{
- background:url(http://lorempixel.com/1680/800/nature) no-repeat center center transparent;
+.sliderwrap{
+ background:url(http://placehold.it/1680x800/e3dec0/f9f6e4/) no-repeat center center transparent;
+ position:relative;
+ margin-bottom:36px;
+ &:after{
+ 	position:absolute;
+ 	bottom:-36px;
+ 	left:0;right:0;
+ 	content:"";
+ 	background:url(../images/fogak.jpg) repeat-x center bottom transparent;
+ 	width:100%;
+ 	height:35px;
+ 	border-top:1px solid $brown-glass;
+
+ }
 }
+
 .sliderblock{
 
 
