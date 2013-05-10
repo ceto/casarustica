@@ -5,7 +5,8 @@
 
 
 .sliderwrap{
- background:url(http://placehold.it/1680x800/e3dec0/f9f6e4/) no-repeat center center transparent;
+ background:url(../images/sliderbg-1640.jpg) no-repeat center center transparent;
+ @include background-size();
  position:relative;
  margin-bottom:36px;
  &:after{
@@ -33,12 +34,39 @@
 	margin-bottom:2em;
 
 
+
 }
 .slidertext{
 	float:left;
 	width:33%;
-	margin-left:0.2em;
+	@include box-sizing('border-box');
+	padding:1em;
+	margin-left:0.125em;
 	margin-top:2em;
 	margin-bottom:2em;
-	background: rgba($brown-glass,0.5);
+	background: rgba($gray-footerold,0.75);
+	color:$yellow-footer;
+	text-align: center;
+	font-family: $scriptFontFamily;
+	
+	h1 {
+		font-family: $displayFontFamily;
+		//text-transform: none;
+		line-height:1.125em;
+		font-size: 2em;
+	}
+	p {
+		font-family: $scriptFontFamily;
+		font-size:1.25em;
+	}
+	ul{
+		font-family: $displayFontFamily;
+		text-align:left;
+		padding-left:25%;
+	}
+
+	.btn {
+		font-family: $displayFontFamily;
+		text-transform: uppercase;	
+	}
 }

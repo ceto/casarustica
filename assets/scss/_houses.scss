@@ -4,7 +4,12 @@
 
 .single-house {
 	.house-figure {
-	margin:0;
+		margin:0;
+		img {
+			border:10px solid $brown-light;
+			@include box-sizing('border-box');
+			@include box-shadow(0 0 5px 0 $brown-light);
+		}
 	}
 
 	.house-datablock {
@@ -24,6 +29,11 @@
 		@include breakpoint($tabletBreak){
 			clear:none;
 		}
+
+		.tab-pane{
+			//background: $gray-footerold;
+		}
+
 	}
 	.actionblock {
 		text-align:center;
@@ -109,23 +119,30 @@
 
 			border-top:1px solid $brown-linea;
 			border-bottom:1px solid $brown-linea;
-			padding:0.1em 2em 0.125em 2em;
+			padding:0.1em 0 0.125em 0;
+			margin-left:68px;
+			margin-right:68px;
 			margin-bottom:1em;
 			position:relative;
 			display: inline-block;
 			
 			&:before {
-				content:"&";
+				content:"";
 				position:absolute;
-				left:0.5em;
-				top:0.1em;
+				left:-68px;
+				top:0.5em;
+				width:54px;height:23px;
+				background: url(../images/fityma.png) no-repeat left top transparent;
+
 
 			}
 			&:after {
-				content:"&";
+				content:"";
 				position:absolute;
-				right:0.5em;
-				top:0.1em;
+				right:-68px;
+				top:0.5em;
+				width:54px;height:23px;
+				background: url(../images/fityma.png) no-repeat right top transparent;
 			}
 
 		}

@@ -88,10 +88,14 @@ body {
    ========================================================================== */
 /* line 7, ../scss/_slider.scss */
 .sliderwrap {
-  background: url(http://placehold.it/1680x800/e3dec0/f9f6e4/) no-repeat center center transparent;
+  background: url(../images/sliderbg-1640.jpg) no-repeat center center transparent;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
   position: relative;
   margin-bottom: 36px; }
-  /* line 11, ../scss/_slider.scss */
+  /* line 12, ../scss/_slider.scss */
   .sliderwrap:after {
     position: absolute;
     bottom: -36px;
@@ -103,7 +107,7 @@ body {
     height: 35px;
     border-top: 1px solid #dfdbc0; }
 
-/* line 28, ../scss/_slider.scss */
+/* line 29, ../scss/_slider.scss */
 .sliderimg {
   width: 66%;
   float: left;
@@ -111,14 +115,39 @@ body {
   margin-top: 2em;
   margin-bottom: 2em; }
 
-/* line 37, ../scss/_slider.scss */
+/* line 39, ../scss/_slider.scss */
 .slidertext {
   float: left;
   width: 33%;
-  margin-left: 0.2em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  margin-left: 0.125em;
   margin-top: 2em;
   margin-bottom: 2em;
-  background: rgba(223, 219, 192, 0.5); }
+  background: rgba(64, 56, 51, 0.75);
+  color: #f1eac7;
+  text-align: center;
+  font-family: "Berkshire Swash", cursive; }
+  /* line 52, ../scss/_slider.scss */
+  .slidertext h1 {
+    font-family: "Playfair Display", serif;
+    line-height: 1.125em;
+    font-size: 2em; }
+  /* line 58, ../scss/_slider.scss */
+  .slidertext p {
+    font-family: "Berkshire Swash", cursive;
+    font-size: 1.25em; }
+  /* line 62, ../scss/_slider.scss */
+  .slidertext ul {
+    font-family: "Playfair Display", serif;
+    text-align: left;
+    padding-left: 25%; }
+  /* line 68, ../scss/_slider.scss */
+  .slidertext .btn {
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase; }
 
 /* ==========================================================================
    Content
@@ -134,21 +163,29 @@ body {
     text-align: center;
     border-top: 1px solid #403833;
     border-bottom: 1px solid #403833;
-    padding: 0.1em 2em 0.125em 2em;
+    padding: 0.1em 0 0.125em 0;
+    margin-left: 68px;
+    margin-right: 68px;
     position: relative;
     display: inline-block; }
-    /* line 32, ../scss/_content.scss */
+    /* line 34, ../scss/_content.scss */
     .page-header h1:before, .page-header h2:before {
-      content: "&";
+      content: "";
       position: absolute;
-      left: 0.5em;
-      top: 0.1em; }
-    /* line 38, ../scss/_content.scss */
+      left: -68px;
+      top: 0.4333333em;
+      width: 54px;
+      height: 23px;
+      background: url(../images/fityma.png) no-repeat left top transparent; }
+    /* line 44, ../scss/_content.scss */
     .page-header h1:after, .page-header h2:after {
-      content: "&";
+      content: "";
       position: absolute;
-      right: 0.5em;
-      top: 0.1em; }
+      right: -68px;
+      top: 0.4333333em;
+      width: 54px;
+      height: 23px;
+      background: url(../images/fityma.png) no-repeat right top transparent; }
 
 /* ==========================================================================
    Posts
@@ -161,34 +198,40 @@ body {
     text-align: center;
     border-top: 1px solid #403833;
     border-bottom: 1px solid #403833;
-    padding: 0.1em 2em 0.125em 2em;
+    padding: 0.1em 68px 0.125em 68px;
     position: relative;
     display: inline-block; }
     /* line 20, ../scss/_posts.scss */
     .single .hentry header .entry-title:before {
-      content: "&";
+      content: "";
       position: absolute;
-      left: 0.5em;
-      top: 0.1em; }
-    /* line 27, ../scss/_posts.scss */
+      left: 0;
+      top: 0.4333333em;
+      width: 54px;
+      height: 23px;
+      background: url(../images/fityma.png) no-repeat left top transparent; }
+    /* line 30, ../scss/_posts.scss */
     .single .hentry header .entry-title:after {
-      content: "&";
+      content: "";
       position: absolute;
-      right: 0.5em;
-      top: 0.1em; }
-/* line 37, ../scss/_posts.scss */
+      right: 0;
+      top: 0.4333333em;
+      width: 54px;
+      height: 23px;
+      background: url(../images/fityma.png) no-repeat right top transparent; }
+/* line 42, ../scss/_posts.scss */
 .single .hentry .entry-meta {
   font-family: "Playfair Display", serif;
   margin-bottom: 1em; }
-/* line 41, ../scss/_posts.scss */
+/* line 46, ../scss/_posts.scss */
 .single .hentry time {
   font-size: 1.75em;
   font-style: italic; }
-/* line 46, ../scss/_posts.scss */
+/* line 51, ../scss/_posts.scss */
 .single .hentry .byline {
   font-size: 0.75em;
   margin-top: 0.25em; }
-  /* line 49, ../scss/_posts.scss */
+  /* line 54, ../scss/_posts.scss */
   .single .hentry .byline a {
     font-family: "Berkshire Swash", cursive;
     font-size: 2.5em; }
@@ -196,47 +239,47 @@ body {
 /* ==========================================================================
    Post Archive and Blog view
    ========================================================================== */
-/* line 65, ../scss/_posts.scss */
+/* line 70, ../scss/_posts.scss */
 .blog .hentry, .archive .hentry {
   margin-bottom: 3em;
   padding-bottom: 2em;
   border-bottom: 1px solid #dfdbc0; }
-  /* line 71, ../scss/_posts.scss */
+  /* line 76, ../scss/_posts.scss */
   .blog .hentry header, .archive .hentry header {
     text-align: center; }
-    /* line 73, ../scss/_posts.scss */
+    /* line 78, ../scss/_posts.scss */
     .blog .hentry header .entry-title, .archive .hentry header .entry-title {
       padding-bottom: 0;
       margin-bottom: 0;
       line-height: 1.25em; }
-  /* line 82, ../scss/_posts.scss */
+  /* line 87, ../scss/_posts.scss */
   .blog .hentry .entry-figure, .archive .hentry .entry-figure {
     margin: 0 0 0 0;
     text-align: center; }
-    /* line 85, ../scss/_posts.scss */
+    /* line 90, ../scss/_posts.scss */
     .blog .hentry .entry-figure img, .archive .hentry .entry-figure img {
-      -webkit-border-radius: 90px;
-      -moz-border-radius: 90px;
-      -ms-border-radius: 90px;
-      -o-border-radius: 90px;
-      border-radius: 90px;
-      border: 5px solid #9e2700;
-      -webkit-box-shadow: 0px 0px 5px #333333;
-      -moz-box-shadow: 0px 0px 5px #333333;
-      box-shadow: 0px 0px 5px #333333; }
-  /* line 91, ../scss/_posts.scss */
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      border: 10px solid #cfc9b3;
+      -webkit-box-shadow: 0 0 5px 0 #cfc9b3;
+      -moz-box-shadow: 0 0 5px 0 #cfc9b3;
+      box-shadow: 0 0 5px 0 #cfc9b3; }
+  /* line 96, ../scss/_posts.scss */
   .blog .hentry .entry-meta, .archive .hentry .entry-meta {
     font-family: "Playfair Display", serif;
     margin-bottom: 0.75em; }
-  /* line 98, ../scss/_posts.scss */
+  /* line 103, ../scss/_posts.scss */
   .blog .hentry time, .archive .hentry time {
     font-size: 1.25em;
     font-style: italic; }
-  /* line 103, ../scss/_posts.scss */
+  /* line 108, ../scss/_posts.scss */
   .blog .hentry .byline, .archive .hentry .byline {
     display: inline;
     font-size: 0.75em; }
-    /* line 106, ../scss/_posts.scss */
+    /* line 111, ../scss/_posts.scss */
     .blog .hentry .byline a, .archive .hentry .byline a {
       font-family: "Berkshire Swash", cursive;
       font-size: 2em; }
@@ -244,51 +287,51 @@ body {
 /* ==========================================================================
    Home Posts
    ========================================================================== */
-/* line 119, ../scss/_posts.scss */
-.home .kwrap-2 .main .row-fluid {
+/* line 124, ../scss/_posts.scss */
+.home .kwrap-2 .main .span4, .home .kwrap-2 .main .span6 {
   padding-bottom: 2em;
   padding-top: 2em; }
 
-/* line 124, ../scss/_posts.scss */
+/* line 129, ../scss/_posts.scss */
 .home .main {
   text-align: center; }
-  /* line 128, ../scss/_posts.scss */
+  /* line 133, ../scss/_posts.scss */
   .home .main h1 {
     text-align: center;
     border-top: 1px solid #403833;
     border-bottom: 1px solid #403833;
-    padding: 0.1em 2em 0.125em 2em;
+    padding: 0.1em 0em 0.125em 0em;
+    margin-right: 68px;
+    margin-left: 68px;
     position: relative;
     display: inline-block; }
-    /* line 136, ../scss/_posts.scss */
-    .home .main h1:before {
-      content: "&";
-      position: absolute;
-      left: 0.5em;
-      top: 0.1em; }
     /* line 143, ../scss/_posts.scss */
-    .home .main h1:after {
-      content: "&";
+    .home .main h1:before {
+      content: "";
       position: absolute;
-      right: 0.5em;
-      top: 0.1em; }
-  /* line 153, ../scss/_posts.scss */
+      left: -68px;
+      top: 0.4333333em;
+      width: 54px;
+      height: 23px;
+      background: url(../images/fityma.png) no-repeat left top transparent; }
+    /* line 153, ../scss/_posts.scss */
+    .home .main h1:after {
+      content: "";
+      position: absolute;
+      right: -68px;
+      top: 0.4333333em;
+      width: 54px;
+      height: 23px;
+      background: url(../images/fityma.png) no-repeat right top transparent; }
+  /* line 165, ../scss/_posts.scss */
   .home .main h2 {
     font-family: "Berkshire Swash", cursive;
     text-transform: none;
     font-weight: normal;
     padding: 0 2em; }
-  /* line 159, ../scss/_posts.scss */
+  /* line 171, ../scss/_posts.scss */
   .home .main p, .home .main li {
     text-align: left; }
-  /* line 163, ../scss/_posts.scss */
-  .home .main a img {
-    -webkit-border-radius: 80px;
-    -moz-border-radius: 80px;
-    -ms-border-radius: 80px;
-    -o-border-radius: 80px;
-    border-radius: 80px;
-    max-width: 120px; }
 
 /* ==========================================================================
    Houses
@@ -296,33 +339,42 @@ body {
 /* line 6, ../scss/_houses.scss */
 .single-house .house-figure {
   margin: 0; }
-/* line 10, ../scss/_houses.scss */
+  /* line 8, ../scss/_houses.scss */
+  .single-house .house-figure img {
+    border: 10px solid #cfc9b3;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 5px 0 #cfc9b3;
+    -moz-box-shadow: 0 0 5px 0 #cfc9b3;
+    box-shadow: 0 0 5px 0 #cfc9b3; }
+/* line 15, ../scss/_houses.scss */
 .single-house .house-datablock {
   float: right; }
   @media (max-width: 768px) {
-    /* line 10, ../scss/_houses.scss */
+    /* line 15, ../scss/_houses.scss */
     .single-house .house-datablock {
       float: none; } }
-/* line 19, ../scss/_houses.scss */
+/* line 24, ../scss/_houses.scss */
 .single-house .house-tabdata {
   clear: left;
   margin-left: 0;
   margin-top: 2em; }
   @media (max-width: 768px) {
-    /* line 19, ../scss/_houses.scss */
+    /* line 24, ../scss/_houses.scss */
     .single-house .house-tabdata {
       clear: none; } }
-/* line 28, ../scss/_houses.scss */
+/* line 38, ../scss/_houses.scss */
 .single-house .actionblock {
   text-align: center;
   margin: 2em 0; }
-  /* line 32, ../scss/_houses.scss */
+  /* line 42, ../scss/_houses.scss */
   .single-house .actionblock .btn {
     font-family: "Playfair Display", serif;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     padding: 0.5em 5em; }
-    /* line 42, ../scss/_houses.scss */
+    /* line 52, ../scss/_houses.scss */
     .single-house .actionblock .btn span {
       font-family: "Playfair Display", serif;
       display: block;
@@ -333,7 +385,7 @@ body {
 /*	===========================================
 	House List
 	===========================================   */
-/* line 60, ../scss/_houses.scss */
+/* line 70, ../scss/_houses.scss */
 .page-template-template-house-list-php article.house {
   background: #fef8d0;
   padding: 16px;
@@ -341,20 +393,20 @@ body {
   -webkit-box-shadow: 0 0 5px 0 #dfdbc0;
   -moz-box-shadow: 0 0 5px 0 #dfdbc0;
   box-shadow: 0 0 5px 0 #dfdbc0; }
-/* line 70, ../scss/_houses.scss */
+/* line 80, ../scss/_houses.scss */
 .page-template-template-house-list-php .house-figure {
   margin: 0;
   text-align: center; }
-/* line 74, ../scss/_houses.scss */
+/* line 84, ../scss/_houses.scss */
 .page-template-template-house-list-php .house-title {
   text-align: center;
   background: #dfdbc0;
   margin: 0.666666em -16px; }
-/* line 82, ../scss/_houses.scss */
+/* line 92, ../scss/_houses.scss */
 .page-template-template-house-list-php .actionblock {
   text-align: center;
   margin: 1em 0; }
-  /* line 86, ../scss/_houses.scss */
+  /* line 96, ../scss/_houses.scss */
   .page-template-template-house-list-php .actionblock .btn {
     font-family: "Playfair Display", serif;
     text-transform: uppercase;
@@ -363,39 +415,47 @@ body {
 /*	===========================================
 	Featured House
 	===========================================   */
-/* line 102, ../scss/_houses.scss */
+/* line 112, ../scss/_houses.scss */
 .feathouseblockwrap .feathouseblock {
   margin-top: 4em;
   margin-bottom: 4em;
   text-align: center; }
-  /* line 108, ../scss/_houses.scss */
+  /* line 118, ../scss/_houses.scss */
   .feathouseblockwrap .feathouseblock .featblock-title {
     border-top: 1px solid #403833;
     border-bottom: 1px solid #403833;
-    padding: 0.1em 2em 0.125em 2em;
+    padding: 0.1em 0 0.125em 0;
+    margin-left: 68px;
+    margin-right: 68px;
     margin-bottom: 1em;
     position: relative;
     display: inline-block; }
-    /* line 117, ../scss/_houses.scss */
+    /* line 129, ../scss/_houses.scss */
     .feathouseblockwrap .feathouseblock .featblock-title:before {
-      content: "&";
+      content: "";
       position: absolute;
-      left: 0.5em;
-      top: 0.1em; }
-    /* line 124, ../scss/_houses.scss */
+      left: -68px;
+      top: 0.5em;
+      width: 54px;
+      height: 23px;
+      background: url(../images/fityma.png) no-repeat left top transparent; }
+    /* line 139, ../scss/_houses.scss */
     .feathouseblockwrap .feathouseblock .featblock-title:after {
-      content: "&";
+      content: "";
       position: absolute;
-      right: 0.5em;
-      top: 0.1em; }
+      right: -68px;
+      top: 0.5em;
+      width: 54px;
+      height: 23px;
+      background: url(../images/fityma.png) no-repeat right top transparent; }
 
-/* line 138, ../scss/_houses.scss */
+/* line 155, ../scss/_houses.scss */
 .feathouse {
   margin-bottom: 2em; }
-  /* line 141, ../scss/_houses.scss */
+  /* line 158, ../scss/_houses.scss */
   .feathouse .feat-figure {
     margin: 0; }
-  /* line 148, ../scss/_houses.scss */
+  /* line 165, ../scss/_houses.scss */
   .feathouse .feat-title {
     margin: 0; }
 

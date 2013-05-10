@@ -23,23 +23,31 @@
 		text-align: center;
 		border-top:1px solid $brown-linea;
 		border-bottom:1px solid $brown-linea;
-		padding:0.1em 2em 0.125em 2em;
+		padding:0.1em 0 0.125em 0;
+		margin-left: 68px;
+		margin-right:68px;
 		position:relative;
 		display: inline-block;
 
 
 		
 		&:before {
-			content:"&";
-			position:absolute;
-			left:0.5em;
-			top:0.1em;
-		}
+				content:"";
+				position:absolute;
+				left:-68px;
+				top:0.4333333em;
+				width:54px;height:23px;
+				background: url(../images/fityma.png) no-repeat left top transparent;
+
+
+			}
 		&:after {
-			content:"&";
+			content:"";
 			position:absolute;
-			right:0.5em;
-			top:0.1em;
+			right:-68px;
+			top:0.4333333em;
+			width:54px;height:23px;
+			background: url(../images/fityma.png) no-repeat right top transparent;
 		}
 	}
 }

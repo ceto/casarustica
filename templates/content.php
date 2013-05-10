@@ -1,6 +1,6 @@
 <article <?php post_class('span10 offset1'); ?>>
   <figure class="entry-figure">
-    <img src="http://lorempixel.com/160/160">
+    <a href="<?php the_permalink(); ?>"><img src="http://lorempixel.com/160/160"></a>
   </figure>
   <div class="rizsa">
     <header>

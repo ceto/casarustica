@@ -20,9 +20,19 @@
 
 		<div class="row-fluid">
 			<div class="span10 offset1">
-				<img class="sliderimg" src="http://lorempixel.com/768/420/nature"> 
+				<img class="sliderimg" src="http://placehold.it/768x420/3b312a"> 
 				<div class="slidertext">
-					Sipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat, orci ac laoreet cursus, dolor sem luctus lorem, eget consequat magna felis a magna. Aliquam scelerisque condimentum ante, eget facilisis tortor lobortis in.
+					<h1>Önnek is lehet parasztháza</h1>
+					<p>Klasszikus parasztházak, felújítva, magas komfortfokozatttal</p>
+ 					<ul>
+ 						<li>Balatonhoz közel,</li>
+ 						<li>teljesen modernizált,</li>
+ 						<li>lakóháznak, </li>
+ 						<li>hétvégi háznak.</li>
+					</ul>
+					<p>
+						<a href="?page_id=26" class="btn btn-warning">Megnézem a házakat</a>
+					</p>
 				</div>
 			</div>
 		</div>

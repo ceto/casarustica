@@ -29,7 +29,7 @@
       </ul>
        
       <div class="tab-content">
-        <div class="tab-pane active" id="photo3d">
+        <div class="tab-pane active fade in" id="photo3d">
           <ul class="thumbnails">
             <div class="row-fluid">
               
@@ -70,7 +70,7 @@
           </ul>
         </div><!-- / #photo3d-->
 
-        <div class="tab-pane" id="alap">
+        <div class="tab-pane fade" id="alap">
          
           <ul class="thumbnails">
 
@@ -84,7 +84,7 @@
           Alaprajz látható itt, esetleg letölthető pdf-ben.
         </div>
         
-        <div class="tab-pane" id="past">
+        <div class="tab-pane fade" id="past">
           <ul class="thumbnails">
             <div class="row-fluid">
               
@@ -109,7 +109,7 @@
             
           </ul>
         </div>
-        <div class="tab-pane" id="map">
+        <div class="tab-pane fade" id="map">
           Google maps jön ide ...
         </div>
       </div><!-- / .tab-content -->
