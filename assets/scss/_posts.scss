@@ -9,13 +9,14 @@
 	header {
 		text-align: center;
 		
-		.entry-title {
+		.entry-title, .house-title {
 			text-align: center;
 			border-top:1px solid $brown-linea;
 			border-bottom:1px solid $brown-linea;
-			padding:0.1em 68px 0.125em 68px;
+			padding:0.125em 68px 0.25em 68px;
 			position:relative;
-			display: inline-block;
+			display: block;
+			line-height: 1.125em;
 			
 			&:before {
 				content:"";
@@ -126,7 +127,9 @@
 		padding-top:2em;
 	}
 }
-.home .main {
+
+
+.home .main, .page-id-15 .kwrap-2, .page-id-15 .kwrap-3 {
 	text-align: center;
 
 		
@@ -139,6 +142,7 @@
 		margin-left:68px;
 		position:relative;
 		display: inline-block;
+		line-height:1.25em;
 		
 		&:before {
 				content:"";
@@ -166,7 +170,7 @@
 		font-family: $scriptFontFamily;
 		text-transform: none;
 		font-weight:normal;
-		padding:0 2em;
+		
 	}
 	p, li {
 		text-align: left;
@@ -178,4 +182,9 @@
 
 	} 
 
+}
+.home .kwrap-3 .main {
+	h1 {
+		
+	}
 }

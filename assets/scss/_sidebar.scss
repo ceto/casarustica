@@ -2,12 +2,109 @@
    Sidebar
    ========================================================================== */
 
-.sidebar {
-	.widget {
-		margin-bottom: 4em;		
+
+
+
+.okos[class*="span"] {
+
+	@include breakpoint($largeBreak){
+		width: 5*$fluidGridColumnWidth+4*$fluidGridGutterWidth;
 	}
-	.widget-inner h3 {
+	
+	@include breakpoint($desktopBreak){
+		width: 6*$fluidGridColumnWidth+5*$fluidGridGutterWidth;
+	}
+
+	@include breakpoint($tabletBreak){
+		width: 6*$fluidGridColumnWidth+5*$fluidGridGutterWidth;
+		float:left;
+	}
+	@include breakpoint($mobileBreak){
+		float:none;
+		width: 100%;
+		display: block;
+		@include box-sizing('border-box');
+	}
+
+
+
+}
+
+.sidebar-1[class*="span"]{
+	
+	@include breakpoint($largeBreak){
+		width: 3.5*$fluidGridColumnWidth+2.5*$fluidGridGutterWidth;
+	}
+
+	@include breakpoint($desktopBreak){
+	    //float: none;
+	    float:right;
+	    //display: block;
+	    width: 6*$fluidGridColumnWidth+5*$fluidGridGutterWidth;
+	    margin-left: $fluidGridGutterWidth;
+	   	//@include box-sizing('border-box');
+	}
+
+	@include breakpoint($tabletBreak){
+	    //float: none;
+	    float:right;
+	    //display: block;
+	    width: 6*$fluidGridColumnWidth+5*$fluidGridGutterWidth;
+	    margin-left: $fluidGridGutterWidth;
+	   	//@include box-sizing('border-box');
+	}
+
+	@include breakpoint($mobileBreak){
+		float:none;
+		width: 100%;
+		display: block;
+		margin-left: 0;
+		@include box-sizing('border-box');
 	}
 }
 
+.sidebar-2[class*="span"] {
+	@extend .sidebar-1[class*="span"];
 
+	@include breakpoint($largeBreak){
+		//margin-left:7/8*$fluidGridGutterWidth;
+	}
+
+	
+}
+
+.sidebar {
+
+	.widget {
+		
+	}
+	.widget-inner h3 {
+		text-align: center;
+	}
+
+
+	.cumo {
+		//margin-bottom:0;
+		//display:none;
+	}
+
+	.slidertext {
+		background:rgba($gray-footerold,0.95);
+		background:rgba($brown-glass,1);
+		
+		width:auto;
+		float:none;
+		margin:0;
+	}
+
+	.side-albums {
+		background:rgba($gray-footerold,0.95);
+		background:rgba($brown-glass,1);
+		margin-top:0;
+		//color:$yellow-footer;
+		.widget-inner {
+			padding:1em;
+		}
+	}
+
+}

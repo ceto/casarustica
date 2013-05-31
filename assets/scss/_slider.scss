@@ -5,7 +5,7 @@
 
 
 .sliderwrap{
- background:url(../images/sliderbg-1640.jpg) no-repeat center center transparent;
+ background:url(../images/1640_bg_uj.jpg) no-repeat center center transparent;
  @include background-size();
  position:relative;
  margin-bottom:36px;
@@ -23,6 +23,7 @@
 }
 
 .sliderblock{
+	margin-top: 80px;
 
 
 }
@@ -31,7 +32,14 @@
 	float:left;
 	display:block;
 	margin-top:2em;
-	margin-bottom:2em;
+	margin-bottom:4em;
+	opacity:0;
+
+	@include breakpoint($tabletBreak){
+		float:none;
+		width:auto;
+		margin-bottom:0;
+	}
 
 
 
@@ -43,11 +51,18 @@
 	padding:1em;
 	margin-left:0.125em;
 	margin-top:2em;
-	margin-bottom:2em;
+	margin-bottom:4em;
 	background: rgba($gray-footerold,0.75);
 	color:$yellow-footer;
 	text-align: center;
 	font-family: $scriptFontFamily;
+
+	@include breakpoint($tabletBreak){
+		float:none;
+		width:auto;
+		margin-left:0;
+		margin-top:0.125em;
+	}
 	
 	h1 {
 		font-family: $displayFontFamily;

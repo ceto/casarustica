@@ -12,7 +12,7 @@ body {
 	@include background-image(linear-gradient($white-bg, $white-darkbg));
 }
 
-.kwrap-1, .kwrap-2, .kwrap3-1  {
+.kwrap-1, .kwrap-2, .kwrap-3  {
 	position:relative;
 	background: url(../images/aljataj.png) repeat-x center bottom transparent;
 	//@include background-image(linear-gradient($white-bg, $white-darkbg));
@@ -43,4 +43,18 @@ body {
 	max-width: 1170px;
 	margin-left: auto;
 	margin-right:auto;
+}
+.gmap {
+    height:0;
+    //width:100%;
+    padding-bottom: 56.25%;
+    @include box-sizing('border-box');
+}
+
+.main {
+	ul:not(.nav), ol {
+		li {
+			margin:1em 2em;
+		}
+	}
 }

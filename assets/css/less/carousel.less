@@ -111,8 +111,8 @@
 // -----------------------------
 .carousel-indicators {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  bottom: 2em;
+  left: 2em;
   z-index: 5;
   margin: 0;
   list-style: none;
@@ -137,18 +137,19 @@
 // -----------------------------
 
 .carousel-caption {
+  font-size:1.5em;
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 15px;
-  background: @grayDark;
-  background: rgba(0,0,0,.75);
+  left: 50%;
+  right: 1.5em;
+  bottom: 1.5em;
+  padding: 0.875em 0.875em 1.5em;
+  background: @gray-footerold;
+  background: rgba(64,57,51,.75);
 }
 .carousel-caption h4,
 .carousel-caption p {
   color: @white;
-  line-height: @baseLineHeight;
+  line-height: @baseLineHeight*1.5;
 }
 .carousel-caption h4 {
   margin: 0 0 5px;

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Home Template
+Template Name: Homepage
 */
 ?>
 <?php get_template_part('templates/content', 'home'); ?>

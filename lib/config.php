@@ -21,7 +21,7 @@ define('POST_EXCERPT_LENGTH', 40);
 function roots_main_class() {
   if (roots_display_sidebar()) {
     // Classes on pages with the sidebar
-    $class = 'span8';
+    $class = 'span4 okos';
   } else {
     // Classes on full width pages
     $class = 'span12';
@@ -67,7 +67,9 @@ function roots_display_sidebar() {
     array(
       'template-home.php',
       'template-no-sidebar.php',
-      'template-house-list.php'
+      'template-no-sidebar-narrow.php',
+      'template-house-list.php',
+      'template-superslider.php'
 
     )
   );

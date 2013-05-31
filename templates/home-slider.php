@@ -3,12 +3,12 @@
 
 
 
-    <div class="row-fluid">
+    <div class="row-fluid headinfo">
       <div class="span9 offset3">
           <div class="langsel">HU | EN | DE</div>
           <div class="callmenow">(+36) 70 770 5653</div>              
           <div class="row-fluid">
-            <div class="span12 slogan">Ökölógiai parasztházak tervasztalról, kulcsrakészen a rengeteg szélén</div>
+            <div class="span12 slogan"><?php  bloginfo('description'); ?></div>
           </div><!-- .row-fluid -->
       </div>
     </div>
@@ -19,7 +19,7 @@
 
 
 		<div class="row-fluid">
-			<div class="span10 offset1">
+			<div class="span10 offset1 sliderblock">
 				<img class="sliderimg" src="http://placehold.it/768x420/3b312a"> 
 				<div class="slidertext">
 					<h1>Önnek is lehet parasztháza</h1>
@@ -31,7 +31,7 @@
  						<li>hétvégi háznak.</li>
 					</ul>
 					<p>
-						<a href="?page_id=26" class="btn btn-warning">Megnézem a házakat</a>
+						<a href="?house=fajszi-haz" class="btn btn-warning">Referencia ház megtekintése</a>
 					</p>
 				</div>
 			</div>

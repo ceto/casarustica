@@ -1,36 +1,42 @@
 <?php
   $the_feathouse= new WP_Query ( 
-    array('post_type' => 'house', )
+    array(
+    	'post_type' => 'house',
+    	'posts_per_page'=>3,
+     )
     );
 ?>
 
 <div class="feathouseblockwrap">
 	<div class="container-fluid wrap feathouseblock">
-		<h3 class="featblock-title"><?php _e('Ízelitő parasztházainkból','roots') ?></h3>
-		<aside class="row-fluid">
-			<?php while ( $the_feathouse->have_posts()) : $the_feathouse->the_post(); ?>
-				<div class="span4 feathouse" >
-					<div class="row-fluid">
-						<figure class="feat-figure span4">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<img src="http://placehold.it/160x120/3b312a" alt="<?php the_title(); ?>">
-							</a>
-						</figure>
-						<div class="feat-data span8">
-							<h3 class="feat-title">
+		<div class="row-fluid">
+			<div class="span12">
+				<h3 class="featblock-title"><?php _e('Ízelitő parasztházainkból','roots') ?></h3><br />
+				<?php while ( $the_feathouse->have_posts()) : $the_feathouse->the_post(); ?>
+					<div class="feat-houses clearfix" >
+							<figure class="house-figure">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-									<?php the_title(); ?>
+									<?php the_post_thumbnail('tiny43');  ?>
 								</a>
-							</h3>
-							<div class="feat-text">
-								Lorem ipsum dolor sit amet ...
-							</div>
-						</div><!-- ! .feat-data -->
-					</div>
+							</figure>
+							<div class="house-data">
+								<h3 class="house-title">
+									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+										<?php the_title(); ?>
+									</a>
+								</h3>
+								<div class="hosue-readiness">
+						            <?php echo readiness(get_post_meta( get_the_ID(), '_house_readiness', true)); ?>
+						         </div>
+								<h4 class="house-subtitle">
+	     							<?php echo get_post_meta( get_the_ID(), '_house_subtitle', true); ?>
+	    						</h4>
 
-				</div>
-			<?php endwhile; ?>
-		</aside>
+							</div><!-- ! .hosue-data -->
+						</div>
+				<?php endwhile; ?>
+			</div>	
+		</div>
 	</div><!-- / .feathoseblock -->
 </div><!-- / .feathouseblockwrap -->
 

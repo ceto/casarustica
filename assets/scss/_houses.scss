@@ -4,13 +4,126 @@
 
 .single-house {
 	.house-figure {
+		position:relative;
 		margin:0;
+		margin-bottom:2em;
 		img {
 			border:10px solid $brown-light;
 			@include box-sizing('border-box');
 			@include box-shadow(0 0 5px 0 $brown-light);
 		}
 	}
+	.house-readiness {
+		background: $gray-footerold;
+		position:absolute;
+		display:inline-block;
+		top:45px;
+		right:-15px;
+		text-align: center;
+		@include box-sizing('border-box');
+		@include rotate(45deg); 
+		padding:10px 0;
+		height:40px;
+		min-width:160px;
+		color: $white-bg;
+		font-size:1.25em;
+		font-family: $scriptFontFamily;
+		&:before {
+				content:"";
+				position:absolute;
+				border-top:40px solid transparent;
+				border-right:40px solid $gray-footerold;
+				width:0;
+				height:0;
+				left:-39px;
+				top:0;
+
+
+			}
+		&:after {
+				content:"";
+				position:absolute;
+				border-top:40px solid transparent;
+				border-left:40px solid $gray-footerold;
+				width:0;
+				height:0;
+				right:-39px;
+				top:0;
+				
+			}
+
+
+	}
+	.house-title {
+		margin-top: 0em;
+		margin-bottom:0;
+		font-size:2.25em;
+		line-height: 1.125em;
+		color:$orange-menu;
+	}
+
+	.house-subtitle {
+		font-family: $scriptFontFamily;
+		color:$brown-slogan;
+		text-transform: none;
+		font-size: 1.5em;
+		line-height:1.125em;
+		font-weight:400;
+		margin-top:0.75em;
+		margin-bottom:1em;
+
+
+	}
+
+	// .navigation-post {
+	// 	position: absolute;
+	// 	left:0; right:0;
+	// }
+	.house-excerpt {
+		margin-bottom:2em;
+		
+		p {
+			&:after {
+
+			}
+
+
+		}
+	}
+	.adatlap {
+		.data-row{
+			padding:0.25em 0;
+		}
+		.key{
+			font-weight:bold;
+			font-size: 0.875em;
+			//text-transform: uppercase;
+			//font-family: $displayFontFamily;
+			display: block;
+			float:left;
+			width:35%;
+			clear:left;
+			@include breakpoint($mobileBreak){
+				float:none;
+				width:auto;
+			}
+
+
+		}
+		.value {
+			float:left;
+			width:65%;
+			@include breakpoint($mobileBreak){
+				float:none;
+				width:auto;
+			}
+
+
+			
+		}
+	}
+
+
 
 	.house-datablock {
 		float:right;
@@ -18,20 +131,71 @@
 			float:none;
 		}
 		h3 {
-			//text-align: center;
+			color:$brown-slogan;
+			font-family: $scriptFontFamily;
+			font-weight:400;
+			text-transform: none;
+			margin-bottom:0.25em;
+			margin-top:1.25em;
+			&:first-child {
+				margin-top:0;
+			}
+				
 		}
+
+		.nav {
+			margin-bottom:0;
+		}
+		.tab-pane {
+			background: $white-bg;
+			
+			//background: url(../images/aljataj.png) repeat-x right bottom $white-bg;
+			padding:2em 1.5em 0em 1.5em;
+		}
+	
+
 	}
 	.house-tabdata {
 		clear:left;
 		margin-left:0;
-		margin-top:2em;
+		//margin-top:2em;
 
 		@include breakpoint($tabletBreak){
 			clear:none;
 		}
 
-		.tab-pane{
-			//background: $gray-footerold;
+		#map.tab-pane{
+			display:block;
+			height:0;
+			overflow:hidden;
+			//visibility: hidden;
+			&.active.in {
+				height:auto;
+				//visibility: visible;
+
+			}
+
+			.gmap {
+
+			}
+		
+		}
+
+	}
+	.house-lebonyi {
+
+		border-top:1px solid $brown-glass;
+		padding: 0.5em 0 1.5em;
+		margin-top:2em;
+		background: $white-bg;
+		//text-align: right;
+		color:$brown-slogan;
+		p {
+			font-size: 0.875em;
+			margin:0.5em;
+		}
+		p:first-child{
+			
 		}
 
 	}
@@ -59,19 +223,73 @@
 			}
 		}
 	}
+
 }
 
 /*	===========================================
 	House List
 	===========================================   */
 
-.page-template-template-house-list-php {
 	
-	article.house {
-		background: $yellow-glass;
-		padding:16px;
-		border:1px solid $brown-glass;
-		@include box-shadow(0 0 5px 0 $brown-glass );
+	article.houses, .feat-houses {
+		
+		text-align: center;
+		margin-bottom:3em;
+		margin-left:5%;
+		width:30%;
+		float:left;
+
+		&:nth-of-type(3n+1) {
+			margin-left:0;
+			clear:left;
+		}
+
+		@include breakpoint($largeBreak){
+			width:48%;
+			margin-left: 4%;
+			&:nth-of-type(3n+1) {
+				margin-left:4%;
+				clear:none;
+			}
+
+			&:nth-of-type(2n+1) {
+				margin-left:0;
+				clear:left;
+			}
+
+		}
+		@include breakpoint($tabletBreak){
+			width:49%;
+			margin-left: 2%;
+			&:nth-of-type(3n+1) {
+				margin-left:2%;
+				clear:none;
+			}
+
+			&:nth-of-type(2n+1) {
+				margin-left:0;
+				clear:left;
+			}
+
+		}
+
+		@include breakpoint($mobileBreak){
+			width:auto;
+			margin-left: 0;
+			float:none;
+			margin-bottom: 2em;
+			&:nth-of-type(3n+1) {
+				margin-left:0;
+				clear:none;
+			}
+
+			&:nth-of-type(2n+1) {
+				margin-left:0;
+				clear:none;
+			}
+
+		}
+
 	}
 
 
@@ -79,14 +297,73 @@
 
 	.house-figure {
 		margin:0;
-		text-align: center;
+		// text-align: center;
+		// width:50%;
+		// margin:0 auto;
+		width:33%;
+		margin:0 2% 0 0;
+		float:left;
+		@include breakpoint($largeBreak){
+			width:28%;
+		}
+		@include breakpoint($tabletBreak){
+
+		}
+		
+		img {
+
+		}
+
 	}
-	.house-title {
-		text-align: center;
-		background: $brown-glass;
-		margin:0.666666em -16px;
+	.house-data {
+		width:65%;
+		float:right;
+		position:relative;
+		&:after{
+			content:"&";
+			color:$orange-link;
+			font-family: $displayFontFamily;
+			font-size: 2em;
+			display: block;
+			padding-top:0.75em;
+		}
+
+		@include breakpoint($largeBreak){
+			width:70%;
+		}
+		@include breakpoint($tabletBreak){
+
+		}
+
 	}
 
+	.house-readiness {
+		font-size:0.875em;
+		font-style: italic;
+				color:$brown-slogan;
+
+
+
+	}
+	.house-title {
+		margin:0;
+		padding:0;
+		font-size:1.5em;
+		line-height:1.125em;
+
+	}
+	.house-subtitle {
+		
+		font-family: $scriptFontFamily;
+		//color:$brown-slogan;
+		text-transform: none;
+		font-size: 1.5em;
+		font-size:1.25em;
+		line-height:1.125em;
+		font-weight:400;
+		margin:0 0;
+		
+	}
 
 
 	.actionblock {
@@ -95,15 +372,28 @@
 		
 		.btn {
 			font-family: $displayFontFamily;
-			text-transform: uppercase;
-			display:block;
+			//text-transform: uppercase;
+			//display:block;
 		}
 	}
-}
+
+
 
 /*	===========================================
 	Featured House
 	===========================================   */
+
+.feat-houses {
+	margin-bottom:0;
+	margin-top:2em;
+	.house-data{
+		
+		
+		&:after {
+			content:"";
+		}
+	}
+}
 
 .feathouseblockwrap {
 	//background: $gray-footerold;
@@ -152,25 +442,118 @@
 
 }
 
-.feathouse {
-	//text-align: left;
-	margin-bottom:2em;
-	.feat-figure{
-		margin:0;
-	}
-	.feat-data {
+
+
+
+/*------------ Sidebar House --------*/
+.side-houses {
 		
+		text-align: center;
+		margin-bottom:3em;
+
+
+
+		// @include breakpoint($tabletBreak){
+		// 	width:48%;
+		// 	margin-left:4%;
+		// 	float:left;
+		// 	&:nth-of-type(2n+1) {
+		// 		margin-left:0;
+		// 		clear:left;
+		// 	}
+			
+		// }
+		// @include breakpoint($mobileBreak){
+		// 	width:auto;
+		// 	margin-left:0;
+		// 	float:none;
+		// 	&:nth-of-type(2n+1) {
+		// 		margin-left:0;
+		// 		clear:none;
+		// 	}
+			
+		// }
+
+	.side-figure {
+		margin:0;
+		// text-align: center;
+		// width:50%;
+		// margin:0 auto;
+		width:28%;
+		margin:0 2% 0 0;
+		float:left;
+
+		@include breakpoint($tabletBreak){
+			width:23%;
+		}
+		
+		img {
+
+		}
 
 	}
-	.feat-title {
-		margin:0;
+	.side-data {
+		width:70%;
+		float:right;
+		position:relative;
+		&:after{
+			content:"&";
+			color:$orange-link;
+			font-family: $displayFontFamily;
+			font-size: 2em;
+			display: block;
+			padding-top:0.75em;
+		}
+
+
+		@include breakpoint($tabletBreak){
+			width:75%;
+		}
+
 	}
+
+	.side-readiness {
+		font-size:0.875em;
+		font-style: italic;
+				color:$brown-slogan;
+
+
+
+	}
+	.side-title {
+		margin:0;
+		padding:0;
+		font-size:1.5em;
+		line-height:1.125em;
+
+	}
+	.side-subtitle {
+		
+		font-family: $scriptFontFamily;
+		//color:$brown-slogan;
+		text-transform: none;
+		font-size: 1.5em;
+		font-size:1.25em;
+		line-height:1.125em;
+		font-weight:400;
+		margin:0 0;
+		
+	}
+
+
+	.actionblock {
+		text-align:center;
+		margin:1em 0;
+		
+		.btn {
+			font-family: $displayFontFamily;
+			//text-transform: uppercase;
+			//display:block;
+		}
+	}
+
 
 }
-
-
-
-
 
 
 

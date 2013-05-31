@@ -8,8 +8,22 @@
 
 .banner { }
 .header2 {
-	padding:0.75em 0 0.75em;
+	
+	.container-fluid {
+		position: relative;		
+	}
+	
+	.headinfo {
+		z-index:2;
+		position:absolute;
+		width:auto;
+		left:20px;right:20px;top:0;
+	}
 }
+.headinfo {
+	padding-top:1em;
+}
+
 .logo{
 	position:absolute;
 	top:0;
@@ -41,9 +55,10 @@
 	float:right;
 }
 .slogan {
-	text-align: right;
+	text-align: center;
 	color:$brown-slogan;
-	font-size:1.5em;
+	font-size:1.25em;
 	font-family:$scriptFontFamily;
-	margin-top:1.5em;
+	margin-top:2em;
+	margin-bottom:1em;
 }

@@ -19,7 +19,7 @@
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: @grayLighter;
+  background-color: @white-darkbg;
 }
 
 // Prevent IE8 from misplacing imgs
@@ -111,7 +111,9 @@
 
 // Give the tabs something to sit on
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
+  //border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid @brown-glass;
+
 }
 // Make the list-items overlay the bottom border
 .nav-tabs > li {
@@ -119,6 +121,7 @@
 }
 // Actual tabs (as links)
 .nav-tabs > li > a {
+  //text-transform: uppercase;
   padding-top: 8px;
   padding-bottom: 8px;
   line-height: @baseLineHeight;
@@ -134,7 +137,10 @@
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
   color: @gray;
-  background-color: @bodyBackground;
+  //background-color: @bodyBackground;
+  background-color: @orange-menu;
+  color:@yellow-menu;
+  
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;

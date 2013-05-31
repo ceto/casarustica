@@ -17,22 +17,32 @@
     if (is_page_template('template-home.php') ) {
       get_template_part('templates/home','slider'); 
       get_template_part('templates/house','featured');       
-    } else {
+    } else if (is_page_template('template-superslider.php') ) {
+      get_template_part('templates/superslider','head'); 
+    } else
+
+    {
       get_template_part('templates/header','info'); 
     }
   ?>
-
+<?php if (!is_page_template('template-superslider.php') ) : ?>
   <div class="nagywrap">
     <div class="kwrap-1">
       <div class="wrap container-fluid" role="document">
         <div class="content row-fluid">
-          <div class="main <?php echo roots_main_class(); ?>" role="main">
+          <div class="main <?php echo is_page_template('template-no-sidebar-narrow.php')?'span6 offset3':roots_main_class(); ?>" role="main">
             <?php include roots_template_path(); ?>
           </div><!-- /.main -->
           <?php if (roots_display_sidebar()) : ?>
-          <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-            <?php include roots_sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
+            
+            <aside class="sidebar sidebar-1 <?php echo roots_sidebar_class(); ?>" role="complementary">
+              <?php include roots_sidebar_path(); ?>
+            </aside><!-- /.sidebar-1 -->
+            
+            <aside class="sidebar sidebar-2 <?php echo roots_sidebar_class(); ?>" role="complementary">
+              <?php get_template_part('templates/sidebar-2'); ?>
+            </aside><!-- /.sidebar-2 -->
+
           <?php endif; ?>
         </div><!-- /.content -->
       </div><!-- /.wrap -->
@@ -40,6 +50,7 @@
 
     <?php get_template_part('templates/content','child');   ?>
   </div><!-- / .nagywrap -->
+<?php endif; ?>
 
   <div class="footerwrap">
     <?php get_template_part('templates/footer'); ?>

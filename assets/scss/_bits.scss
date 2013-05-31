@@ -24,6 +24,7 @@ $yellow-menu:#fffed2;
 $orange-top:#d26e24;
 $orange-bottom:#a1420f;
 $orange-menu:#9e2700;
+$orange-link:$orange-menu;
 
 
 $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -35,4 +36,40 @@ $displayFontFamily:     'Playfair Display', serif;
 
 $mobileBreak: max-width 480px;
 $tabletBreak: max-width 768px;
-$destopBreak: max-width 980px;
+$desktopBreak: max-width 980px;
+$largeBreak: max-width 1200px;
+
+// GRID
+// --------------------------------------------------
+
+
+// Default 940px grid
+// -------------------------
+$gridColumns:             12;
+$gridColumnWidth:         60px;//60px;
+$gridGutterWidth:         60px;//20px;
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+// 1200px min
+$gridColumnWidth1200:     50px;//70px;
+$gridGutterWidth1200:     50px;//30px;
+$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1));
+
+// 768px-979px
+$gridColumnWidth768:      42px;//42px;
+$gridGutterWidth768:      42px;//20px;
+$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1));
+
+
+// Fluid grid
+// -------------------------
+$fluidGridColumnWidth:    percentage($gridColumnWidth/$gridRowWidth);
+$fluidGridGutterWidth:    percentage($gridGutterWidth/$gridRowWidth);
+
+// 1200px min
+$fluidGridColumnWidth1200:     percentage($gridColumnWidth1200/$gridRowWidth1200);
+$fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200);
+
+// 768px-979px
+$fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768);
+$fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768);

@@ -14,3 +14,4 @@
     <?php comments_template('/templates/comments.php'); ?>
   </article>
 <?php endwhile; ?>
+<?php  roots_content_nav(); ?>
