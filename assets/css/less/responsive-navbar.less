@@ -13,6 +13,18 @@
   body {
     padding-top: 0;
   }
+  .navbar-inner {
+    height:auto;
+  }
+  .navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  height:auto;
+  -webkit-box-sizing: padding-box;
+  -moz-box-sizing:    padding-box;
+  box-sizing:         padding-box;
+
+}
   // Unfix the navbars
   .navbar-fixed-top,
   .navbar-fixed-bottom {
@@ -26,7 +38,7 @@
   }
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
-    padding: 5px;
+    padding: 5px 0;
   }
   .navbar .container {
     width: auto;
@@ -34,9 +46,9 @@
   }
   // Account for brand name
   .navbar .brand {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 0 0 0 -5px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 0 0 0;
   }
 
   // COLLAPSIBLE NAVBAR

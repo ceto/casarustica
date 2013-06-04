@@ -4,8 +4,8 @@
 
 body {
 	padding-top: 40px;
-	@include breakpoint(max-width 979px){
-		padding-top:0;
+	@include breakpoint($tabletBreak){
+		padding-top:0;	
 	}
 }
 .nagywrap {
@@ -35,10 +35,15 @@ body {
  // }
 }
 .home .kwrap-1 {
-	background-image: none;
-	padding-bottom:4em;
+	//background-image: none;
+	background: url(../images/pitypang.png) repeat-x center bottom transparent;
+	padding-bottom:8em;
 }
-
+.page-id-15 .kwrap-1 {
+	//background-image: none;
+	background: url(../images/pitypang.png) repeat-x center bottom transparent;
+	padding-bottom:8em;
+}
 .container-fluid {
 	max-width: 1170px;
 	margin-left: auto;

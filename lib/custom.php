@@ -329,7 +329,7 @@ function create_slide_type() {
 		'has_archive' => false,
 		'exclude_from_search' => true,
 		'rewrite' => array('slug' => 'slides'),
-		'supports' => array('title', 'editor', 'thumbnail')
+		'supports' => array('title', 'thumbnail')
 		)
 	);
 }
@@ -345,6 +345,13 @@ function slide_metaboxes( $meta_boxes ) {
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
 		'fields' => array(
+			
+			array(
+				'name' => __('Description'),
+				'desc' => __('Descrition Text'),
+				'id' => $prefix . 'desc',
+				'type' => 'textarea_small'
+			),
 			
 			array(
 				'name' => __('Button text'),

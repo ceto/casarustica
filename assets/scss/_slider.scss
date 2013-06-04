@@ -5,8 +5,8 @@
 
 
 .sliderwrap{
- background:url(../images/1640_bg_uj.jpg) no-repeat center center transparent;
- @include background-size();
+ background:url(../images/hatar_bg.jpg) no-repeat center top transparent;
+ @include background-size('cover');
  position:relative;
  margin-bottom:36px;
  &:after{
@@ -23,46 +23,72 @@
 }
 
 .sliderblock{
-	margin-top: 80px;
+	//background: rgba($gray-footerold,0.75);
+	
+	margin:0 8% 50px 8%;
+	@include breakpoint($largeBreak){
+		margin:0 4% 50px 4%;
+	
+	
+	}
+	@include breakpoint($desktopBreak){
+		margin:0 auto 50px auto;
+	
+	
+	}
+	.l-block {
+		width:66%;
+		float:left;
+		//opacity:0;
 
+		@include breakpoint($desktopBreak){
+			width:60%;
+		}
+		@include breakpoint($tabletBreak){
+			width:50%;
+		}
+		@include breakpoint($mobileBreak){
+			width:100%;
+			float:none;
+		}
 
-}
-.sliderimg {
-	width:66%;
-	float:left;
-	display:block;
-	margin-top:2em;
-	margin-bottom:4em;
-	opacity:0;
-
-	@include breakpoint($tabletBreak){
-		float:none;
-		width:auto;
-		margin-bottom:0;
+		// img {
+		// 	background: rgba($gray-footerold,0.5);
+		// 	@include box-sizing('border-box');
+		// 	padding:3px;
+		// }
+	}
+	.r-block {
+		width:34%;
+		float:right;
+		@include breakpoint($desktopBreak){
+			width:40%;
+		}
+		@include breakpoint($tabletBreak){
+			width:50%;
+		}
+		@include breakpoint($mobileBreak){
+			width:100%;
+			float:none;
+		}
+	
 	}
 
-
-
 }
+
+.carousel-caption {
+	@include text-shadow(rgba($gray-footer, 1) 1px 1px 1px);
+}
+
 .slidertext{
-	float:left;
-	width:33%;
 	@include box-sizing('border-box');
 	padding:1em;
-	margin-left:0.125em;
-	margin-top:2em;
-	margin-bottom:4em;
-	background: rgba($gray-footerold,0.75);
-	color:$yellow-footer;
+	//background: rgba($gray-footerold,0.75);
+	//color:$yellow-footer;
+	//color:$gray-footerold;
 	text-align: center;
 	font-family: $scriptFontFamily;
 
-	@include breakpoint($tabletBreak){
-		float:none;
-		width:auto;
-		margin-left:0;
-		margin-top:0.125em;
-	}
 	
 	h1 {
 		font-family: $displayFontFamily;
@@ -73,6 +99,7 @@
 	p {
 		font-family: $scriptFontFamily;
 		font-size:1.25em;
+
 	}
 	ul{
 		font-family: $displayFontFamily;

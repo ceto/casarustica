@@ -116,12 +116,13 @@
     left:1em;
     right:1em;
     bottom:1em;
+    position:static;
   }
-    .carousel-indicators {
-    left:2.5em;
-    bottom:2.25em;
+  .carousel-indicators {
+    bottom: 1em;
+    left: 1em;
   }
-
+   
 }
 
 
@@ -130,6 +131,12 @@
 // ---------------------
 
 @media (max-width: 480px) {
+    // Remove padding on container given explicit padding set on body
+  .container-fluid {
+    padding: 0;
+    padding-left:12px;
+    padding-right:12px;
+  }
 
   // Smooth out the collapsing/expanding nav
   .nav-collapse {
@@ -200,9 +207,6 @@
   .carousel-caption {
     position: static;
   }
-  .carousel-indicators {
-    left:1em;
-    bottom:1em;
-  }
+  
 
 }

@@ -8,12 +8,12 @@
       </a>
       <a class="brand" href="<?php echo home_url(); ?>/">
         <img class="logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>">
-        <span class="logotext"><?php bloginfo('name'); ?></span>
+        <span class="logotext">Casa Rustica</span>
       </a>
-      <nav class="nav-main nav-collapse collapse pull-right" role="navigation">
+      <nav class="nav-main nav-collapse collapse" role="navigation">
         <?php
           if (has_nav_menu('primary_navigation')) :
-            wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav'));
+            wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav pull-right'));
           endif;
         ?>
       </nav>
