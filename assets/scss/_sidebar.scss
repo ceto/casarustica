@@ -108,3 +108,128 @@
 	}
 
 }
+footer.content-info {
+	.widget {
+		margin-bottom:1em;
+	}
+
+}
+
+.widget_mailchimpsf_widget {
+	
+	#mc_subheader {
+		font-weight:bold;
+		padding-bottom:0.5em;
+	}
+	#mc_signup_form {
+		position: relative;
+		padding-bottom:0.25em;
+		margin-bottom:1.5em;
+		
+	}
+	.updated {
+		font-weight:normal;
+		font-size: 0.875em;
+		position:absolute;
+		top:100%;
+		line-height:1.4em;
+	}
+	.mc_error_msg {
+		color: $orange-menu;
+		font-weight:normal;
+	}
+	.mc_success_msg{
+		color:$yellow-footer;
+		font-weight:normal;
+	}
+	.mc_merge_var{
+		//text-align: center;
+	}
+	.mc_var_label {
+		display:none;
+	}
+	input[type="text"]{
+		width:100%;
+		max-width: 250px;
+	}
+	.mc_signup_submit {
+		text-align: left;
+	}
+	#mc_signup_submit {
+		width:100%;
+		max-width:266px;
+	}
+
+
+}
+
+.tothetop {
+	text-align: center;
+	text-transform: uppercase;
+	display: inline-block;
+	float:right;
+	font-size:1.5em;
+	
+	margin-top:-2em;
+	margin-right:-2em;
+	background: $orange-menu;
+	color:$white-bg;
+	//font-family: $scriptFontFamily;
+	//font-weight: bold;
+	width:2em;
+	height:2em;
+	padding-top:0.475em;
+	@include box-sizing(border-box);
+	@include border-radius(1em);
+	&:hover {
+		text-decoration:none;
+		background: $orange-top;
+		color:$white-darkbg;
+	}
+
+	@include breakpoint($tabletBreak){
+		float:none;
+		display:block;
+		margin:1em auto 0 auto;
+		//width:80px;
+		//height:80px;
+		font-size:3em;
+
+	}
+	i{
+		
+		//display: block;
+	}
+}
+
+.topi {
+	//@extend .tothetop;
+	//float:none;
+	text-align: center;
+	display: block;
+	font-size:1.5em;
+	background: $orange-menu;
+	color:$white-bg;
+	@include box-sizing(border-box);
+	@include border-radius(1em);
+	width:2em;
+	height:2em;
+	padding-top:0.475em;
+	position:absolute;
+	right:1em;
+	bottom:1em;
+
+
+	@include breakpoint($tabletBreak){
+		
+		position: static;
+		margin:0 auto 0 auto;
+		font-size:3em;
+
+	}
+	&:hover {
+		text-decoration:none;
+		background: $orange-top;
+		color:$white-darkbg;
+	}
+}

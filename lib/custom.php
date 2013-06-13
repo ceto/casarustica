@@ -274,17 +274,29 @@ function house_metaboxes4( $meta_boxes ) {
 		'show_names' => true, // Show field names on the left
 		'fields' => array(
 			array(
+				'name' => 'Alaprajz I.',
+				'desc' => 'Upload an image or enter an URL.',
+				'id' => $prefix . 'alaprajz1',
+				'type' => 'file',
+				'save_id' => true, // save ID using true
+				'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
+			),
+			array(
+				'name' => 'Alaprajz II.',
+				'desc' => 'Upload an image or enter an URL.',
+				'id' => $prefix . 'alaprajz2',
+				'type' => 'file',
+				'save_id' => true, // save ID using true
+				'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
+			),
+
+			array(
                     'name' => __('Fotó/3D galéria csatolása'),
                     'id'   => $prefix . 'fotogallery',
                     'type' => 'select',
                     'options' => $gallopt,
 			),
-			array(
-                    'name' => __('Alaprajz galéria csatolása'),
-                    'id'   => $prefix . 'fotoalaprajz',
-                    'type' => 'select',
-                    'options' => $gallopt,
-			),
+
 			array(
                     'name' => __('Ilyen volt galéria csatolása'),
                     'id'   => $prefix . 'fotoilyenvolt',
@@ -345,21 +357,6 @@ function slide_metaboxes( $meta_boxes ) {
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
 		'fields' => array(
-			
-			array(
-				'name' => __('Description'),
-				'desc' => __('Descrition Text'),
-				'id' => $prefix . 'desc',
-				'type' => 'textarea_small'
-			),
-			
-			array(
-				'name' => __('Button text'),
-				'desc' => __('Text of the button'),
-				'id' => $prefix . 'btext',
-				'type' => 'text_medium'
-			),
-
 			array(
 				'name' => __('Url'),
 				'desc' => __('Click url'),
@@ -438,7 +435,7 @@ function gallery_list () {
 	global $nggdb;
 	$galleries = $nggdb->find_all_galleries('gid', 'DESC');
 	//print_r($galleries);
-	$lista=Array();
+	$lista=array();
 	foreach ($galleries as $key => $value) {
 		$lista[$value->gid]=$value->title;
 	}
@@ -463,6 +460,9 @@ function readiness($value) {
 		case '4':
 			return 'Kiszemelve';
 			break;
+		case '5':
+			return 'Eladó';
+			break;
 		
 		default:
 			return 'Gazdáját várja';
@@ -471,3 +471,16 @@ function readiness($value) {
 }
 
 
+function current_type_nav_class($css_class, $item) {
+  $post_type = get_query_var('post_type');
+  if ($post_type=='house') {
+      $current_value = "active"; 
+      $css_class = array_filter($css_class, function ($element) use ($current_value) { return ($element != $current_value); } );
+      if ($item->ID==27) {       
+       array_push($css_class, 'active');
+  	 }
+  }
+
+  return $css_class;
+}
+add_filter('nav_menu_css_class', 'current_type_nav_class', 10, 2);

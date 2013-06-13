@@ -23,6 +23,9 @@
 .headinfo {
 	margin-top:1em;
 	margin-bottom:2em;
+	@include breakpoint($tabletBreak) {
+		margin-bottom:0;
+	}
 }
 .fixblock {
 	margin-left:230px;

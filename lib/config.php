@@ -69,7 +69,8 @@ function roots_display_sidebar() {
       'template-no-sidebar.php',
       'template-no-sidebar-narrow.php',
       'template-house-list.php',
-      'template-superslider.php'
+      'template-contact.php'
+
 
     )
   );

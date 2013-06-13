@@ -8,7 +8,11 @@
         <div class="wrap container-fluid" role="document">
           <div class="content row-fluid">
             <div class="main span12" role="main">
-              <h1><?php roots_title(); ?></h1>
+              <div class="page-header">
+                <h2>
+                  <?php echo roots_title(); ?>
+                </h2>
+              </div>
               <?php the_content(); ?>
               <?php // wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
             </div><!-- /.main -->

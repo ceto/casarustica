@@ -14,44 +14,50 @@
 		}
 	}
 	.house-readiness {
-		background: $gray-footerold;
+		//background: $gray-footerold;
 		position:absolute;
 		display:inline-block;
-		top:45px;
-		right:-15px;
+		top:30px;
+		right:-47px;
+		//margin-right:-17px;
 		text-align: center;
-		@include box-sizing('border-box');
+		//@include box-sizing('border-box');
 		@include rotate(45deg); 
-		padding:10px 0;
-		height:40px;
-		min-width:160px;
+		//padding:10px 0;
+		//height:40px;
 		color: $white-bg;
 		font-size:1.25em;
+		line-height:40px;
 		font-family: $scriptFontFamily;
 		font-style: normal;
-		&:before {
-				content:"";
-				position:absolute;
-				border-top:40px solid transparent;
-				border-right:40px solid $gray-footerold;
-				width:0;
-				height:0;
-				left:-39px;
-				top:0;
+		border-bottom:40px solid $gray-footerold;
+		border-left: 40px solid transparent;
+		border-right: 40px solid transparent;
+		height: 0;
+		min-width:120px;
+		// &:before {
+		// 		content:"";
+		// 		position:absolute;
+		// 		border-top:40px solid transparent;
+		// 		border-right:40px solid $gray-footerold;
+		// 		width:0;
+		// 		height:0;
+		// 		left:-39px;
+		// 		top:0;
 
 
-			}
-		&:after {
-				content:"";
-				position:absolute;
-				border-top:40px solid transparent;
-				border-left:40px solid $gray-footerold;
-				width:0;
-				height:0;
-				right:-39px;
-				top:0;
+		// 	}
+		// &:after {
+		// 		content:"";
+		// 		position:absolute;
+		// 		border-top:40px solid transparent;
+		// 		border-left:40px solid $gray-footerold;
+		// 		width:0;
+		// 		height:0;
+		// 		right:-39px;
+		// 		top:0;
 				
-			}
+		// 	}
 
 
 	}
@@ -61,6 +67,7 @@
 		font-size:2.25em;
 		line-height: 1.125em;
 		color:$orange-menu;
+		text-transform: uppercase;
 	}
 
 	.house-subtitle {
@@ -165,6 +172,25 @@
 			clear:none;
 		}
 
+		#alap.tab-pane {
+			
+			img{
+
+				background-color:$brown-light;
+				display:block;
+				padding:8px;
+				@include box-sizing('border-box');
+				@include box-shadow(0 0 5px 0 $brown-light);
+				//position:relative;
+				@include transition-property(all);
+				@include transition-duration(400ms);
+				@include transition-timing-function(ease-in); 
+				margin-bottom: 1em;
+
+			}
+		}
+
+
 		#map.tab-pane{
 			display:block;
 			height:0;
@@ -231,14 +257,24 @@
 	House List
 	===========================================   */
 
-	
-	article.houses, .feat-houses {
-		
-		text-align: center;
-		margin-bottom:3em;
-		margin-left:5%;
-		width:30%;
+
+	article.houses {
+
+
+		position:relative;
+		//color:$yellow-footer;
+		background: $white-bg;
+		@include box-shadow($brown-light 0 0 10px);
+		@include box-sizing('border-box');
+		padding:12px;
+		//text-align: center;
+		margin-bottom:2%;
+		margin-left:2%;
+		width:32%;
 		float:left;
+		&:hover {
+			background: white;
+		}
 
 		&:nth-of-type(3n+1) {
 			margin-left:0;
@@ -248,6 +284,7 @@
 		@include breakpoint($largeBreak){
 			width:48%;
 			margin-left: 4%;
+			margin-bottom:4%;
 			&:nth-of-type(3n+1) {
 				margin-left:4%;
 				clear:none;
@@ -262,6 +299,7 @@
 		@include breakpoint($tabletBreak){
 			width:49%;
 			margin-left: 2%;
+			margin-bottom:2%;
 			&:nth-of-type(3n+1) {
 				margin-left:2%;
 				clear:none;
@@ -291,7 +329,7 @@
 
 		}
 
-	}
+	
 
 
 
@@ -301,36 +339,50 @@
 		// text-align: center;
 		// width:50%;
 		// margin:0 auto;
-		width:33%;
-		margin:0 2% 0 0;
+		width:42%;
+		margin:0 4% 0 0;
 		float:left;
 		@include breakpoint($largeBreak){
-			width:28%;
+			width:36%;
 		}
 		@include breakpoint($tabletBreak){
 
 		}
+
+		// &:after{
+		// 	text-align: center;
+		// 	content:"&";
+		// 	color:$orange-link;
+		// 	font-family: $displayFontFamily;
+		// 	font-size: 2em;
+		// 	display: block;
+		// 	padding-top:0.75em;
+		// }
 		
 		img {
-
+			border:2px solid $brown-menu;
+			@include box-sizing('border-box');
+			@include box-shadow(0 0 5px 0 $brown-light);
+			&:hover {
+				border:2px solid $brown-light;
+			}
+			
 		}
+
+
+
 
 	}
 	.house-data {
-		width:65%;
+		width:54%;
 		float:right;
-		position:relative;
-		&:after{
-			content:"&";
-			color:$orange-link;
-			font-family: $displayFontFamily;
-			font-size: 2em;
-			display: block;
-			padding-top:0.75em;
-		}
+		padding-bottom:1.25em;
+		
+		text-align: left;
+
 
 		@include breakpoint($largeBreak){
-			width:70%;
+			width:60%;
 		}
 		@include breakpoint($tabletBreak){
 
@@ -339,43 +391,84 @@
 	}
 
 	.house-readiness {
-		font-size:0.875em;
-		font-style: italic;
-				color:$brown-slogan;
-
-
-
+		//background: $gray-footerold;
+		//position: absolute;
+		//bottom:0.75em;
+		//right:0.75em;
+		display:block;
+		//text-align: right;
+		margin-top:-0.25em;
+		margin-bottom:0.25em;
+		color:$brown-slogan;
+		font-size:1em;
+		font-family: $scriptFontFamily;
+		font-style: normal;
+		a {
+					color:$brown-slogan;
+		}
 	}
+
 	.house-title {
-		margin:0;
-		padding:0;
+		position:relative;
+		margin:0 0 0.5em;
+		padding:0.45em 0 0.4em 0;
 		font-size:1.5em;
 		line-height:1.125em;
+		text-align: center;
+		text-transform: uppercase;
+		background-color: $brown-menu;
+		&:before {
+			position:absolute;
+			content:"";
+			left:0px;right:0px;
+			top:2px;
+			bottom:2px;
+			border-top:1px solid $yellow-footer;
+			border-bottom:1px solid $yellow-footer;
+
+		}
+
+
+		a {
+			
+			color:$yellow-footer;
+
+			position:relative;
+			z-index:1;
+			&:hover{
+				text-decoration: none;
+				color:$white-bg;
+			}
+		}
+
+
 
 	}
 	.house-subtitle {
 		
-		font-family: $scriptFontFamily;
+		font-family: $displayFontFamily;
 		//color:$brown-slogan;
 		text-transform: none;
-		font-size: 1.5em;
-		font-size:1.25em;
-		line-height:1.125em;
-		font-weight:400;
+		//font-size: 1.5em;
+		font-weight:bold;
+		line-height:1.25em;
+		font-size:1em;
 		margin:0 0;
 		
 	}
 
 
-	.actionblock {
-		text-align:center;
-		margin:1em 0;
+	.action{
+		position:absolute;
+		right:0.75em;
+		bottom:0.75em;
+		font-family: $serifFontFamily;
+		//font-style:italic;
+		font-size: 0.875em;
+		font-weight: bold;
+	
 		
-		.btn {
-			font-family: $displayFontFamily;
-			//text-transform: uppercase;
-			//display:block;
-		}
+	}
 	}
 
 
@@ -385,8 +478,14 @@
 	===========================================   */
 
 .feat-houses {
+	@extend article.houses;
 	margin-bottom:0;
-	margin-top:2em;
+	margin-top:0em;
+
+	//background: none;
+	//color:$yellow-footer;
+	//box-shadow: none;
+	
 	.house-data{
 		
 		
@@ -398,45 +497,20 @@
 
 .feathouseblockwrap {
 	//background: $gray-footerold;
+	//margin-bottom:10em;
 
 
 	.feathouseblock {
-		margin-top: 4em;
-		margin-bottom:4em;
+		margin-top: 5em;
+		margin-bottom:3em;
 		text-align: center;
 
 		
 		.featblock-title {
-
-			border-top:1px solid $brown-linea;
-			border-bottom:1px solid $brown-linea;
-			padding:0.1em 0 0.125em 0;
-			margin-left:68px;
-			margin-right:68px;
-			margin-bottom:1em;
-			position:relative;
-			display: inline-block;
-			
-			&:before {
-				content:"";
-				position:absolute;
-				left:-68px;
-				top:0.5em;
-				width:54px;height:23px;
-				background: url(../images/fityma.png) no-repeat left top transparent;
-
-
-			}
-			&:after {
-				content:"";
-				position:absolute;
-				right:-68px;
-				top:0.5em;
-				width:54px;height:23px;
-				background: url(../images/fityma.png) no-repeat right top transparent;
-			}
-
+				display:none;
+	
 		}
+
 
 
 	}

@@ -15,7 +15,7 @@ Follow variables are useable :
 <?php if (!defined ('ABSPATH')) die ('No direct access allowed'); ?><?php if (!empty ($gallery)) : ?>
 
 
-<!-- h3 class="gallery-title"><?php echo $gallery->title ?></h3 --!>
+<!-- h3 class="gallery-title"><?php echo $gallery->title ?></h3 -->
 <div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
 <?php if ($gallery->show_slideshow) { ?>
 	<!-- Slideshow link -->
@@ -59,7 +59,6 @@ Follow variables are useable :
  	
 	<!-- Pagination -->
  	<?php echo $pagination ?>
- 	
 </div>
-
+<p class="gall-desc"><?php echo $gallery->description ?></p>
 <?php endif; ?>

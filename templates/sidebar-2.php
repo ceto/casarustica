@@ -6,6 +6,24 @@
      )
     );
 ?>
+<section class="widget widget-first clearfix cumo">
+	<div class="widget-inner">
+		<div class="slidertext">
+			<h1>Önnek is lehet parasztháza</h1>
+			<p>Klasszikus parasztházak, felújítva, magas komfortfokozatttal</p>
+				<ul>
+					<li>Kulcsarakész parasztházak,</li>
+					<li>Testre szabott hagyomány,</li>
+					<li>Ember és természet, </li>
+					<li>Balatonhoz közel.</li>
+			</ul>
+			<p>
+				<a href="?house=fajszi-haz" class="btn btn-warning">Referencia ház megtekintése</a>
+			</p>
+		</div>
+	</div>
+</section>
+
 <section class="widget clearfix">
 	<div class="widget-inner">
 		<h3><?php _e('Parasztházainkból','roots') ?></h3>

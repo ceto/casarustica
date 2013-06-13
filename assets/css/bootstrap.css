@@ -638,7 +638,7 @@ h6 small {
 h1,
 h2,
 h3 {
-  line-height: 35px;
+  line-height: 1.125em;
 }
 h1 {
   font-size: 31.5px;
@@ -649,8 +649,9 @@ h2 {
 }
 h3 {
   font-size: 21px;
-  margin-bottom: 0;
+  margin-bottom: 0.5em;
   margin-top: 1em;
+  line-height: 1.25em;
 }
 h4 {
   font-size: 15.75px;
@@ -765,16 +766,15 @@ abbr.initialism {
   text-transform: uppercase;
 }
 blockquote {
-  font-family: 'Berkshire Swash', cursive;
-  color: #6d5e53;
-  padding: 1em 0 0 2em;
-  margin: 0 0 20px;
-  border-left: 5px solid #cfc9b3;
+  font-family: 'Noto Serif', Georgia, "Times New Roman", Times, serif;
+  padding: 1em 3em 1em 3em;
+  margin: 0 0 1em;
 }
 blockquote p {
   margin-bottom: 0;
-  font-size: 1.5em;
-  font-weight: 400;
+  font-size: 1.25em;
+  font-weight: bold;
+  font-style: italic;
   line-height: 1.25;
 }
 blockquote small {
@@ -5914,7 +5914,6 @@ a.badge:focus {
 }
 .carousel {
   position: relative;
-  margin-bottom: 20px;
   line-height: 1;
 }
 .carousel-inner {
@@ -5965,13 +5964,41 @@ a.badge:focus {
 .carousel-inner > .active.right {
   left: 100%;
 }
+.carousel.fade {
+  opacity: 1;
+}
+.carousel.fade .item {
+  -moz-transition: opacity ease-in-out 0.7s;
+  -o-transition: opacity ease-in-out 0.7s;
+  -webkit-transition: opacity ease-in-out 0.7s;
+  transition: opacity ease-in-out 0.7s;
+  left: 0 !important;
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  display: block !important;
+  z-index: 1;
+}
+.carousel.fade .item:first-child {
+  top: auto;
+  position: relative;
+}
+.carousel.fade .item.active {
+  opacity: 1;
+  -moz-transition: opacity ease-in-out 0.7s;
+  -o-transition: opacity ease-in-out 0.7s;
+  -webkit-transition: opacity ease-in-out 0.7s;
+  transition: opacity ease-in-out 0.7s;
+  z-index: 2;
+}
 .carousel-control {
   position: absolute;
-  top: 40%;
-  left: 15px;
+  top: 50%;
+  left: 2%;
   width: 40px;
   height: 40px;
-  margin-top: -20px;
+  margin-top: -30px;
   font-size: 60px;
   font-weight: 100;
   line-height: 30px;
@@ -5984,10 +6011,11 @@ a.badge:focus {
   border-radius: 23px;
   opacity: 0.5;
   filter: alpha(opacity=50);
+  z-index: 2;
 }
 .carousel-control.right {
   left: auto;
-  right: 15px;
+  right: 2%;
 }
 .carousel-control:hover,
 .carousel-control:focus {
@@ -5998,8 +6026,8 @@ a.badge:focus {
 }
 .carousel-indicators {
   position: absolute;
-  bottom: 2em;
-  left: 2em;
+  top: 1em;
+  right: 1em;
   z-index: 5;
   margin: 0;
   list-style: none;
@@ -6020,33 +6048,31 @@ a.badge:focus {
 }
 .carousel-caption {
   position: absolute;
-  left: 1em;
+  left: 25%;
   right: 1em;
-  bottom: 1em;
+  bottom: 0;
   padding: 1em 1em;
   color: #f1eac7;
-  background: #403933;
-  background: rgba(64, 57, 51, 0.75);
+  text-align: right;
 }
 .carousel-caption h4 {
+  display: inline;
+  background: rgba(64, 57, 51, 0.65);
   font-size: 1.5em;
-  line-height: 1.125em;
+  line-height: 1.75em;
+  padding: 0.125em 0;
+  -webkit-box-shadow: -0.5em 0 0 0 rgba(64, 57, 51, 0.65), 0.5em 0 0 0 rgba(64, 57, 51, 0.65);
+  -moz-box-shadow: -0.5em 0 0 0 rgba(64, 57, 51, 0.65), 0.5em 0 0 0 rgba(64, 57, 51, 0.65);
+  box-shadow: -0.5em 0 0 0 rgba(64, 57, 51, 0.65), 0.5em 0 0 0 rgba(64, 57, 51, 0.65);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   font-family: 'Berkshire Swash', cursive;
   font-weight: normal;
   text-transform: none;
-  margin: 0 0 5px;
+  margin: 0 0;
 }
-.carousel-caption p {
-  font-size: 1em;
-  line-height: 1.4em;
-  margin: 0;
-}
-.carousel-caption p.gombi {
-  margin-top: 0.5em;
-  text-align: right;
-}
-.carousel-caption p.gombi a {
-  font-style: italic;
+.carousel-caption h4 a {
   color: #f1eac7;
 }
 .hero-unit {

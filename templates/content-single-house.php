@@ -84,7 +84,7 @@
           <?php endif; ?>
            <div class="house-lebonyi">
             <p>
-              <i class="icon-magic"></i> <a href="?page_id=189" class="ajax-popup-link">Lebonyolítás és finanszírozás</a>          
+              <i class="icon-magic"></i> <a href="?page_id=4#ujbonyi" class="ajax-popup-link">Lebonyolítás és finanszírozás</a>          
             </p>
           </div>
 
@@ -183,10 +183,12 @@
 
     </div>
 
-        <p class="actionblock">
-        <a class="btn btn-warning" href="#">ÉRDEKLŐDJÖN TELEFONON<span>+36 70 770 5653</span> vagy ürlapunkon keresztül</a> 
-      </p>
+           <p class="actionblock">
+          <a class="btn btn-warning" href="?page_id=30&message_subject=<?php the_ID(); ?>">ÉRDEKLŐDJÖN TELEFONON<span>+36 70 770 5653</span> vagy ürlapunkon keresztül</a> 
+          <input type="hidden" name="message_subject" id="message_subject" value="<?php the_ID(); ?>" />
+          </p>
 
+      
      </div>
     <footer>
       <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
@@ -213,13 +215,30 @@
         </div><!-- / #photo3d-->
 
         <div class="tab-pane fade" id="alap">
-          <?php if ( get_post_meta( get_the_ID(), '_house_fotoalaprajz', true ) >0 ) :?>
-          <div class="gwrap">
-                <?php echo do_shortcode('[nggallery id='.get_post_meta( get_the_ID(), '_house_fotoalaprajz', true ).' images=15 ]'); ?>
-          </div>
-          <?php endif; ?>
+               <?php if ( get_post_meta( get_the_ID(), '_house_alaprajz1', true ) !='' ) :?>
+                <?php 
+                  //$tsrc = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_house_alaprajz1_id', true ), 'medium169', false ) ; 
+                  $tlnk = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_house_alaprajz1_id', true ), 'full', false ) ; 
+                  $thumb = wp_get_attachment_image( get_post_meta( get_the_ID(), '_house_alaprajz1_id', true ), 'medium169', false ) ; 
 
-          Alaprajz látható itt, esetleg letölthető pdf-ben.
+
+                ?>
+                <a href="<?php echo $tlnk[0] ; ?>">
+                  <?php echo $thumb  ; ?>
+                </a>
+                <?php endif; ?>
+
+                <?php if ( get_post_meta( get_the_ID(), '_house_alaprajz2', true ) !='' ) :?>
+                <?php 
+                  //$tsrc = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_house_alaprajz2_id', true ), 'medium169', false ) ; 
+                  $tlnk = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_house_alaprajz2_id', true ), 'full', false ) ; 
+                  $thumb = wp_get_attachment_image( get_post_meta( get_the_ID(), '_house_alaprajz2_id', true ), 'medium169', false ) ; 
+
+                ?>
+                <a href="<?php echo $tlnk[0] ; ?>">
+                   <?php echo $thumb  ; ?>
+                </a>
+                 <?php endif; ?>
         </div>
         
         <div class="tab-pane fade" id="past">

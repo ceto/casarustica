@@ -3,9 +3,12 @@
 // --------------------------------------------------
 
 
+
+
+
 .carousel {
   position: relative;
-  margin-bottom: @baseLineHeight;
+  //margin-bottom: @baseLineHeight;
   line-height: 1;
 }
 
@@ -65,16 +68,56 @@
 
 }
 
+
+
+
+.carousel.fade
+{
+    opacity: 1;
+
+    .item
+    {
+        -moz-transition: opacity ease-in-out .7s;
+        -o-transition: opacity ease-in-out .7s;
+        -webkit-transition: opacity ease-in-out .7s;
+        transition: opacity ease-in-out .7s;
+        left: 0 !important;
+        opacity: 0;
+        top:0;
+        position:absolute;
+        width: 100%;
+        display:block !important;
+        z-index:1;
+        &:first-child{
+            top:auto;
+            position:relative;
+        }
+
+        &.active
+        {
+            opacity: 1;
+            -moz-transition: opacity ease-in-out .7s;
+            -o-transition: opacity ease-in-out .7s;
+            -webkit-transition: opacity ease-in-out .7s;
+            transition: opacity ease-in-out .7s;
+            z-index:2;
+        }
+    }
+
+ // .active.left {left:0;opacity:0;z-index:2;}
+ // .carousel .next {left:0;opacity:1;z-index:1;}
+
+} 
 // Left/right controls for nav
 // ---------------------------
 
 .carousel-control {
   position: absolute;
-  top: 40%;
-  left: 15px;
+  top: 50%;
+  left: 2%;
   width: 40px;
   height: 40px;
-  margin-top: -20px;
+  margin-top: -30px;
   font-size: 60px;
   font-weight: 100;
   line-height: 30px;
@@ -84,6 +127,7 @@
   border: 3px solid @white;
   .border-radius(23px);
   .opacity(50);
+  z-index:2;
 
   // we can't have this transition here
   // because webkit cancels the carousel
@@ -95,7 +139,7 @@
   // Reposition the right one
   &.right {
     left: auto;
-    right: 15px;
+    right: 2%;
   }
 
   // Hover/focus state
@@ -111,8 +155,8 @@
 // -----------------------------
 .carousel-indicators {
   position: absolute;
-  bottom: 2em;
-  left: 2em;
+  top: 1em;
+  right: 1em;
   z-index: 5;
   margin: 0;
   list-style: none;
@@ -138,40 +182,46 @@
 
 .carousel-caption {
   position: absolute;
-  left: 1em;
+  left: 25%;
   right: 1em;
-  bottom: 1em;
+  bottom: 0;
   padding: 1em 1em;
   color:@yellow-footer;
 
-  background: @gray-footerold;
-  background: rgba(64,57,51,.75);
+  //background: @gray-footerold;
+  //background: rgba(64,57,51,.75);
+
+    text-align:right;
 
 }
 
 .carousel-caption h4 {
+ 
+
+  display:inline;
+  background: rgba(64,57,51,.65);
+
   font-size: 1.5em;
-  line-height: 1.125em;
+  line-height: 1.75em;
+  padding: 0.125em 0;
+
+  -webkit-box-shadow:-0.5em 0 0 0 rgba(64,57,51,.65), 0.5em 0 0 0 rgba(64,57,51,.65);
+  -moz-box-shadow: -0.5em 0 0 0 rgba(64,57,51,.65), 0.5em 0 0 0 rgba(64,57,51,.65);
+  box-shadow: -0.5em 0 0 0 rgba(64,57,51,.65), 0.5em 0 0 0 rgba(64,57,51,.65);
+
+
+  .box-sizing(border-box);
   font-family: @scriptFontFamily;
   font-weight:normal;
   text-transform: none;
-  margin: 0 0 5px;
-
-}
-
-.carousel-caption p {
-  font-size: 1em;
-  line-height: 1.4em;
-  margin: 0;
-
-
-}
-.carousel-caption p.gombi {
-  margin-top:0.5em;
-  text-align: right;
+  margin: 0 0;
   a {
     //font-weight: bold;
-    font-style:italic;
+    //font-style:italic;
     color:@yellow-footer;
   }
+
 }
+
+
+

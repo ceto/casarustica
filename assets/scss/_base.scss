@@ -4,57 +4,78 @@
 
 body {
 	padding-top: 40px;
+
 	@include breakpoint($tabletBreak){
 		padding-top:0;	
 	}
 }
+.feathouseblockwrap {
+	@include background-image(linear-gradient($white-bg, $white-darkbg));
+	padding:0 0 1em;
+	position:relative;
+	background: url(../images/fogle.png) repeat-x center top $white-bg
+	//,  url(../images/fogfel.png) repeat-x center bottom $white-bg
+	;
+	
+}
 .nagywrap {
 	@include background-image(linear-gradient($white-bg, $white-darkbg));
+	overflow:hidden;
 }
 
-.kwrap-1, .kwrap-2, .kwrap-3  {
-	position:relative;
+.kwrap-1 {
+	
 	background: url(../images/aljataj.png) repeat-x center bottom transparent;
 	//@include background-image(linear-gradient($white-bg, $white-darkbg));
 	padding-bottom:8em;
 }
 
-.kwrap-2, .kwrap-3 {
-	//padding-top:36px;
-	
-	// &:before{
- // 	position:absolute;
- // 	top:0px;
- // 	left:0;right:0;
- // 	content:"";
- // 	background:url(../images/fogak.jpg) repeat-x center bottom transparent;
- // 	width:100%;
- // 	height:35px;
- // 	border-top:1px solid $brown-glass;
 
- // }
-}
 .home .kwrap-1 {
 	//background-image: none;
-	background: url(../images/pitypang.png) repeat-x center bottom transparent;
-	padding-bottom:8em;
+	//background: url(../images/pitypang.png) repeat-x center bottom transparent;
+	background-image: none;
+	//@include background(linear-gradient($white-bg, $white-darkbg));
+	padding:4em 0;
 }
-.page-id-15 .kwrap-1 {
-	//background-image: none;
+
+.home .kwrap-2,  {
 	background: url(../images/pitypang.png) repeat-x center bottom transparent;
-	padding-bottom:8em;
+	//@include background(linear-gradient($white-bg, $white-darkbg));
+	padding:4em 0;
+
+}
+
+.home .kwrap-3,  {
+	background: url(../images/aljataj.png) repeat-x center bottom transparent;
+	//@include background-image(linear-gradient($white-bg, $white-darkbg));
+	padding:4em 0 8em;
+}
+
+
+.page-id-15 .kwrap-1 {
+ 	//background-image: none;
+ 	background: url(../images/pitypang.png) repeat-x center bottom transparent;
+ 	padding-bottom:8em;
+ }
+
+.page-id-15 .kwrap-2,  {
+	background: url(../images/aljataj.png) repeat-x center bottom transparent;
+	//@include background-image(linear-gradient($white-bg, $white-darkbg));
+	padding:0 0 8em;
+}
+
+.page-id-15 .kwrap-2 {
+ 	background: url(../images/hatar_bg.jpg) no-repeat center bottom transparent;
+ 	@include background-size(100%);
+ 	padding-bottom:10em;
 }
 .container-fluid {
 	max-width: 1170px;
 	margin-left: auto;
 	margin-right:auto;
 }
-.gmap {
-    height:0;
-    //width:100%;
-    padding-bottom: 56.25%;
-    @include box-sizing('border-box');
-}
+
 
 .main {
 	ul:not(.nav), ol {

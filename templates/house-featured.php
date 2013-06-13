@@ -7,36 +7,39 @@
     );
 ?>
 
-<div class="feathouseblockwrap">
+<div class="feathouseblockwrap clearfix">
 	<div class="container-fluid wrap feathouseblock">
 		<div class="row-fluid">
 			<div class="span12">
-				<h3 class="featblock-title"><?php _e('Ízelitő parasztházainkból','roots') ?></h3><br />
+				<h3 class="featblock-title"><?php _e('Ízelitő parasztházainkból','roots') ?></h3>
 				<?php while ( $the_feathouse->have_posts()) : $the_feathouse->the_post(); ?>
 					<div class="feat-houses clearfix" >
-							<figure class="house-figure">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-									<?php the_post_thumbnail('tiny43');  ?>
-								</a>
-							</figure>
-							<div class="house-data">
-								<h3 class="house-title">
-									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-										<?php the_title(); ?>
-									</a>
-								</h3>
-								<div class="hosue-readiness">
-						            <?php echo readiness(get_post_meta( get_the_ID(), '_house_readiness', true)); ?>
-						         </div>
-								<h4 class="house-subtitle">
-	     							<?php echo get_post_meta( get_the_ID(), '_house_subtitle', true); ?>
-	    						</h4>
+						<header>
+      <h2 class="house-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    </header>
+  <figure class="house-figure">
+    <a href="<?php the_permalink(); ?>">
+      <?php the_post_thumbnail('small43');  ?>
+    </a>
+  </figure>
+  <div class="house-data">
+    <div class="house-readiness">
 
-							</div><!-- ! .hosue-data -->
-						</div>
+        <?php echo readiness(get_post_meta( get_the_ID(), '_house_readiness', true)); ?>
+
+    </div>     
+    <h3 class="house-subtitle">
+      <?php echo get_post_meta( get_the_ID(), '_house_subtitle', true); ?>
+    </h3>
+    <a href="<?php the_permalink(); ?>" class="action">Részletek ...</a>
+
+  </div><!-- /.house-data -->
+					</div>
 				<?php endwhile; ?>
 			</div>	
 		</div>
+	<a class="fblockmore" href="?page_id=26">További házak ...</a>
+
 	</div><!-- / .feathoseblock -->
 </div><!-- / .feathouseblockwrap -->
 

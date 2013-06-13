@@ -2,7 +2,7 @@
 <body <?php body_class(); ?>>
 
   <!--[if lt IE 7]><div class="alert">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</div><![endif]-->
-
+<a name="top"></a>
   <?php
     do_action('get_header');
     // Use Bootstrap's navbar if enabled in config.php
@@ -15,17 +15,15 @@
 
  <?php
     if (is_page_template('template-home.php') ) {
-      get_template_part('templates/home','slider'); 
-      get_template_part('templates/house','featured');       
-    } else if (is_page_template('template-superslider.php') ) {
-      get_template_part('templates/superslider','head'); 
-    } else
-
-    {
-      get_template_part('templates/header','info'); 
+      get_template_part('templates/home','slider'); ?>
+      <a name="contenttop"></a> 
+      <?php get_template_part('templates/house','featured');       
+    } else  {
+      get_template_part('templates/header','info'); ?>
+      <a name="contenttop"></a> 
+      <?php 
     }
   ?>
-<?php if (!is_page_template('template-superslider.php') ) : ?>
   <div class="nagywrap">
     <div class="kwrap-1">
       <div class="wrap container-fluid" role="document">
@@ -50,7 +48,7 @@
 
     <?php get_template_part('templates/content','child');   ?>
   </div><!-- / .nagywrap -->
-<?php endif; ?>
+
 
   <div class="footerwrap">
     <?php get_template_part('templates/footer'); ?>

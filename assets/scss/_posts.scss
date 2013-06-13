@@ -1,11 +1,23 @@
-
-
 /* ==========================================================================
    Posts
    ========================================================================== */
 
 .single .hentry {
+	.entry-figure {
+		margin:0 0 2em 0;
+		text-align: center;
+		img {
+			@include box-sizing(border-box);
+			@include border-radius(50%);
+			border:10px solid $brown-light;
+			@include box-shadow(0px 0px 2px 4px white);
+			&:hover {
+				//border:10px solid $orange-link;
+				@include box-shadow(0px 0px 4px 2px $brown-text);
+			}
+		}
 
+	}
 	header {
 		text-align: center;
 		
@@ -13,7 +25,8 @@
 			text-align: center;
 			border-top:1px solid $brown-linea;
 			border-bottom:1px solid $brown-linea;
-			padding:0.125em 68px 0.25em 68px;
+			padding:0.124em 52px 0.25em 52px;
+			@include box-sizing(border-box);
 			position:relative;
 			display: block;
 			line-height: 1.125em;
@@ -21,20 +34,20 @@
 			&:before {
 				content:"";
 				position:absolute;
-				left:0;
-				top:0.4333333em;
-				width:54px;height:23px;
-				background: url(../images/fityma.png) no-repeat left top transparent;
+				left:-7px;
+				top:0.3em;
+				width:52px;height:32px;
+				background: url(../images/sprites.png) no-repeat -2px -33px transparent;
 
 
 			}
 			&:after {
 				content:"";
 				position:absolute;
-				right:0;
-				top:0.4333333em;
-				width:54px;height:23px;
-				background: url(../images/fityma.png) no-repeat right top transparent;
+				right:-7px;
+				top:0.3em;
+				width:52px;height:32px;
+				background: url(../images/sprites.png) no-repeat -54px -33px transparent;
 			}
 		}
 	
@@ -48,15 +61,16 @@
 		font-size:1.75em;
 		font-style: italic;
 		//font-weight: bold;
+	 	//display: block;
 	 }
 	.byline {
-		//display: inline;
-		font-size:0.75em;
+		display: block;
+		font-size:2em;
 		a {
 			font-family: $scriptFontFamily;
-			font-size:2.5em;
+			//font-size:2em;
 			}
-		margin-top:0.25em;
+		//margin-top:0.125em;
 	}
 	.entry-content { }
 	footer { }
@@ -71,8 +85,19 @@
 .blog .hentry, .archive .hentry {
 
 	margin-bottom:3em;
-	padding-bottom:2em;
-	border-bottom:1px solid $brown-glass;
+	//padding-bottom:3em;
+	//border-bottom:1px solid $brown-glass;
+
+	
+	&:after {
+		display: block;
+		margin:3em auto 1em auto;
+		content: '';
+		width:35px;
+		height:35px;
+		background: url(../images/sprites.png) no-repeat -35px -65px transparent;
+		//background-size: 100px;
+	}
 
 	header {
 		text-align: center;
@@ -91,29 +116,48 @@
 		img {
 			@include border-radius(50%);
 			border:10px solid $brown-light;
-			@include box-shadow(0 0 5px 0 $brown-light);
+			@include box-shadow(0px 0px 2px 4px white);
+			&:hover {
+				//border:10px solid $orange-link;
+				@include box-shadow(0px 0px 4px 2px $brown-text);
+			}
+		}
+	}
+	.entry-title{
+		//font-family: $serifFontFamily;
+		font-size:1.5em;
+		line-height:1.125em;
+		a {
+			color:$brown-text;
+			&:hover {
+				color:$orange-link;
+				text-decoration: none
+			}
 		}
 	}
 	.entry-meta {
 		font-family: $displayFontFamily;
-		margin-bottom:0.75em;
-		p {
-		//	margin-top:0;
-		}
+		margin: 0.25em 0 0.25em;
+		font-size:1.5em;
+		line-height: 1em;
+		font-style: italic;
 	}
 	time {
-		font-size:1.25em;
-		font-style: italic;
+		//font-size:1.5em;
+		//font-style: italic;
 		//font-weight: bold;
+	 	//display: block;
 	 }
 	.byline {
-		display: inline;
-		font-size:0.75em;
+		display: block;
+		//font-size:1.5em;
 		a {
 			font-family: $scriptFontFamily;
-			font-size:2em;
+			//font-size:2em;
 			}
+		//margin-top:0.125em;
 	}
+	
 }
 
 
@@ -121,33 +165,168 @@
    Home Posts
    ========================================================================== */
 
-.home .kwrap-2 .main{
- .span4, .span6{
-		padding-bottom:2em;
-		padding-top:2em;
+
+
+.home .kwrap-1 .main  {
+	
+	.page-header {
+		&:before {
+			display: block;
+			margin:-4em auto 3em auto;
+			content: '';
+			width:35px;
+			height:35px;
+			background: url(../images/sprites.png) no-repeat -35px -65px transparent;
+			//background-size: 100px;
+		}
 	}
+	
+	h1 {
+		display:inline-block;
+		
+	}
+
+	.span4:nth-child(2n) {
+
+	 	&:after {
+			display: block;
+			margin:4em auto -4em auto;
+			content: '';
+			width:35px;
+			height:35px;
+			background: url(../images/sprites.png) no-repeat -35px -65px transparent;
+			//background-size: 100px;
+		}
+	}
+
+	h3{
+		text-align: center;
+	}
+	p{
+		text-align: center;
+
+	}
+		
+}
+
+.home .kwrap-2 .main {
+	.page-header {
+		display: none;
+	}
+
+	h2{
+		text-align:center;
+	}
+
+}
+.home .kwrap-3 .main {
+	.page-header {
+		display: none;
+	}
+
+
+
+
+}
+
+.page-id-15 .main {
+	.span6 {
+		background: $white-bg;
+		padding:4em 4em;
+		margin-bottom:3em;
+		@include box-shadow($brown-glass 0 0 10px);
+		
+
+		@include breakpoint($largeBreak){
+			padding:3em 3em;
+ 		}
+
+
+		@include breakpoint($desktopBreak){
+			padding:2em 1em;
+ 		}
+		
+		@include breakpoint($tabletBreak){
+			padding:4em 4em;
+ 		}
+
+		@include breakpoint($mobileBreak){
+			padding:2em 1em;
+ 		}
+
+	}
+	
+	h3{
+	text-align:center;
+
+	}
+	p+h3 {
+
+  		&:before {
+		display: block;
+		margin:0 auto 1em auto;
+		content: '';
+		width:35px;
+		height:35px;
+		background: url(../images/sprites.png) no-repeat -35px -65px transparent;
+
+		}	
+  	
+
+  	}
+
+
+}
+
+.gmap {
+    height:0;
+    padding-bottom: 52%;
+    @include box-sizing('border-box');
+	border:10px solid $brown-light;
 }
 
 
-.home .main  {
-	text-align: center;
 
-		
-	h1 {
+
+.nyitospeci {
+	background: $white-bg;
+	padding:5em 4em 2em;
+	margin-bottom:3em;
+	
+	@include box-shadow($brown-glass 0 0 10px);
+	@include breakpoint($mobileBreak){
+		padding:4em 1em;
+ 	}
+
+ 	&:after {
+		display: block;
+		margin:0 auto 1em auto;
+		content: '';
+		width:35px;
+		height:35px;
+		background: url(../images/sprites.png) no-repeat -35px -65px transparent;
+		//background-size: 100px;
+	}
+	
+	text-align: center;
+	
+	h2 {
+		 word-break: break-all;
+		font-size:2.5em;
 		text-align: center;
 		border-top:1px solid $brown-linea;
 		border-bottom:1px solid $brown-linea;
-		padding:0.1em 0em 0.125em 0em;
-		margin-right:68px;
-		margin-left:68px;
+		padding:0.1em 52px 0.125em 52px;
+		margin:0 auto 0 auto;
 		position:relative;
 		display: inline-block;
 		line-height:1.25em;
+
 		
 		&:before {
 				content:"";
 				position:absolute;
-				left:-68px;
+				left:-7px;
 				top:0.4333333em;
 				width:54px;height:23px;
 				background: url(../images/fityma.png) no-repeat left top transparent;
@@ -157,34 +336,174 @@
 		&:after {
 			content:"";
 			position:absolute;
-			right:-68px;
+			right:-7px;
 			top:0.4333333em;
 			width:54px;height:23px;
 			background: url(../images/fityma.png) no-repeat right top transparent;
 		}
-	}
-	h3 {
 
 	}
-	h2 {
-		font-family: $scriptFontFamily;
-		text-transform: none;
-		font-weight:normal;
-		
-	}
-	p, li {
-		text-align: left;
-	}
 
-	a img {
-		//@include border-radius(80px);
-		//max-width:120px;
 
-	} 
+
 
 }
-.home .kwrap-3 .main {
-	h1 {
-		
+
+
+.ujbonyi {
+
+	counter-reset: bonyi-counter;
+	position:relative;
+	h2 {
+		margin-top:1em;
+
+	}	
+	h2+p {
+		font-family: $scriptFontFamily;
+		text-align:center !important;
+		font-size:1.5em;
+		font-weight:normal;
+		margin:1em 18%;
 	}
+	h3 {
+		text-align: left;
+		margin-bottom:0.25em;
+		//font-weight:normal;
+		//font-family: $serifFontFamily;
+		margin-top:2em;
+		counter-increment: bonyi-counter;
+		//position:relative;
+		margin-left:18%;
+		@include breakpoint($mobileBreak){
+ 				margin-left:0;
+ 				text-align: center;
+ 		}
+		
+		&:before {
+			margin:0 auto 0.25em auto;
+			position:absolute;
+			display:block;
+			text-align:left;
+			font-weight:bold;
+			font-family: $displayFontFamily;
+			font-weight:normal;
+			word-break: keep-all;
+			font-size:2em;
+			line-height: 1.25em;
+			padding:0 0.125em 0 0.55em;
+			@include box-sizing('border-box');
+			@include border-radius(0.8em);
+			@include box-shadow($white-darkbg 0 0 10px 0px);
+
+			width:1.6em;height:1.6em;
+			background: white;
+			//color:white;
+ 			left:0;
+ 			content: counter(bonyi-counter)'.';
+
+ 			@include breakpoint($mobileBreak){
+ 				position:static;
+ 			}
+		
+		}
+	}
+	h3+p, h3 + p + p, h3 + p + p + p{
+		
+		text-align:left;
+		margin-left:18%;
+		@include breakpoint($mobileBreak){
+ 				margin-left:0;
+ 		}
+	}
+}
+
+.kivagyunk {
+	position:relative;
+	margin:0 0 2em;
+	h1 {
+		display:inline-block!important;
+		margin-bottom:0!important;
+	}
+	h4{
+		font-size:1.5em;
+		font-family: $serifFontFamily;
+		font-weight:normal;
+		text-transform: none;
+		text-align: left;
+		margin:1.5em 0 1.5em 18%;
+
+ 		@include breakpoint($mobileBreak){
+ 			margin:2em 0 1em 0;
+ 			text-align: center;
+ 		}
+		
+		&:before {
+			margin:0 auto 0.5em auto;
+			position:absolute;
+			display:block;
+			@include box-sizing('border-box');
+
+			width:52px;height:32px;
+			
+ 			left:0;
+ 			content: '';
+ 			background: url(../images/tulipanos_veret.png) no-repeat -79px -2px transparent;
+
+ 			@include breakpoint($mobileBreak){
+ 				position:static;
+ 			}
+		
+		}
+
+
+		small {
+			font-size: 0.75em;
+			font-family: $serifFontFamily;
+			font-weight:normal;
+			color:$brown-text;
+		}
+	}
+	.klikkelo {
+		font-size:0.875em;
+		right:0;
+		bottom:-6em;
+		z-index:1;
+		position: absolute;
+		//text-align: right !important;
+		i {
+			&:hover {
+				text-decoration: none;
+				color:$brown-text;
+			}
+		}
+	}
+}
+.home .kwrap-3 .main .row-fluid {
+	position:relative;
+
+	h3 {
+		text-align: left;
+		font-weight: normal;
+		font-family: $serifFontFamily;
+		text-transform: none;
+		font-size: 1.75em;
+	}
+}
+.portre {
+	position:absolute;
+	bottom:4em;
+	right:50%;
+	max-width:50%;
+	@include breakpoint($tabletBreak){
+		position: static;
+		max-width:70%;
+	}
+
+}
+
+.formblock {
+	.controlsa {
+		margin-bottom:1em;
+	}
+
 }

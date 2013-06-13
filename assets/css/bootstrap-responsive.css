@@ -782,10 +782,8 @@
   }
   .carousel-caption {
     position: static;
-  }
-  .carousel-indicators {
-    bottom: 1em;
-    left: 1em;
+    padding: 0.5em 0.75em 0;
+    text-align: center;
   }
 }
 @media (max-width: 767px) {
@@ -877,14 +875,9 @@
     top: 20px;
   }
   .carousel-caption {
-    left: 1em;
-    right: 1em;
-    bottom: 1em;
+    padding: 0.5em 0.75em 0;
     position: static;
-  }
-  .carousel-indicators {
-    bottom: 1em;
-    left: 1em;
+    text-align: center;
   }
 }
 @media (max-width: 480px) {
