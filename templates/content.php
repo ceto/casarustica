@@ -1,7 +1,10 @@
 <article <?php post_class('span10 offset1'); ?>>
-  <figure class="entry-figure">
-    <a href="<?php the_permalink(); ?>"><img src="http://lorempixel.com/160/160"></a>
-  </figure>
+  
+<?php if (has_post_thumbnail() ) :?>
+      <figure class="entry-figure">
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('tiny11'); ?></a>
+      </figure>
+    <?php endif; ?>
   <div class="rizsa">
     <header>
       <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

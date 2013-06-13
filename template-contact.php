@@ -140,7 +140,7 @@ if(!$human == 0){
 			<div class="form-actions">
 				<input type="hidden" name="message_human" value="2">
 				<input type="hidden" name="submitted" value="1">
-				<input type="submit" class="btn btn-inverse">
+				<input type="submit" class="btn btn-inverse" value="Elküldöm">
 			</div>
 		</form>
 	</div>

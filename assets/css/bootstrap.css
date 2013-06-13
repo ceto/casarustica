@@ -771,7 +771,6 @@ blockquote {
   margin: 0 0 1em;
 }
 blockquote p {
-  margin-bottom: 0;
   font-size: 1.25em;
   font-weight: bold;
   font-style: italic;

@@ -81,14 +81,15 @@ html>body .ngg-album {
 }
 
 .ngg-album-compact {
+	position:relative;
 	//float: left;
 	//margin-left:2%;
 	//margin-bottom: 2%;
 	//width:49%;
-	&:nth-child(2n+1){
-		margin-left:0;
-		clear:left;
-	}
+	//&:nth-child(2n+1){
+	//	margin-left:0;
+	//	clear:left;
+	//}
 
 
 	// @include breakpoint($tabletBreak) {
@@ -117,36 +118,37 @@ html>body .ngg-album {
 
 .ngg-album-compactbox {
 	position:relative;
+	margin: 0.75em 0;
 	//background:black;
 
 
-	&:after{
-		display:block;
-		content:'';
-		position:absolute;
+	// &:after{
+	// 	display:block;
+	// 	content:'';
+	// 	position:absolute;
 		
 		
-		bottom:-30px;
-		left:0;right:0;
+	// 	bottom:-30px;
+	// 	left:0;right:0;
 		
 		
-		height:30px;
-		//width:120px;
+	// 	height:30px;
+	// 	//width:120px;
 
 		
-		//background-size:cover;
-		//background:black;
-	}
+	// 	//background-size:cover;
+	// 	//background:black;
+	// }
 }
 
 
 .ngg-album-compactbox .Thumb {
 
-	background-color:$brown-light;
+	background-color: $brown-text;
+	padding:1px;
 	display:block;
-	padding:5px;
 	@include box-sizing('border-box');
-	@include box-shadow(0 0 5px 0 $brown-light);
+	//@include box-shadow(0 0 5px 0 $brown-light);
 	position:relative;
 	margin:0 auto;
 	
@@ -161,21 +163,47 @@ html>body .ngg-album {
 
 
 	&:hover {
-			opacity:0.85;
 	}
 
 }
 
 .ngg-album-compact h4 {
-	font-size:1em;
+	@include transition-property(opacity);
+  	@include transition-duration(400ms);
+  	@include transition-timing-function(ease-in); 
+ 
+	opacity:0;
+	font-size:1.25em;
+	line-height:1.125em;
+	color:$yellow-footer;
+	position: absolute;
+	left:0;right:0;
+	top:0; bottom:0;
+	background: rgba($gray-footer,0.65);
+	
+	margin:0;
+
 	//font-weight:bold;
 	//margin-bottom:0px;
-	margin-top:1em;
-	line-height:1.125em;
+
 	text-align: center;
 	text-transform: none;
+
+	padding:0.5em;
 	//width:110px;
 	//display: none;
+	&:hover {
+		opacity:1;
+
+	}
+
+	a {
+		text-transform: uppercase;
+		margin-top:30%;
+		display: block;
+		color:$yellow-footer;
+
+	}
 }
 
 .ngg-album-compact p {

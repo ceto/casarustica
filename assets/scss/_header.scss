@@ -97,10 +97,24 @@
 		display:block;
 		
 	}
+	// @include breakpoint($tabletBreak) {
+	// 	width:301px;
+	// 	background:url(../images/logo_tablet.png) no-repeat left center transparent;
+	// 	@include background-size();
+		
+	// }
 	@include breakpoint($tabletBreak) {
-		width:170px;
-		background:url(../images/logo.png) no-repeat center -7px transparent;
-		@include background-size(100%);
+		width:165px;
+		//height:31px;
+		background:url(../images/logo_mobile.png) no-repeat left center transparent;
+		@include background-size();
+		
+	}
+	@include breakpoint($mobileBreak) {
+		width:165px;
+		//height:31px;
+		background:url(../images/logo_mobile.png) no-repeat left center transparent;
+		@include background-size();
 		
 	}
 

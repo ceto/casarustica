@@ -15,7 +15,7 @@
 				<?php while ( $the_feathouse->have_posts()) : $the_feathouse->the_post(); ?>
 					<div class="feat-houses clearfix" >
 						<header>
-      <h2 class="house-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      <h4 class="house-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
     </header>
   <figure class="house-figure">
     <a href="<?php the_permalink(); ?>">
@@ -28,9 +28,9 @@
         <?php echo readiness(get_post_meta( get_the_ID(), '_house_readiness', true)); ?>
 
     </div>     
-    <h3 class="house-subtitle">
+    <h5 class="house-subtitle">
       <?php echo get_post_meta( get_the_ID(), '_house_subtitle', true); ?>
-    </h3>
+    </h5>
     <a href="<?php the_permalink(); ?>" class="action">Részletek ...</a>
 
   </div><!-- /.house-data -->

@@ -62,6 +62,12 @@
 		// 	@include box-sizing('border-box');
 		// 	padding:3px;
 		// }
+	
+		@include breakpoint($tabletBreak){
+			display:none;
+
+		}
+
 	}
 	.r-block {
 		width:34%;
@@ -82,8 +88,16 @@
 
 }
 
+.carousel-control {
+	@include breakpoint($tabletBreak){
+			display:none;
+
+		}
+}
 .carousel-caption {
 	@include text-shadow(rgba($gray-footer, 1) 1px 1px 1px);
+
+		
 }
 
 .slidertext{

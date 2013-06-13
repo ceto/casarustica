@@ -9,7 +9,7 @@ function roots_widgets_init() {
     'id'            => 'sidebar-primary',
     'before_widget' => '<section class="widget %1$s %2$s clearfix"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<h3>',
+    'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
   ));
 
@@ -18,7 +18,7 @@ function roots_widgets_init() {
     'id'            => 'sidebar-secondary',
     'before_widget' => '<section class="widget %1$s %2$s clearfix"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<h3>',
+    'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
   ));
 
@@ -27,7 +27,7 @@ function roots_widgets_init() {
     'id'            => 'sidebar-footer',
     'before_widget' => '<section class="span4 widget %1$s %2$s clearfix"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<h3>',
+    'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
   ));
 

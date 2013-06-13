@@ -69,7 +69,16 @@
 	@include breakpoint($largeBreak){
 		//margin-left:7/8*$fluidGridGutterWidth;
 	}
+}
 
+.sidebar-1 {
+	//background: $brown-glass;
+	//background: black;
+	//@include box-shadow(0px 0 10px 0px $brown-light);
+	//@include box-shadow(inset 15px 0 15px -15px $brown-light);
+	//position:relative;
+
+	
 	
 }
 
@@ -78,8 +87,38 @@
 	.widget {
 		
 	}
-	.widget-inner h3 {
+	.widget-title {
 		text-align: center;
+		border-top:1px solid $brown-linea;
+		border-bottom:1px solid $brown-linea;
+		padding:0.1em 52px 0.125em 52px;
+		margin:0 0 0.75em 0;
+		position:relative;
+		display: block;
+		font-size:2.5em;
+		line-height:1.125em;
+
+		&:before {
+				content:"";
+				position:absolute;
+				left:-7px;
+				top:0.25em;
+				width:52px;height:32px;
+				background: url(../images/sprites.png) no-repeat -3px top transparent;
+
+
+			}
+		&:after {
+			content:"";
+			position:absolute;
+			right:-7px;
+			top:0.25em;
+			width:52px;height:32px;
+			background: url(../images/sprites.png) no-repeat -54px top transparent;
+		}
+	}
+
+	.widget-inner h3 {
 	}
 
 
@@ -89,24 +128,48 @@
 	}
 
 	.slidertext {
-		background:rgba($gray-footerold,0.95);
-		background:rgba($brown-glass,1);
+		background: $white-bg;
+		//background: $gray-footer;
+		//color:$yellow-footer;
+		//background: rgba($brown-glass,1);
+		@include box-shadow($brown-light 0 0 10px);
 		
 		width:auto;
 		float:none;
-		margin:0;
+		margin:0 0 2em;
 	}
 
 	.side-albums {
-		background:rgba($gray-footerold,0.95);
-		background:rgba($brown-glass,1);
-		margin-top:0;
+		//background:rgba($gray-footerold,0.95);
+		//background:rgba($brown-glass,1);
+		//margin-top:0;
 		//color:$yellow-footer;
-		.widget-inner {
-			padding:1em;
-		}
-	}
+		//.widget-inner {
+		//	padding:1em;
+		//}
 
+		.ngg-albumoverview{
+			background: rgba($gray-footer,0.89);
+			background: rgba($brown-glass,0.75);
+			//background: rgba($white-bg,1);
+			margin:0 39px;
+			//margin:0 0;
+			padding: 0.5em 0.5em;
+		
+			position:relative;
+			&:before {
+					content:"";
+					position:absolute;
+					left:-39px;right:-39px;
+					top:0;bottom:0;
+					//background: url(../images/fotolyuk_bal_b.png) repeat-y left top, url(../images/fotolyuk_jobb_b.png) repeat-y right top transparent;
+					background: rgba($brown-glass,0.75);
+			}
+
+			
+		}
+
+	}
 }
 footer.content-info {
 	.widget {
@@ -221,7 +284,7 @@ footer.content-info {
 
 
 	@include breakpoint($tabletBreak){
-		
+		display:none;
 		position: static;
 		margin:0 auto 0 auto;
 		font-size:3em;
