@@ -33,42 +33,51 @@ body {
 
 .home .kwrap-1 {
 	//background-image: none;
-	//background: url(../images/pitypang.png) repeat-x center bottom transparent;
-	background-image: none;
+	background: url(../images/pitypang.png) repeat-x center bottom transparent;
+	//background-image: none;
 	//@include background(linear-gradient($white-bg, $white-darkbg));
-	padding:4em 0;
+	padding:4em 0 8;
 }
 
 .home .kwrap-2,  {
 	background: url(../images/pitypang.png) repeat-x center bottom transparent;
 	//@include background(linear-gradient($white-bg, $white-darkbg));
-	padding:4em 0;
+	padding:0 0 4em 0;
 
 }
 
 .home .kwrap-3,  {
 	background: url(../images/aljataj.png) repeat-x center bottom transparent;
 	//@include background-image(linear-gradient($white-bg, $white-darkbg));
-	padding:4em 0 8em;
+	padding:2em 0 8em 0;
 }
 
 
 .page-id-15 .kwrap-1 {
  	//background-image: none;
  	background: url(../images/pitypang.png) repeat-x center bottom transparent;
- 	padding-bottom:8em;
+ 	padding-bottom:6em;
  }
 
-.page-id-15 .kwrap-2,  {
+.page-id-15 .kwrap-2  {
+	background: url(../images/aljataj.png) repeat-x center bottom transparent;
+	//@include background-image(linear-gradient($white-bg, $white-darkbg));
+	padding:2em 0 8em;
+	background:none;
+}
+.page-id-15 .nagywrap  {
 	background: url(../images/aljataj.png) repeat-x center bottom transparent;
 	//@include background-image(linear-gradient($white-bg, $white-darkbg));
 	padding:0 0 8em;
+	background:none;
 }
 
-.page-id-15 .kwrap-2 {
- 	background: url(../images/hatar_bg.jpg) no-repeat center bottom transparent;
- 	@include background-size(100%);
- 	padding-bottom:10em;
+body.page-id-15 {
+ 	background: url(../images/feszek_bg.jpg) no-repeat center bottom $white-bg;
+ 	//@include background-size(100%);
+ 	//background-attachment: fixed;
+
+ 	//padding-bottom:15em;
 }
 .container-fluid {
 	max-width: 1170px;

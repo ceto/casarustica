@@ -296,3 +296,45 @@ footer.content-info {
 		color:$white-darkbg;
 	}
 }
+
+#respond {
+	h2 {
+		text-align: center;
+		margin-bottom:1em;
+	}
+}
+
+.formblock {
+	i{
+		display: none;
+	}
+ input[type="text"],input[type="email"], textarea, select {
+ 	width:100%;
+ }
+ textarea {
+ 	height:130px;
+ }
+
+.form-horizontal {
+		margin:0 auto;
+}
+
+.aform-actions {
+	 	background: none;
+	 	text-align: center;
+	input {
+		margin:0 auto;
+		display:inline-block;
+	}
+ }
+}
+.batar {
+	h2 {
+		margin-bottom:3em;
+	}
+	font-size:1.25em;
+	line-height:1.25;
+	p {
+		margin-bottom: 1.5em;
+	}
+}

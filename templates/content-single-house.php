@@ -199,9 +199,15 @@
       <aside class="house-tabdata span6">
       <ul class="nav nav-tabs" id="myTab">
         <li class="active"><a href="#photo3d" data-toggle="tab"><?php _e('Fotók / 3D','casarustica'); ?></a></li>
-        <li><a href="#alap" data-toggle="tab"><?php _e('Alaprajz','casarustica'); ?></a></li>
+        <?php if ( get_post_meta( get_the_ID(), '_house_alaprajz1', true ) !='' ) :?>
+          <li><a href="#alap" data-toggle="tab"><?php _e('Alaprajz','casarustica'); ?></a></li>
+        <?php endif; ?>
+         <?php if ( get_post_meta( get_the_ID(), '_house_fotoilyenvolt', true ) >0 ) :?>
         <li><a href="#past" data-toggle="tab"><?php _e('Ilyen volt','casarustica'); ?></a></li>
-        <li><a href="#map" data-toggle="tab"><?php _e('Térkép','casarustica'); ?></a></li>
+      <?php endif; ?>
+        <?php if ( get_post_meta( get_the_ID(), '_house_gpsnorth', true ) !='' ) :?>
+          <li><a href="#map" data-toggle="tab"><?php _e('Térkép','casarustica'); ?></a></li>
+        <?php endif; ?>
       </ul>
        
       <div class="tab-content">
@@ -214,8 +220,9 @@
           <?php endif; ?>
         </div><!-- / #photo3d-->
 
+        <?php if ( get_post_meta( get_the_ID(), '_house_alaprajz1', true ) !='' ) :?>
         <div class="tab-pane fade" id="alap">
-               <?php if ( get_post_meta( get_the_ID(), '_house_alaprajz1', true ) !='' ) :?>
+
                 <?php 
                   //$tsrc = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_house_alaprajz1_id', true ), 'medium169', false ) ; 
                   $tlnk = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_house_alaprajz1_id', true ), 'full', false ) ; 
@@ -226,7 +233,7 @@
                 <a href="<?php echo $tlnk[0] ; ?>">
                   <?php echo $thumb  ; ?>
                 </a>
-                <?php endif; ?>
+                
 
                 <?php if ( get_post_meta( get_the_ID(), '_house_alaprajz2', true ) !='' ) :?>
                 <?php 
@@ -238,20 +245,28 @@
                 <a href="<?php echo $tlnk[0] ; ?>">
                    <?php echo $thumb  ; ?>
                 </a>
-                 <?php endif; ?>
-        </div>
-        
-        <div class="tab-pane fade" id="past">
-          <?php if ( get_post_meta( get_the_ID(), '_house_fotoilyenvolt', true ) >0 ) :?>
-          <div class="gwrap">
-                <?php echo do_shortcode('[nggallery id='.get_post_meta( get_the_ID(), '_house_fotoilyenvolt', true ).' images=15 ]'); ?>
-          </div>
-          <?php endif; ?>
-        </div>
+                <?php endif; ?>
 
+        </div>
+         <?php endif; ?>
+
+          <?php if ( get_post_meta( get_the_ID(), '_house_fotoilyenvolt', true ) >0 ) :?>        
+        <div class="tab-pane fade" id="past">
+           <div class="gwrap">
+                <?php echo do_shortcode('[nggallery id='.get_post_meta( get_the_ID(), '_house_fotoilyenvolt', true ).' images=15 ]'); ?>
+            </div>
+        </div>
+          <?php endif; ?>
+
+       <?php if ( get_post_meta( get_the_ID(), '_house_gpsnorth', true ) !='' ) :?>
         <div class="tab-pane fade" id="map">
+          <script>
+              var north = <?php echo get_post_meta( get_the_ID(), '_house_gpsnorth', true); ?>;
+              var south = <?php echo get_post_meta( get_the_ID(), '_house_gpssouth', true); ?>;
+          </script>
          <div id="helyszin_map" class="gmap"></div>
         </div>
+      <?php endif; ?>
       </div><!-- / .tab-content -->
 
     </aside><!-- / .house-tabdata -->
@@ -260,5 +275,6 @@
   </article>
 
 <?php endwhile; ?>
-              <?php  roots_content_nav(); ?>
+<?php  roots_content_nav(); ?>
+
 

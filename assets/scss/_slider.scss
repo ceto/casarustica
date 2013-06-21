@@ -41,9 +41,9 @@
 		width:66%;
 		float:left;
 		@include box-sizing(border-box);
-		border:10px solid rgba(white,0.85);
+		border:10px solid rgba(white,0.90);
 		background: rgba(black,0.75);
-		@include box-shadow(0 0 3px 0 $brown-light);
+		@include box-shadow(0 0 3px 0 rgba($gray-footer,0.5));
 		//opacity:0;
 
 		@include breakpoint($desktopBreak){
@@ -111,25 +111,30 @@
 
 	
 	h1 {
-		margin-top:0;
+		margin-top:10%;
 		font-family: $displayFontFamily;
 		//text-transform: none;
 		line-height:1.125em;
 		font-size: 2em;
 	}
 	p {
-		font-family: $scriptFontFamily;
+		font-family: $displayFontFamily;
+		font-weight:bold;
 		font-size:1.25em;
+		margin:5% 0;
+
 
 	}
 	ul{
 		font-family: $displayFontFamily;
 		text-align:left;
-		padding-left:25%;
+		padding-left:15%;
+		margin-bottom: 8%;
 	}
 
 	.btn {
 		font-family: $displayFontFamily;
-		text-transform: uppercase;	
+		text-transform: uppercase;
+		//margin-top:10%;	
 	}
 }

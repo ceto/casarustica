@@ -94,8 +94,10 @@ class Roots_Vcard_Widget extends WP_Widget {
   ?>
     <p class="vcard">
       <strong><a class="fn org url" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></strong><br>
+      <strong>Lingual Kft.</strong><br/>
       <span class="adr">
         <span class="street-address"><?php echo $instance['street_address']; ?></span><br>
+
         <span class="locality"><?php echo $instance['locality']; ?></span>,
         <span class="region"><?php echo $instance['region']; ?></span>
         <span class="postal-code"><?php echo $instance['postal_code']; ?></span><br>

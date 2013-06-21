@@ -71,22 +71,32 @@
 .navigation-post {
 	.previous {
 		float:left;
-		width:50%;
+		max-width:49%;
 		text-align: left;
+		a {
+			//@include border-radius(1em 0 0 1em);
+		}
 
 	}
 	.next {
 		float:right;
-		width:50%;
+		max-width:49%;
 		text-align:right;
+		a {
+			//@include border-radius(0 1em 1em 0 );
+		}
 
 	}
 	a {
 		background: $orange-menu;
 		color:white;
 		display: inline-block;
-		padding:0.25em 1em;
+		padding:0.5em 1em 0.5em 1em;
+		//font-size: 1.125em;
+		line-height: 1.125em;
+		//font-weight: bold;
 	}
+
 }
 
 

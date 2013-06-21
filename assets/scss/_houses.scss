@@ -5,7 +5,7 @@
 .single-house {
 	.house-figure {
 		position:relative;
-		margin:0;
+		margin:3px 0 0 0;
 		margin-bottom:2em;
 		img {
 			border:10px solid $brown-light;
@@ -71,12 +71,12 @@
 	}
 
 	.house-subtitle {
-		font-family: $scriptFontFamily;
+		font-family: $displayFontFamily;
 		color:$brown-slogan;
 		text-transform: none;
 		font-size: 1.5em;
 		line-height:1.125em;
-		font-weight:400;
+		font-weight:bold;
 		margin-top:0.75em;
 		margin-bottom:1em;
 
@@ -536,10 +536,10 @@
 	}
 
 	.fblockmore {
-	text-align: right;
+	text-align: center;
 	margin:1em 1em -1em;
 	display: block;
-	font-size: 0.875em;
+	font-size: 1.25em;
 	font-weight:bold;
 	font-style: italic;
 

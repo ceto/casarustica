@@ -72,12 +72,12 @@ if(!$human == 0){
 <?php get_template_part('templates/page', 'header'); ?>
 		
 		<div class="row-fluid">
-		<div id="respond" class="span6 formblock">
+		<div id="respond" class="span4 offset2 formblock">
 		<h2>Küldjön üzenetet</h2>
 		<?php echo $response; ?>
 		<form class="form-horizontal" action="<?php the_permalink(); ?>" method="post">
 						<div class="controlsa">
-							<div class="input-prepend">
+							<div class="ainput-prepend">
 								<span class="add-on"><i class="icon-user"></i></span>
 								<input class="input-xlarge" type="text" required placeholder="Név" id="message_name" name="message_name" value="<?php echo $_POST['message_name']; ?>">
 							</div>
@@ -85,7 +85,7 @@ if(!$human == 0){
 
 				
 						<div class="controlsa">
-							<div class="input-prepend">
+							<div class="ainput-prepend">
 								<span class="add-on"><i class="icon-envelope"></i></span>
 								<input class="input-xlarge" type="email" required placeholder="E-mail" id="message_email" name="message_email" value="<?php echo $_POST['message_email']; ?>">
 							</div>
@@ -94,7 +94,7 @@ if(!$human == 0){
 			
 
 						<div class="controlsa">
-							<div class="input-prepend">
+							<div class="ainput-prepend">
 								<span class="add-on"><i class="icon-phone"></i></span>
 								<input class="input-xlarge" type="text" required placeholder="Telefon" id="message_tel" name="message_tel" value="<?php echo $_POST['message_tel']; ?>">
 							</div>
@@ -111,7 +111,7 @@ if(!$human == 0){
 						?>		
 						
 						<div class="controlsa">
-							<div class="input-prepend">
+							<div class="ainput-prepend">
 								<span class="add-on"><i class="icon-check"></i></span>
 								<select class="input-xlarge" name="message_subject" id="message_subject">
 									<option <?php if($ubjecto == 'Általános érdeklődés') echo 'selected'; ?> value="Általános érdeklődés">Általános érdeklődés</option>
@@ -129,7 +129,7 @@ if(!$human == 0){
 
 
 						<div class="controlsa">
-							<div class="input-prepend">
+							<div class="ainput-prepend">
 								<span class="add-on"><i class="icon-pencil"></i></span>
 								<textarea  class="input-xlarge" required placeholder="Üzenet" id="message_text" name="message_text" value="<?php echo $_POST['message_text']; ?>"></textarea>
 							</div>
@@ -137,15 +137,15 @@ if(!$human == 0){
 
 
 
-			<div class="form-actions">
+			<div class="aform-actions">
 				<input type="hidden" name="message_human" value="2">
 				<input type="hidden" name="submitted" value="1">
-				<input type="submit" class="btn btn-inverse" value="Elküldöm">
+				<input type="submit" class="btn btn-warning" value="Elküldöm">
 			</div>
 		</form>
 	</div>
 
-	<div class="contact-content span6 ">
+	<div class="contact-content span4 batar">
 				<?php get_template_part('templates/content', 'page'); ?>
 		</div>
 </div>

@@ -53,20 +53,17 @@ function house_metaboxes0( $meta_boxes ) {
                     'id'   => $prefix . 'readiness',
                     'type' => 'radio_inline',
                     'options' => array(
-						array('name' => 'Költözhető', 'value' => '1'),
 						array('name' => 'Tervasztalon', 'value' => '0'),
+						array('name' => 'Költözhető', 'value' => '1'),
 						array('name' => 'Engedélyeztetve', 'value' => '2'),
 						array('name' => 'Félkész', 'value' => '3'),
-						array('name' => 'Kiszemelve', 'value' => '4'),
-						
+						array('name' => 'Rreferencia ház', 'value' => '4'),
+						array('name' => 'Eladó', 'value' => '5'),
+						array('name' => 'Gazdáját várja', 'value' => '6'),
 							
 					)
             ),
 			
-
-
-			
-
 
 		)	
 	);
@@ -411,17 +408,17 @@ function roots_content_nav( $nav_id ) {
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?> clearfix">
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'ligeti' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'ligeti' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="previous">%link</div>', '<i class="icon-double-angle-left"></i> '._x( '', 'Previous post link', 'ligeti' ) . '%title' ); ?>
+		<?php next_post_link( '<div class="next">%link</div>', '%title' . _x( '', 'Next post link', 'ligeti' ).' <i class="icon-double-angle-right"></i>'  ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'ligeti' ) ); ?></div>
+		<div class="previous"><?php next_posts_link( __( '<i class="icon-double-angle-left"></i> Older posts', 'ligeti' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'ligeti' ) ); ?></div>
+		<div class="next"><?php previous_posts_link( __( 'Newer posts <i class="icon-double-angle-right"></i>', 'ligeti' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -458,10 +455,14 @@ function readiness($value) {
 			return 'Félkész';
 			break;
 		case '4':
-			return 'Kiszemelve';
+			return 'Referencia ház';
 			break;
 		case '5':
 			return 'Eladó';
+			break;
+
+		case '6':
+			return 'Gazdáját várja';
 			break;
 		
 		default:
