@@ -20,10 +20,10 @@
       </div>
 
       <ul class="nav nav-tabs" id="firstTab">
-        <li class="active"><a href="#haz" data-toggle="tab"><?php _e('Adatlap','casarustica'); ?></a></li>
-        <li><a href="#reszek" data-toggle="tab"><?php _e('Épületrészek','casarustica'); ?></a></li>
-        <li><a href="#telek" data-toggle="tab"><?php _e('Telek','casarustica'); ?></a></li>
-        <li><a href="#leiras" data-toggle="tab"><?php _e('Leírás','casarustica'); ?></a></li>
+        <li class="active"><a href="#haz" data-toggle="tab"><?php _e('Adatlap','roots'); ?></a></li>
+        <li><a href="#reszek" data-toggle="tab"><?php _e('Épületrészek','roots'); ?></a></li>
+        <li><a href="#telek" data-toggle="tab"><?php _e('Telek','roots'); ?></a></li>
+        <li><a href="#leiras" data-toggle="tab"><?php _e('Leírás','roots'); ?></a></li>
       </ul>
       <div class="tab-content">
         <div class="tab-pane active fade in adatlap" id="haz">
@@ -84,7 +84,7 @@
           <?php endif; ?>
            <div class="house-lebonyi">
             <p>
-              <i class="icon-magic"></i> <a href="?page_id=4#ujbonyi" class="ajax-popup-link">Lebonyolítás és finanszírozás</a>          
+              <i class="icon-magic"></i> <a href="<?php echo home_url(); ?>" class="ajax-popup-link"><?php _e('Lebonyolítás és finanszírozás','roots') ?></a>          
             </p>
           </div>
 
@@ -127,7 +127,7 @@
           <?php endif; ?>
           <div class="house-lebonyi">
           <p>
-            <i class="icon-magic"></i> <a href="?page_id=189" class="ajax-popup-link">Lebonyolítás és finanszírozás</a>          
+            <i class="icon-magic"></i> <a href="<?php echo home_url(); ?>" class="ajax-popup-link"><?php _e('Lebonyolítás és finanszírozás','roots') ?></a>          
           </p>
           </div>
           
@@ -164,7 +164,7 @@
           
           <div class="house-lebonyi">
           <p>
-            <i class="icon-magic"></i> <a href="?page_id=189 ajax-popup-link">Lebonyolítás és finanszírozás</a>          
+            <i class="icon-magic"></i> <a href="<?php echo home_url(); ?>" class="ajax-popup-link"><?php _e('Lebonyolítás és finanszírozás','roots') ?></a>          
           </p>
           </div>
 
@@ -175,7 +175,7 @@
             <?php the_content(); ?>
             <div class="house-lebonyi">
               <p>
-                <i class="icon-magic"></i> <a href="?page_id=189" class="ajax-popup-link">Lebonyolítás és finanszírozás</a>          
+                <i class="icon-magic"></i> <a href="<?php echo home_url(); ?>" class="ajax-popup-link"><?php _e('Lebonyolítás és finanszírozás','roots') ?></a>          
               </p>
             </div>
 
@@ -184,7 +184,8 @@
     </div>
 
            <p class="actionblock">
-          <a class="btn btn-warning" href="?page_id=30&message_subject=<?php the_ID(); ?>">ÉRDEKLŐDJÖN TELEFONON<span>+36 70 770 5653</span> vagy ürlapunkon keresztül</a> 
+          <a class="btn btn-warning" href="?page_id=30&message_subject=<?php the_ID(); ?>">ÉRDEKLŐDJÖN TELEFONON<span>(+36) 30 249 9567
+</span> vagy ürlapunkon keresztül</a> 
           <input type="hidden" name="message_subject" id="message_subject" value="<?php the_ID(); ?>" />
           </p>
 
@@ -198,15 +199,15 @@
   </div><!-- / .data-block -->
       <aside class="house-tabdata span6">
       <ul class="nav nav-tabs" id="myTab">
-        <li class="active"><a href="#photo3d" data-toggle="tab"><?php _e('Fotók / 3D','casarustica'); ?></a></li>
+        <li class="active"><a href="#photo3d" data-toggle="tab"><?php _e('Fotók / 3D','roots'); ?></a></li>
         <?php if ( get_post_meta( get_the_ID(), '_house_alaprajz1', true ) !='' ) :?>
-          <li><a href="#alap" data-toggle="tab"><?php _e('Alaprajz','casarustica'); ?></a></li>
+          <li><a href="#alap" data-toggle="tab"><?php _e('Alaprajz','roots'); ?></a></li>
         <?php endif; ?>
          <?php if ( get_post_meta( get_the_ID(), '_house_fotoilyenvolt', true ) >0 ) :?>
-        <li><a href="#past" data-toggle="tab"><?php _e('Ilyen volt','casarustica'); ?></a></li>
+        <li><a href="#past" data-toggle="tab"><?php _e('Ilyen volt','roots'); ?></a></li>
       <?php endif; ?>
         <?php if ( get_post_meta( get_the_ID(), '_house_gpsnorth', true ) !='' ) :?>
-          <li><a href="#map" data-toggle="tab"><?php _e('Térkép','casarustica'); ?></a></li>
+          <li><a href="#map" data-toggle="tab"><?php _e('Térkép','roots'); ?></a></li>
         <?php endif; ?>
       </ul>
        

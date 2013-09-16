@@ -83,10 +83,10 @@ function initialize() {
   };
   helyszin_map = new google.maps.Map(document.getElementById('helyszin_map'), mapOptions);
 
-  var image = new google.maps.MarkerImage('http://ceto.no-ip.org/casarustica/wp-content/themes/casarustica/assets/images/zaszlo.png',
+  var image = new google.maps.MarkerImage('http://casarustica.hu/wp-content/themes/casarustica/assets/images/zaszlo.png',
           new google.maps.Size(73, 69), new google.maps.Point(0,0), new google.maps.Point(20, 65));
   
-  var shadow = new google.maps.MarkerImage('http://ceto.no-ip.org/casarustica/wp-content/themes/casarustica/assets/images/zaszlo_arnyek.png',
+  var shadow = new google.maps.MarkerImage('http://casarustica.hu/wp-content/themes/casarustica/assets/images/zaszlo_arnyek.png',
           new google.maps.Size(73, 69), new google.maps.Point(0,0), new google.maps.Point(20, 65));
         
          var markerm = new google.maps.Marker({
@@ -157,7 +157,7 @@ $(document).ready(function(){
       toggle: true
     })
 
-    $('.kivagyunk').append('<a class="klikkelo">A lebonyolítás részletei <i class=" icon-plus"></i></a>');
+    //$('.kivagyunk').append('<a class="klikkelo">A lebonyolítás részletei <i class=" icon-plus"></i></a>');
 
     $('.kivagyunk .klikkelo').click(function() {
       $('.ujbonyi').collapse('toggle');
@@ -188,7 +188,7 @@ $('.carousel').carousel({
 var $root = $('html, body');
 $('a').click(function() {
     $root.animate({
-        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top-40
     }, 500);
     return false;
 });

@@ -1,4 +1,5 @@
 <?php
+define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS',true);
 /**
  * Custom functions
  */
@@ -18,7 +19,7 @@ function create_house_type() {
 			),
 		'public' => true,
 		'has_archive' => true,
-		'rewrite' => array('slug' => 'houses'),
+		'rewrite' => array('slug' => 'paraszthazak'),
 		'supports' => array('title', 'editor', 'thumbnail')
 		)
 	);
@@ -485,3 +486,12 @@ function current_type_nav_class($css_class, $item) {
   return $css_class;
 }
 add_filter('nav_menu_css_class', 'current_type_nav_class', 10, 2);
+
+
+function langed_id($id,$type='page'){
+  if(function_exists('icl_object_id')) {
+    return icl_object_id($id,$type,true);
+  } else {
+    return $id;
+  }
+}

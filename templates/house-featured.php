@@ -31,14 +31,14 @@
     <h5 class="house-subtitle">
       <?php echo get_post_meta( get_the_ID(), '_house_subtitle', true); ?>
     </h5>
-    <a href="<?php the_permalink(); ?>" class="action">Részletek ...</a>
+    <a href="<?php the_permalink(); ?>" class="action"><?php _e('Részletek ...','roots') ?></a>
 
   </div><!-- /.house-data -->
 					</div>
 				<?php endwhile; ?>
 			</div>	
 		</div>
-	<a class="fblockmore" href="?page_id=26">További házak ...</a>
+	<a class="fblockmore" href="<?php echo get_permalink(langed_id(26)); ?>"><?php _e('További házak ...','roots') ?></a>
 
 	</div><!-- / .feathoseblock -->
 </div><!-- / .feathouseblockwrap -->

@@ -152,19 +152,19 @@
 			background: rgba($gray-footer,0.89);
 			background: rgba($brown-glass,0.75);
 			//background: rgba($white-bg,1);
-			margin:0 39px;
+			margin:0 0;
 			//margin:0 0;
-			padding: 0.5em 0.5em;
+			padding: 0.125em 1.1em;
 		
 			position:relative;
-			&:before {
-					content:"";
-					position:absolute;
-					left:-39px;right:-39px;
-					top:0;bottom:0;
-					//background: url(../images/fotolyuk_bal_b.png) repeat-y left top, url(../images/fotolyuk_jobb_b.png) repeat-y right top transparent;
-					background: rgba($brown-glass,0.75);
-			}
+			// &:before {
+			// 		content:"";
+			// 		position:absolute;
+			// 		left:-39px;right:-39px;
+			// 		top:0;bottom:0;
+			// 		//background: url(../images/fotolyuk_bal_b.png) repeat-y left top, url(../images/fotolyuk_jobb_b.png) repeat-y right top transparent;
+			// 		background: rgba($brown-glass,0.75);
+			// }
 
 			
 		}
@@ -279,6 +279,7 @@ footer.content-info {
 	height:2em;
 	padding-top:0.475em;
 	position:absolute;
+	z-index: 2;
 	right:1em;
 	bottom:1em;
 

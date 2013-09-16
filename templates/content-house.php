@@ -20,7 +20,7 @@
     <h3 class="house-subtitle">
       <?php echo get_post_meta( get_the_ID(), '_house_subtitle', true); ?>
     </h3>
-    <a href="<?php the_permalink(); ?>" class="action">Részletek ...</a>
+    <a href="<?php the_permalink(); ?>" class="action"><?php _e('Részletek ...','roots'); ?></a>
 
   </div><!-- /.house-data -->
 </article>

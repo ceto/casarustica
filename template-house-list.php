@@ -6,7 +6,9 @@ Template Name: List of Houses
 <?php get_template_part('templates/page', 'header'); ?>
 <?php
   $the_house= new WP_Query ( 
-    array('post_type' => 'house', )
+    array('post_type' => 'house',
+    'posts_per_page'=>99,
+     )
 
     );
 

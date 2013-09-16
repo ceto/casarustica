@@ -39,8 +39,15 @@
   //php mailer variables
   $to = get_option('admin_email');
   $subject = "Webes üzenet ".get_bloginfo('name');
-  $headers = 'From: '. $email . "\r\n" .
-    'Reply-To: ' . $email . "\r\n";
+//  $headers = 'From: '. $email . "\r\n" .
+//    'Reply-To: ' . $email . "\r\n";
+
+$headers = "From: " . strip_tags($email) . "\r\n";
+$headers .= "Reply-To: ". strip_tags($email) . "\r\n";
+//$headers .= "CC: casarustica@casarustica.hu\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+//$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
   
 if(!$human == 0){
     if($human != 2) generate_response("error", $not_human); //not human!
@@ -57,8 +64,8 @@ if(!$human == 0){
         }
         else //ready to go!
         {
-        	$message='Telefon: '.$tel.'<br/>'.'Tárgy: '.$subjecto.'<br/>'.$message;
-        	$sent = mail($to, $subject, $message, $headers);
+        	$message='Név: '.$name.'<br/>'.'Telefon: '.$tel.'<br />'.'Tárgy: '.$subjecto.'<br />'.$message;
+        	$sent = wp_mail($to, $subject, $message, $headers);
           	if($sent) generate_response("success", $message_sent); //message sent!
           	else generate_response("error", $message_unsent); //message wasn't sent
         }
@@ -73,7 +80,7 @@ if(!$human == 0){
 		
 		<div class="row-fluid">
 		<div id="respond" class="span4 offset2 formblock">
-		<h2>Küldjön üzenetet</h2>
+		<h2><?php _e('Küldjön üzenetet','roots'); ?></h2>
 		<?php echo $response; ?>
 		<form class="form-horizontal" action="<?php the_permalink(); ?>" method="post">
 						<div class="controlsa">
@@ -105,7 +112,7 @@ if(!$human == 0){
 							$the_house = new WP_Query ( 
 						    array(
 						    	'post_type' => 'house',
-						    	'posts_per_page'=>0
+						    	'posts_per_page'=>100
 						     )
 						    );
 						?>		
@@ -140,7 +147,7 @@ if(!$human == 0){
 			<div class="aform-actions">
 				<input type="hidden" name="message_human" value="2">
 				<input type="hidden" name="submitted" value="1">
-				<input type="submit" class="btn btn-warning" value="Elküldöm">
+				<input type="submit" class="btn btn-warning" value="<?php _e('Elküldöm','roots'); ?>">
 			</div>
 		</form>
 	</div>

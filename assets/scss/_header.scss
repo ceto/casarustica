@@ -44,6 +44,29 @@
 	font-weight: bold;
 	float:left;
 }
+
+#lang_sel_list {
+	
+
+	li {
+		float:right;
+		list-style-type: none;
+		//font-weight: normal;
+		text-transform: uppercase;
+		padding-right:0.33333em;
+		&:after {
+			content:"|";
+			
+
+		}
+		&:first-child:after{
+			display:none;
+		} 
+
+	}
+}
+
+
 .callmenow{
 	text-align: right;
 	color:$orange-menu;

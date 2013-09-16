@@ -36,7 +36,7 @@ body {
 	background: url(../images/pitypang.png) repeat-x center bottom transparent;
 	//background-image: none;
 	//@include background(linear-gradient($white-bg, $white-darkbg));
-	padding:4em 0 8;
+	padding:4em 0 5em;
 }
 
 .home .kwrap-2,  {
@@ -53,26 +53,26 @@ body {
 }
 
 
-.page-id-15 .kwrap-1 {
+.page-id-15 .kwrap-1, .page-id-921 .kwrap-1{
  	//background-image: none;
  	background: url(../images/pitypang.png) repeat-x center bottom transparent;
  	padding-bottom:6em;
  }
 
-.page-id-15 .kwrap-2  {
+.page-id-15 .kwrap-2, .page-id-921 .kwrap-2  {
 	background: url(../images/aljataj.png) repeat-x center bottom transparent;
 	//@include background-image(linear-gradient($white-bg, $white-darkbg));
 	padding:2em 0 8em;
 	background:none;
 }
-.page-id-15 .nagywrap  {
+.page-id-15 .nagywrap, .page-id-921 .nagywrap  {
 	background: url(../images/aljataj.png) repeat-x center bottom transparent;
 	//@include background-image(linear-gradient($white-bg, $white-darkbg));
 	padding:0 0 8em;
 	background:none;
 }
 
-body.page-id-15 {
+body.page-id-15, body.page-id-921 {
  	background: url(../images/feszek_bg.jpg) no-repeat center bottom $white-bg;
  	//@include background-size(100%);
  	//background-attachment: fixed;

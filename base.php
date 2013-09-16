@@ -53,6 +53,5 @@
   <div class="footerwrap">
     <?php get_template_part('templates/footer'); ?>
   </div>
-  
 </body>
 </html>

@@ -1,5 +1,5 @@
 # Require any additional compass plugins here.
-require 'breakpoint'
+require '/Library/Ruby/Gems/1.8/gems/breakpoint-2.0.5/lib/breakpoint'
 
 # Set this to the root of your project when deployed:
 http_path = "/"

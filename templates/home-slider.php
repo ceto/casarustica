@@ -1,14 +1,19 @@
 <div class="sliderwrap header2 clearfix" role="banner">
+
 	<div class="wrap container-fluid ">
-
-
-
-    <div class="row-fluid headinfo">
-		<div class="fixblock">
-        	<div class="langsel">HU | DE</div>
-        	<div class="callmenow">(+36) 30 249 9567</div>              
-        </div><!-- .fixblock -->
-	    <div class="slogan">Új parasztházak építése, régi házak helyreállítása<br />Belső–Somogy erdő közeli falvaiban.</div>
+	    <div class="row-fluid headinfo">
+			<div class="fixblock">
+	        	<div class="langsel"><?php do_action('icl_language_selector'); ?></div>
+	        	<div class="callmenow">(+36) 30 249 9567</div>              
+	        </div><!-- .fixblock -->
+		    <div class="slogan">
+		    <?php if (ICL_LANGUAGE_CODE=='de') : ?>
+				Neubau und Renovierung von Bauernhäusern im traditionellen Stil in den Dörfern am Rande der Wälder des Bezirks Somogy.
+		    <?php else : ?>
+		    	Új parasztházak építése, régi házak helyreállítása<br />Belső–Somogy erdő közeli falvaiban.
+			<?php endif; ?>
+		    </div>
+		</div>
     </div>
 
 
@@ -19,21 +24,40 @@
 
 			<div class="sliderblock clearfix">
 
-									<div class="r-block">
+						<div class="r-block">
+						
 						<div class="slidertext">
-							<h1>Önnek is lehet parasztháza</h1>
-							<p>Klasszikus parasztházak, felújítva, magas komfortfokozatttal</p>
+						
+						<?php if (ICL_LANGUAGE_CODE=='de') : ?>
+							<h1>Werden auch Sie Eigentümer eines Bauernhauses</h1>
+							<p>Bauernhäuser im traditionell klassischen Stil renoviert mit Komfortausstattung</p>
 								<ul>
-									<li>Kulcsarakész parasztházak,</li>
+									<li>Schlüsselfertige Bauernhäuser,</li>
+									<li>Maßgeschneiderte Tradition,</li>
+									<li>Mensch und Natur,</li>
+									<li>In der Nähe des Plattensees.</li>
+							</ul>
+							<p>
+								<a href="<?php echo get_permalink(langed_id(51,'house')); ?>" class="btn btn-warning">Referenzhäuser ansehen</a>
+							</p>
+
+						<?php else : ?>						
+							<h1>Önnek is lehet parasztháza</h1>
+							<p>Klasszikus parasztházak, felújítva, magas komfortfokozattal</p>
+								<ul>
+									<li>Kulcsrakész parasztházak,</li>
 									<li>Testre szabott hagyomány,</li>
 									<li>Ember és természet, </li>
 									<li>Karnyújtásnyira a Balatontól.</li>
-							</ul>
+								</ul>
 							<p>
-								<a href="?house=fajszi-haz" class="btn btn-warning">Referencia ház megtekintése</a>
+								<a href="<?php echo get_permalink(langed_id(51,'house')); ?>" class="btn btn-warning">Referencia ház megtekintése</a>
 							</p>
+						<?php endif; ?>
+						
 						</div>
-					</div>
+
+						</div>
 				
 				
 					<div class="l-block">
@@ -78,11 +102,10 @@
 
 
 			</div><!-- / .sliderblock -->
-
-	</div>
+	
 	<!-- Carousel nav -->
   <a class="carousel-control left" href="#homeCarousel" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#homeCarousel" data-slide="next">&rsaquo;</a>
-  <a data-atoggle="collapse" data-atarget=".nav-collapse" class="topi" href="#contenttop"><i class="icon-arrow-down"></i></a>
+  <a class="topi" href="#contenttop"><i class="icon-arrow-down"></i></a>
 
 </div><!-- / .sliderwrap -->

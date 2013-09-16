@@ -214,6 +214,7 @@
 	}
 	.btn {
 		margin-top:1em;
+		margin-bottom:2em;
 	}
 		
 }
@@ -247,7 +248,7 @@ body.blog{
 	background: none;
 }
 
-.page-id-15 .main {
+.page-id-15 .main, .page-id-921 .main {
 	.span6 {
 		background: $white-bg;
 		padding:2em 4em 4em;
@@ -465,25 +466,24 @@ body.blog{
 			position:absolute;
 			display:block;
 			text-align:left;
-			font-weight:bold;
 			font-family: $displayFontFamily;
 			font-weight:normal;
 			word-break: keep-all;
 			font-size:2em;
+			font-weight:bold;
 			line-height: 1.25em;
-			padding:0 0.125em 0 0.55em;
+			padding:0.125em 0.125em 0 0.5em;
 			@include box-sizing('border-box');
 			@include border-radius(0.8em);
 			@include box-shadow($white-darkbg 0 0 10px 0px);
 
 			width:1.6em;height:1.6em;
-			background: white;
 			//color:white;
  			left:0;
  			content: '';
  			//width:35px;
 			//height:35px;
-			background: url(../images/sprites.png) no-repeat -35px -65px transparent;
+			background: url(../images/kicsike.png) no-repeat center center white;
 
  			@include breakpoint($mobileBreak){
  				position:static;
@@ -528,6 +528,9 @@ body.blog{
 		z-index:1;
 		position: absolute;
 		//text-align: right !important;
+		&:hover {
+				cursor:pointer;
+		}
 		i {
 			&:hover {
 				text-decoration: none;
