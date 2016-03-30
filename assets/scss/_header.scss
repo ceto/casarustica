@@ -8,11 +8,11 @@
 
 .banner { }
 .header2 {
-	
+
 	// .container-fluid {
-	// 	position: relative;		
+	// 	position: relative;
 	// }
-	
+
 	// .headinfo {
 	// 	z-index:2;
 	// 	position:absolute;
@@ -46,7 +46,7 @@
 }
 
 #lang_sel_list {
-	
+
 
 	li {
 		float:right;
@@ -56,12 +56,12 @@
 		padding-right:0.33333em;
 		&:after {
 			content:"|";
-			
+
 
 		}
 		&:first-child:after{
 			display:none;
-		} 
+		}
 
 	}
 }
@@ -116,30 +116,29 @@
 	width:130px;
 	height:40px;
 	background:url(../images/logo.png) no-repeat center top transparent;
-	@include background-size(110%);
+	background-size: 110%;
 	@include breakpoint($desktopBreak) {
 		display:block;
-		
+
 	}
 	// @include breakpoint($tabletBreak) {
 	// 	width:301px;
 	// 	background:url(../images/logo_tablet.png) no-repeat left center transparent;
 	// 	@include background-size();
-		
+
 	// }
 	@include breakpoint($tabletBreak) {
 		width:165px;
 		//height:31px;
 		background:url(../images/logo_mobile.png) no-repeat left 3px transparent;
-		@include background-size();
-		
+
+
 	}
 	@include breakpoint($mobileBreak) {
 		width:165px;
 		//height:31px;
 		background:url(../images/logo_mobile.png) no-repeat left 3px transparent;
-		@include background-size();
-		
+
 	}
 
 }

@@ -10,7 +10,7 @@
 	@include breakpoint($largeBreak){
 		width: 5*$fluidGridColumnWidth+4*$fluidGridGutterWidth;
 	}
-	
+
 	@include breakpoint($desktopBreak){
 		width: 6*$fluidGridColumnWidth+5*$fluidGridGutterWidth;
 	}
@@ -23,7 +23,7 @@
 		float:none;
 		width: 100%;
 		display: block;
-		@include box-sizing('border-box');
+		box-sizing: border-box;
 	}
 
 
@@ -31,7 +31,7 @@
 }
 
 .sidebar-1[class*="span"]{
-	
+
 	@include breakpoint($largeBreak){
 		width: 3.5*$fluidGridColumnWidth+2.5*$fluidGridGutterWidth;
 	}
@@ -42,7 +42,7 @@
 	    //display: block;
 	    width: 6*$fluidGridColumnWidth+5*$fluidGridGutterWidth;
 	    margin-left: $fluidGridGutterWidth;
-	   	//@include box-sizing('border-box');
+	   	//box-sizing: border-box;
 	}
 
 	@include breakpoint($tabletBreak){
@@ -51,7 +51,7 @@
 	    //display: block;
 	    width: 6*$fluidGridColumnWidth+5*$fluidGridGutterWidth;
 	    margin-left: $fluidGridGutterWidth;
-	   	//@include box-sizing('border-box');
+	   	//box-sizing: border-box;
 	}
 
 	@include breakpoint($mobileBreak){
@@ -59,7 +59,7 @@
 		width: 100%;
 		display: block;
 		margin-left: 0;
-		@include box-sizing('border-box');
+		box-sizing: border-box;
 	}
 }
 
@@ -78,14 +78,14 @@
 	//@include box-shadow(inset 15px 0 15px -15px $brown-light);
 	//position:relative;
 
-	
-	
+
+
 }
 
 .sidebar {
 
 	.widget {
-		
+
 	}
 	.widget-title {
 		text-align: center;
@@ -132,8 +132,8 @@
 		//background: $gray-footer;
 		//color:$yellow-footer;
 		//background: rgba($brown-glass,1);
-		@include box-shadow($brown-light 0 0 10px);
-		
+		box-shadow: 0 0 10px 0 $brown-light;
+
 		width:auto;
 		float:none;
 		margin:0 0 2em;
@@ -155,7 +155,7 @@
 			margin:0 0;
 			//margin:0 0;
 			padding: 0.125em 1.1em;
-		
+
 			position:relative;
 			// &:before {
 			// 		content:"";
@@ -166,7 +166,7 @@
 			// 		background: rgba($brown-glass,0.75);
 			// }
 
-			
+
 		}
 
 	}
@@ -179,7 +179,7 @@ footer.content-info {
 }
 
 .widget_mailchimpsf_widget {
-	
+
 	#mc_subheader {
 		font-weight:bold;
 		padding-bottom:0.5em;
@@ -188,7 +188,7 @@ footer.content-info {
 		position: relative;
 		padding-bottom:0.25em;
 		margin-bottom:1.5em;
-		
+
 	}
 	.updated {
 		font-weight:normal;
@@ -232,7 +232,7 @@ footer.content-info {
 	display: inline-block;
 	float:right;
 	font-size:1.5em;
-	
+
 	margin-top:-2em;
 	margin-right:-2em;
 	background: $orange-menu;
@@ -242,8 +242,8 @@ footer.content-info {
 	width:2em;
 	height:2em;
 	padding-top:0.475em;
-	@include box-sizing(border-box);
-	@include border-radius(1em);
+	box-sizing: border-box;
+	border-radius: 1em;
 	&:hover {
 		text-decoration:none;
 		background: $orange-top;
@@ -260,7 +260,7 @@ footer.content-info {
 
 	}
 	i{
-		
+
 		//display: block;
 	}
 }
@@ -273,8 +273,8 @@ footer.content-info {
 	font-size:1.5em;
 	background: $orange-menu;
 	color:$white-bg;
-	@include box-sizing(border-box);
-	@include border-radius(1em);
+	box-sizing: border-box;
+	border-radius: 1em;
 	width:2em;
 	height:2em;
 	padding-top:0.475em;

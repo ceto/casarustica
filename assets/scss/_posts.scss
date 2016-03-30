@@ -8,15 +8,15 @@
 		text-align: center;
 		img {
 			//max-width:85%;
-			@include box-sizing(border-box);
-			//@include border-radius(50%);
+			box-sizing: border-box;
+			//border-radius: 50%;
 			border:8px solid $brown-light;
-			@include box-shadow(0px 0px 2px 4px white);
+			box-shadow: 0px 0px 2px 4px white;
 			margin-top:4px;
-			
+
 			&:hover {
 				//border:10px solid $orange-link;
-				@include box-shadow(0px 0px 4px 2px $brown-text);
+				box-shadow: 0px 0px 4px 2px $brown-text;
 
 			}
 		}
@@ -24,17 +24,17 @@
 	}
 	header {
 		text-align: center;
-		
+
 		.entry-title, .house-title {
 			text-align: center;
 			border-top:1px solid $brown-linea;
 			border-bottom:1px solid $brown-linea;
 			padding:0.124em 52px 0.25em 52px;
-			@include box-sizing(border-box);
+			box-sizing: border-box;
 			position:relative;
 			display: block;
 			line-height: 1.125em;
-			
+
 			&:before {
 				content:"";
 				position:absolute;
@@ -54,7 +54,7 @@
 				background: url(../images/sprites.png) no-repeat -54px -33px transparent;
 			}
 		}
-	
+
 
 	}
 	.entry-meta {
@@ -92,7 +92,7 @@
 	//padding-bottom:3em;
 	//border-bottom:1px solid $brown-glass;
 
-	
+
 	&:after {
 		display: block;
 		margin:3em auto 1em auto;
@@ -120,20 +120,20 @@
 		text-align: center;
 		img {
 			max-width:66.66666%;
-			@include box-sizing(border-box);
-			@include border-radius(50%);
+			box-sizing: border-box;
+			border-radius: 50%;
 			border:10px solid $brown-light;
-			@include box-shadow(0px 0px 2px 4px white);
-		
+			box-shadow: 0px 0px 2px 4px white;
+
 			&:hover {
 				//border:10px solid $orange-link;
-				@include box-shadow(0px 0px 4px 2px $brown-text);
+				box-shadow: 0px 0px 4px 2px $brown-text;
 
 			}
-		
+
 		}
-	
-		
+
+
 
 	}
 
@@ -172,7 +172,7 @@
 			}
 		//margin-top:0.125em;
 	}
-	
+
 }
 
 
@@ -184,7 +184,7 @@
 
 .home .kwrap-1 .main  {
 
-	
+
 	.page-header {
 		&:before {
 			display: block;
@@ -196,13 +196,13 @@
 			//background-size: 100px;
 		}
 	}
-	
+
 	h1 {
 		display:inline-block;
-		
+
 	}
 
-	
+
 
 	h3{
 		text-align: center;
@@ -216,7 +216,7 @@
 		margin-top:1em;
 		margin-bottom:2em;
 	}
-		
+
 }
 
 .home .kwrap-2 .main {
@@ -253,8 +253,8 @@ body.blog{
 		background: $white-bg;
 		padding:2em 4em 4em;
 		margin-bottom:2em;
-		@include box-shadow($brown-glass 0 0 10px);
-		
+		box-shadow: 0 0 10px $brown-glass;
+
 
 		@include breakpoint($largeBreak){
 			padding:3em 3em;
@@ -264,7 +264,7 @@ body.blog{
 		@include breakpoint($desktopBreak){
 			padding:2em 1em;
  		}
-		
+
 		@include breakpoint($tabletBreak){
 			padding:4em 4em;
  		}
@@ -274,7 +274,7 @@ body.blog{
  		}
 
 	}
-	
+
 	h3{
 	text-align:center;
 
@@ -289,8 +289,8 @@ body.blog{
 		height:35px;
 		background: url(../images/sprites.png) no-repeat -35px -65px transparent;
 
-		}	
-  	
+		}
+
 
   	}
 
@@ -300,7 +300,7 @@ body.blog{
 .gmap {
     height:0;
     padding-bottom: 52%;
-    @include box-sizing('border-box');
+    box-sizing: border-box;
 	border:10px solid $brown-light;
 }
 
@@ -311,8 +311,8 @@ body.blog{
 	background: $white-bg;
 	padding:4em 4em 2em;
 	margin-bottom:3em;
-	
-	@include box-shadow($brown-glass 0 0 10px);
+
+	box-shadow: 0 0 10px $brown-glass;
 	@include breakpoint($mobileBreak){
 		padding:4em 1em;
  	}
@@ -326,9 +326,9 @@ body.blog{
 		background: url(../images/sprites.png) no-repeat -35px -65px transparent;
 		//background-size: 100px;
 	}
-	
+
 	text-align: center;
-	
+
 	h2 {
 		word-break: break-all;
 		font-size:2.5em;
@@ -341,7 +341,7 @@ body.blog{
 		display: inline-block;
 		line-height:1.25em;
 
-		
+
 		&:before {
 				content:"";
 				position:absolute;
@@ -376,7 +376,7 @@ body.blog{
 	h2 {
 		margin-top:2em;
 
-	}	
+	}
 	h2+p {
 		font-family: $displayFontFamily;
 		text-align:center !important;
@@ -399,7 +399,7 @@ body.blog{
  				text-align: center;
  		}
 
-		
+
 		&:before {
 			margin:0 auto 0.25em auto;
 			position:absolute;
@@ -412,9 +412,9 @@ body.blog{
 			font-size:2em;
 			line-height: 1.25em;
 			padding:0 0.125em 0 0.55em;
-			@include box-sizing('border-box');
-			@include border-radius(0.8em);
-			@include box-shadow($white-darkbg 0 0 10px 0px);
+			box-sizing: border-box;
+			border-radius:.8em;
+			box-shadow: 0 0 10px 0 $white-darkbg;
 
 			width:1.6em;height:1.6em;
 			background: white;
@@ -425,11 +425,11 @@ body.blog{
  			@include breakpoint($mobileBreak){
  				position:static;
  			}
-		
+
 		}
 	}
 	h3+p, h3 + p + p, h3 + p + p + p{
-		
+
 		text-align:left;
 		margin-left:18%;
 		@include breakpoint($mobileBreak){
@@ -458,7 +458,7 @@ body.blog{
  			margin:2em 0 1em 0;
  			text-align: center;
  		}
-		
+
 
 
 		&:before {
@@ -473,9 +473,9 @@ body.blog{
 			font-weight:bold;
 			line-height: 1.25em;
 			padding:0.125em 0.125em 0 0.5em;
-			@include box-sizing('border-box');
-			@include border-radius(0.8em);
-			@include box-shadow($white-darkbg 0 0 10px 0px);
+			box-sizing: border-box;
+			border-radius:.8em;
+			box-shadow: 0 0 10px 0 $white-darkbg;
 
 			width:1.6em;height:1.6em;
 			//color:white;
@@ -488,16 +488,16 @@ body.blog{
  			@include breakpoint($mobileBreak){
  				position:static;
  			}
-		
+
 		}
 		// &:before {
 		// 	margin:0 auto 0.5em auto;
 		// 	position:absolute;
 		// 	display:block;
-		// 	@include box-sizing('border-box');
+		// 	box-sizing: border-box;
 
 		// 	width:52px;height:32px;
-			
+
  	// 		left:0;
  	// 		content: '';
  	// 		background: url(../images/tulipanos_veret.png) no-repeat -79px -2px transparent;
@@ -505,7 +505,7 @@ body.blog{
  	// 		@include breakpoint($mobileBreak){
  	// 			position:static;
  	// 		}
-		
+
 		// }
 
 

@@ -1,32 +1,32 @@
 /* ==========================================================================
-   Base layout 
+   Base layout
    ========================================================================== */
 
 body {
 	padding-top: 40px;
 
 	@include breakpoint($tabletBreak){
-		padding-top:0;	
+		padding-top:0;
 	}
 }
 .feathouseblockwrap {
-	@include background-image(linear-gradient($white-bg, $white-darkbg));
+	background-image: linear-gradient($white-bg, $white-darkbg);
 	padding:0 0 1em;
 	position:relative;
 	background: url(../images/fogle.png) repeat-x center top $white-bg
 	//,  url(../images/fogfel.png) repeat-x center bottom $white-bg
 	;
-	
+
 }
 .nagywrap {
-	@include background-image(linear-gradient($white-bg, $white-darkbg));
+	background-image: linear-gradient($white-bg, $white-darkbg);
 	overflow:hidden;
 }
 
 .kwrap-1 {
-	
+
 	background: url(../images/aljataj.png) repeat-x center bottom transparent;
-	//@include background-image(linear-gradient($white-bg, $white-darkbg));
+	//background-image: linear-gradient($white-bg, $white-darkbg);
 	padding-bottom:8em;
 }
 
@@ -48,7 +48,7 @@ body {
 
 .home .kwrap-3,  {
 	background: url(../images/aljataj.png) repeat-x center bottom transparent;
-	//@include background-image(linear-gradient($white-bg, $white-darkbg));
+	//background-image: linear-gradient($white-bg, $white-darkbg);
 	padding:2em 0 8em 0;
 }
 
@@ -61,13 +61,13 @@ body {
 
 .page-id-15 .kwrap-2, .page-id-921 .kwrap-2  {
 	background: url(../images/aljataj.png) repeat-x center bottom transparent;
-	//@include background-image(linear-gradient($white-bg, $white-darkbg));
+	//background-image: linear-gradient($white-bg, $white-darkbg);
 	padding:2em 0 8em;
 	background:none;
 }
 .page-id-15 .nagywrap, .page-id-921 .nagywrap  {
 	background: url(../images/aljataj.png) repeat-x center bottom transparent;
-	//@include background-image(linear-gradient($white-bg, $white-darkbg));
+	//background-image: linear-gradient($white-bg, $white-darkbg);
 	padding:0 0 8em;
 	background:none;
 }

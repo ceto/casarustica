@@ -9,8 +9,8 @@
 		margin-bottom:2em;
 		img {
 			border:10px solid $brown-light;
-			@include box-sizing('border-box');
-			@include box-shadow(0 0 5px 0 $brown-light);
+			box-sizing: border-box;
+			box-shadow: 0 0 5px 0 $brown-light;
 		}
 	}
 	.house-readiness {
@@ -21,8 +21,8 @@
 		right:-47px;
 		//margin-right:-17px;
 		text-align: center;
-		//@include box-sizing('border-box');
-		@include rotate(45deg); 
+		//box-sizing: border-box;
+		transform: rotate(45deg);
 		//padding:10px 0;
 		//height:40px;
 		color: $white-bg;
@@ -56,7 +56,7 @@
 		// 		height:0;
 		// 		right:-39px;
 		// 		top:0;
-				
+
 		// 	}
 
 
@@ -89,7 +89,7 @@
 	// }
 	.house-excerpt {
 		margin-bottom:2em;
-		
+
 		p {
 			&:after {
 
@@ -127,7 +127,7 @@
 			}
 
 
-			
+
 		}
 	}
 
@@ -148,7 +148,7 @@
 			&:first-child {
 				margin-top:0;
 			}
-				
+
 		}
 
 		.nav {
@@ -156,11 +156,11 @@
 		}
 		.tab-pane {
 			background: $white-bg;
-			
+
 			//background: url(../images/aljataj.png) repeat-x right bottom $white-bg;
 			padding:2em 1.5em 0em 1.5em;
 		}
-	
+
 
 	}
 	.house-tabdata {
@@ -173,18 +173,17 @@
 		}
 
 		#alap.tab-pane {
-			
+
 			img{
 
 				background-color:$brown-light;
 				display:block;
 				padding:8px;
-				@include box-sizing('border-box');
-				@include box-shadow(0 0 5px 0 $brown-light);
+				box-sizing: border-box;
+				box-shadow: 0 0 5px 0 $brown-light;
 				//position:relative;
-				@include transition-property(all);
-				@include transition-duration(400ms);
-				@include transition-timing-function(ease-in); 
+				transition: all 400ms ease-in;
+
 				margin-bottom: 1em;
 
 			}
@@ -205,7 +204,7 @@
 			.gmap {
 
 			}
-		
+
 		}
 
 	}
@@ -222,16 +221,16 @@
 			margin:0.5em;
 		}
 		p:first-child{
-			
+
 		}
 
 	}
 	.actionblock {
 		text-align:center;
 		margin:2em 0;
-		
+
 		.btn {
-			
+
 			//display: block;
 			//text-transform: uppercase;
 			font-family: $displayFontFamily;
@@ -239,7 +238,7 @@
 			padding-top:0.5em;
 			padding-bottom:0.5em;
 			padding:0.5em 5em;
-			
+
 			span {
 				font-family: $displayFontFamily;
 				display:block;
@@ -264,8 +263,8 @@
 		position:relative;
 		//color:$yellow-footer;
 		background: $white-bg;
-		@include box-shadow($brown-light 0 0 10px);
-		@include box-sizing('border-box');
+		box-shadow: 0 0 10px 0 $brown-light;
+		box-sizing: border-box;
 		padding:12px;
 		//text-align: center;
 		margin-bottom:2%;
@@ -329,7 +328,7 @@
 
 		}
 
-	
+
 
 
 
@@ -358,15 +357,15 @@
 		// 	display: block;
 		// 	padding-top:0.75em;
 		// }
-		
+
 		img {
 			border:2px solid $brown-menu;
-			@include box-sizing('border-box');
-			@include box-shadow(0 0 5px 0 $brown-light);
+			box-sizing: border-box;
+			box-shadow: 0 0 5px 0 $brown-light;
 			&:hover {
 				border:2px solid $brown-light;
 			}
-			
+
 		}
 
 
@@ -378,7 +377,7 @@
 		float:right;
 
 		padding-bottom:1.25em;
-		
+
 		text-align: left;
 
 
@@ -433,7 +432,7 @@
 
 
 		a {
-			
+
 			color:$yellow-footer;
 
 			position:relative;
@@ -448,7 +447,7 @@
 
 	}
 	.house-subtitle {
-		
+
 		font-family: $displayFontFamily;
 		text-align: left;
 		//color:$brown-slogan;
@@ -458,7 +457,7 @@
 		line-height:1.25em;
 		font-size:1em;
 		margin:0 0;
-		
+
 	}
 
 
@@ -470,8 +469,8 @@
 		//font-style:italic;
 		font-size: 0.875em;
 		font-weight: bold;
-	
-		
+
+
 	}
 	}
 
@@ -489,10 +488,10 @@
 	//background: none;
 	//color:$yellow-footer;
 	//box-shadow: none;
-	
+
 	.house-data{
-		
-		
+
+
 		&:after {
 			content:"";
 		}
@@ -509,13 +508,13 @@
 		margin-bottom:3em;
 		text-align: center;
 
-		
+
 		.featblock-title {
 				display:none;
 
-	
+
 		}
-		
+
 
 		.feat-houses {
 			@include breakpoint($mobileBreak){
@@ -531,7 +530,7 @@
 				margin-bottom:0;
 			}
 		}
-		
+
 
 	}
 
@@ -554,11 +553,11 @@
 /*------------ Sidebar House --------*/
 .side-houses {
 	@extend article.houses;
-	
+
 	width:auto;
 	float:none;
 	margin:0 0 1em 0;
-	
+
 	h3.house-subtitle {
 		text-align:left;
 	}

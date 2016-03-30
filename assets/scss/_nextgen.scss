@@ -126,16 +126,16 @@ html>body .ngg-album {
 	// 	display:block;
 	// 	content:'';
 	// 	position:absolute;
-		
-		
+
+
 	// 	bottom:-30px;
 	// 	left:0;right:0;
-		
-		
+
+
 	// 	height:30px;
 	// 	//width:120px;
 
-		
+
 	// 	//background-size:cover;
 	// 	//background:black;
 	// }
@@ -147,19 +147,19 @@ html>body .ngg-album {
 	background-color: $brown-text;
 	padding:1px;
 	display:block;
-	@include box-sizing('border-box');
-	//@include box-shadow(0 0 5px 0 $brown-light);
+	box-sizing: border-box;
+	//box-shadow(0 0 5px 0 $brown-light);
 	position:relative;
 	margin:0 auto;
-	
-	
+
+
 	@media screen and (max-width:$mobileBreak) {
 		//width:130px;
 		//height:130px;
 	}
-	
 
-	
+
+
 
 
 	&:hover {
@@ -168,10 +168,8 @@ html>body .ngg-album {
 }
 
 .ngg-album-compact h4 {
-	@include transition-property(opacity);
-  	@include transition-duration(400ms);
-  	@include transition-timing-function(ease-in); 
- 
+	transition: opacity 400ms ease-in;
+
 	opacity:0;
 	font-size:1.25em;
 	line-height:1.125em;
@@ -180,7 +178,7 @@ html>body .ngg-album {
 	left:0;right:0;
 	top:0; bottom:0;
 	background: rgba($gray-footer,0.65);
-	
+
 	margin:0;
 
 	//font-weight:bold;
@@ -228,7 +226,7 @@ html>body .ngg-album {
 	width:32%;
 	margin-left:2%;
 	margin-bottom: 2%;
-	@include box-sizing('border-box');
+	box-sizing: border-box;
 
 	&:nth-child(3n+1){
 		margin-left:0;
@@ -278,20 +276,19 @@ html>body .ngg-album {
 	position: absolute;
 	display:block;
 	opacity:0;
-	@include box-sizing('border-box');
+	box-sizing: border-box;
 	padding:10px;
-	top:8px; 
+	top:8px;
 	left:8px; right:8px; bottom:8px;
 	overflow:hidden;
 	background: rgba($gray-footerold, 0.90);
 	color:white;
 	//font-weight: bold;
 	line-height: 1.25em;
-	
-	@include transition-property(opacity);
-	@include transition-duration(400ms);
-	@include transition-timing-function(ease-in); 
- 
+
+
+	transition: opacity 400ms ease-in;
+
 }
 
 .ngg-gallery-thumbnail a:hover .desc{
@@ -305,22 +302,20 @@ html>body .ngg-album {
 	background-color:$brown-light;
 	display:block;
 	padding:8px;
-	@include box-sizing('border-box');
-	@include box-shadow(0 0 5px 0 $brown-light);
+	box-sizing: border-box;
+	box-shadow: 0 0 5px 0 $brown-light;
 	//position:relative;
-	@include transition-property(all);
-	@include transition-duration(400ms);
-	@include transition-timing-function(ease-in); 
-	
-	
+	transition: all 400ms ease-in;
+
+
 	@media screen and (max-width:$mobileBreak) {
 		//width:130px;
 		//height:130px;
 	}
-	
+
 
 	&:hover {
-		
+
 	}
 
 
@@ -396,7 +391,7 @@ html>body .ngg-album {
 		width:32%;
 		margin-left:2%;
 		margin-bottom: 2%;
-		@include box-sizing('border-box');
+		box-sizing: border-box;
 
 		&:nth-child(3n+1){
 			margin-left:0;
@@ -431,7 +426,7 @@ html>body .ngg-album {
 			}
 		}
 	}
-	
+
 	a:hover img{
 		background-color:$orange-top;
 	}
@@ -440,12 +435,10 @@ html>body .ngg-album {
 		background-color:$brown-light;
 		display:block;
 		padding:8px;
-		@include box-sizing('border-box');
-		@include box-shadow(0 0 5px 0 $brown-light);
+		box-sizing: border-box;
+		box-shadow: 0 0 5px 0 $brown-light;
 		//position:relative;
-		@include transition-property(all);
-		@include transition-duration(400ms);
-		@include transition-timing-function(ease-in); 
+		transition: all 400ms ease-in;
 
 	}
 
