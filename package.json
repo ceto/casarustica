@@ -1,0 +1,35 @@
+{
+  "name": "sage",
+  "version": "8.4.2",
+  "author": "Ben Word <ben@benword.com>",
+  "homepage": "https://roots.io/sage/",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/roots/sage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roots/sage/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "scripts": {
+    "build": "bower install && gulp",
+    "jshint": "gulp jshint",
+    "jscs": "jscs gulpfile.js assets/scripts/*.js"
+  },
+  "engines": {
+    "node": ">= 0.12.0",
+    "npm": ">=2.1.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

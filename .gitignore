@@ -1,0 +1,66 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+dist
+bower_components
+node_modules
+npm-debug.log
+.sass-cache
+
+# .gitignore for jekyllized projects
+
+# Ignore hidden folders
+# This takes care of .tmp, .sass-cache, and many others
+.*/
+
+# OSX
+._*
+.AppleDouble
+.DS_Store
+.localized
+.LSOverride
+.Spotlight-V100
+.Trashes
+Icon
+
+# Windows
+Desktop.ini
+ehthumbs.db
+Thumbs.db
+
+# Linux
+*~
+
+# Tags
+# Ignore tags created by etags and ctags
+TAGS
+tags
+
+# Always-ignore files and folders #
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.swn
+*.swo
+*.swp
+._*
+*~
+
+# Ignore packages #
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+*.sublime-projectcompletions
+
+

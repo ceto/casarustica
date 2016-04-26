@@ -16,12 +16,12 @@
  <?php
     if (is_page_template('template-home.php') ) {
       get_template_part('templates/home','slider'); ?>
-      <a name="contenttop"></a> 
-      <?php get_template_part('templates/house','featured');       
+      <a name="contenttop"></a>
+      <?php get_template_part('templates/house','featured');
     } else  {
       get_template_part('templates/header','info'); ?>
-      <a name="contenttop"></a> 
-      <?php 
+      <a name="contenttop"></a>
+      <?php
     }
   ?>
   <div class="nagywrap">
@@ -32,11 +32,11 @@
             <?php include roots_template_path(); ?>
           </div><!-- /.main -->
           <?php if (roots_display_sidebar()) : ?>
-            
+
             <aside class="sidebar sidebar-1 <?php echo roots_sidebar_class(); ?>" role="complementary">
               <?php include roots_sidebar_path(); ?>
             </aside><!-- /.sidebar-1 -->
-            
+
             <aside class="sidebar sidebar-2 <?php echo roots_sidebar_class(); ?>" role="complementary">
               <?php get_template_part('templates/sidebar-2'); ?>
             </aside><!-- /.sidebar-2 -->

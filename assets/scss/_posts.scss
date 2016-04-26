@@ -551,10 +551,11 @@ body.blog{
 	}
 }
 .portre {
-	position:absolute;
-	bottom:4em;
-	right:50%;
-	max-width:50%;
+	// position:absolute;
+	// bottom:4em;
+	// right:50%;
+	// max-width:50%;
+
 	@include breakpoint($tabletBreak){
 		position: static;
 		max-width:70%;

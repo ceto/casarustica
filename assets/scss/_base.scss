@@ -10,12 +10,10 @@ body {
 	}
 }
 .feathouseblockwrap {
-	background-image: linear-gradient($white-bg, $white-darkbg);
+	background-image: linear-gradient(0deg, $white-bg, $white-darkbg);
 	padding:0 0 1em;
 	position:relative;
-	background: url(../images/fogle.png) repeat-x center top $white-bg
-	//,  url(../images/fogfel.png) repeat-x center bottom $white-bg
-	;
+	background: url(../images/fogle.png) repeat-x center top $white-bg;
 
 }
 .nagywrap {
@@ -31,7 +29,7 @@ body {
 }
 
 
-.home .kwrap-1 {
+.home .kwrap-1, .page-template-template-contact .kwrap-1 {
 	//background-image: none;
 	background: url(../images/pitypang.png) repeat-x center bottom transparent;
 	//background-image: none;
@@ -46,7 +44,7 @@ body {
 
 }
 
-.home .kwrap-3,  {
+.page-template-template-contact .kwrap-2,  {
 	background: url(../images/aljataj.png) repeat-x center bottom transparent;
 	//background-image: linear-gradient($white-bg, $white-darkbg);
 	padding:2em 0 8em 0;
