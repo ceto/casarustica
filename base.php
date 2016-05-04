@@ -33,13 +33,10 @@
           </div><!-- /.main -->
           <?php if (roots_display_sidebar()) : ?>
 
-            <aside class="sidebar sidebar-1 <?php echo roots_sidebar_class(); ?>" role="complementary">
-              <?php include roots_sidebar_path(); ?>
-            </aside><!-- /.sidebar-1 -->
 
-            <aside class="sidebar sidebar-2 <?php echo roots_sidebar_class(); ?>" role="complementary">
-              <?php get_template_part('templates/sidebar-2'); ?>
-            </aside><!-- /.sidebar-2 -->
+              <?php //include roots_sidebar_path(); ?>
+
+              <?php //get_template_part('templates/sidebar-2'); ?>
 
           <?php endif; ?>
         </div><!-- /.content -->

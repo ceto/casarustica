@@ -4,7 +4,7 @@
 
 .single .hentry {
 	.entry-figure {
-		margin:0 0 2em 0;
+		margin:2em 0 2em 0;
 		text-align: center;
 		img {
 			//max-width:85%;
@@ -76,7 +76,9 @@
 			}
 		//margin-top:0.125em;
 	}
-	.entry-content { }
+	.entry-content {
+		padding-bottom: 4rem;
+	}
 	footer { }
 
 }
@@ -88,42 +90,58 @@
 
 .blog .hentry, .archive .hentry {
 
-	margin-bottom:3em;
-	//padding-bottom:3em;
-	//border-bottom:1px solid $brown-glass;
+	margin-bottom:0;
+	margin-top:1.5em;
+
+	@include bp( $mobileBreak ) {
+		width:50%;
+		float:left;
+	}
+	@include bp( $tabletBreak ) {
+		width:33.333%;
+
+	}
+	@include bp( $desktopBreak ) {
+		width:25%;
+	}
+	@include bp( $largeBreak ) {
+		//width:20%;
+	}
 
 
 	&:after {
 		display: block;
-		margin:3em auto 1em auto;
+		margin:1.5em auto 0 auto;
 		content: '';
 		width:35px;
 		height:35px;
 		background: url(../images/sprites.png) no-repeat -35px -65px transparent;
-		//background-size: 100px;
+		//background-size: 50%;
+		transform: scale(.5);
 	}
 
 	header {
 		text-align: center;
 		.entry-title{
 			//margin:0;
-			//padding:0;
-			padding-bottom:0;
+			padding:0 .5em;
 			margin-bottom:0;
-			line-height:1.25em;
+			font-size: 1rem;
+			line-height:1.25;
+			height: 2.5em;
+			overflow: hidden;
 		}
 	}
 
 
 	.entry-figure {
-		margin:0 0 1em 0;
 		text-align: center;
 		img {
-			max-width:66.66666%;
+			//max-width:100%;
 			box-sizing: border-box;
-			border-radius: 50%;
-			border:10px solid $brown-light;
-			box-shadow: 0px 0px 2px 4px white;
+			//border-radius: 50%;
+			border:8px solid $brown-light;
+			box-shadow: 0px 0px 2px 4px $yellow-footer;
 
 			&:hover {
 				//border:10px solid $orange-link;

@@ -34,10 +34,10 @@ $scriptFontFamily:      'Berkshire Swash', cursive;
 $displayFontFamily:     'Playfair Display', serif;
 
 
-$mobileBreak: max-width 480px;
-$tabletBreak: max-width 767px;
-$desktopBreak: max-width 980px;
-$largeBreak: max-width 1200px;
+$mobileBreak: 480px;
+$tabletBreak: 767px;
+$desktopBreak: 980px;
+$largeBreak: 1200px;
 
 // GRID
 // --------------------------------------------------

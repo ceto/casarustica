@@ -21,7 +21,7 @@ define('POST_EXCERPT_LENGTH', 40);
 function roots_main_class() {
   if (roots_display_sidebar()) {
     // Classes on pages with the sidebar
-    $class = 'span4 okos';
+    $class = 'span12';
   } else {
     // Classes on full width pages
     $class = 'span12';

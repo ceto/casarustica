@@ -91,3 +91,12 @@ body.page-id-15, body.page-id-921 {
 		}
 	}
 }
+.post-nav {
+	@include clearfix();
+	clear:both;
+}
+.row-fluid.narrow {
+	max-width: $tabletBreak;
+	margin-left:auto;
+	margin-right: auto;
+}

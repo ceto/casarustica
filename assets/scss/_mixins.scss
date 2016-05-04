@@ -3,3 +3,17 @@
     @content;
   }
 }
+
+@mixin bp($width) {
+  @media (min-width: $width+1) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
