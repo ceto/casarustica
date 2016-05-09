@@ -507,6 +507,12 @@ body.blog { background: url(../images/feszek_bg.jpg) no-repeat 600px bottom #f9f
 .single-house .actionblock .btn { font-family: "Playfair Display", serif; padding-top: 0.5em; padding-bottom: 0.5em; padding: 0.5em 5em; }
 .single-house .actionblock .btn span { font-family: "Playfair Display", serif; display: block; font-size: 1.75em; font-weight: bold; padding: 0 0 0.25em; }
 
+.house__longdescr { margin-top: 2rem; margin-bottom: 4rem; }
+@media (min-width: 981px) { .house__longdescr { -webkit-columns: 2; -moz-columns: 2; columns: 2; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px; }
+  .house__longdescr h2, .house__longdescr h3 { display: inline-block; -webkit-column-break-after: avoid; page-break-after: avoid; break-after: avoid; -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid; }
+  .house__longdescr h2 + p, .house__longdescr h2 + ul, .house__longdescr h2 + ol, .house__longdescr h3 + p, .house__longdescr h3 + ul, .house__longdescr h3 + ol { -webkit-column-break-before: avoid; page-break-before: avoid; break-before: avoid; }
+  .house__longdescr p, .house__longdescr ul, .house__longdescr ol { -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid; } }
+
 /*	===========================================
 	House List
 	===========================================   */
