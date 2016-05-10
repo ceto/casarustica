@@ -27,6 +27,11 @@
 
       </div><!-- / .data-block -->
     </div>
+    <?php if ( get_post_meta( get_the_ID(), '_house_gallery', true ) !='' ) :?>
+      <aside class="row-fluid">
+        <?= apply_filters('the_content', get_post_meta( get_the_ID(), '_house_gallery', true )  ); ?>
+      </aside>
+    <?php endif; ?>
 
     <aside class="house-tabdata row-fluid">
       <ul class="nav nav-tabs" id="myTab">
@@ -41,7 +46,6 @@
           <li><a href="#map" data-toggle="tab"><?php _e('Térkép','roots'); ?></a></li>
         <?php endif; ?>
       </ul>
-
       <div class="tab-content">
         <div class="tab-pane active fade in" id="photo3d">
 

@@ -1,0 +1,48 @@
+figure {
+  margin:0;
+  padding:0;
+  text-align: center;
+  .thumbnail {
+    display: inline-block;
+  }
+}
+.gallery {
+  @include clearfix();
+  margin:0 auto 1rem;
+  list-style-type: none;
+  > li {
+    display: block;
+
+  }
+}
+
+.gallery-grid-4, .gallery-grid-5, .gallery-grid-6 {
+  > li {
+    @include bp($mobileBreak) {
+      float:left;
+      margin:1% !important;
+      width:48%;
+      &:nth-child(2n+1) {
+        clear:left;
+      }
+    }
+    @include bp($tabletBreak) {
+      width:31.3333%;
+      &:nth-child(2n+1) {
+        clear:none;
+      }
+      &:nth-child(3n+1) {
+        clear:left;
+      }
+    }
+    @include bp($desktopBreak) {
+      width:23%;
+      &:nth-child(3n+1) {
+        clear:none;
+      }
+      &:nth-child(4n+1) {
+        clear:left;
+      }
+    }
+  }
+}

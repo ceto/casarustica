@@ -206,6 +206,22 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 .mfp-ie7 .mfp-content { padding-top: 44px; }
 .mfp-ie7 .mfp-close { top: 0; right: 0; padding-top: 0; }
 
+figure { margin: 0; padding: 0; text-align: center; }
+figure .thumbnail { display: inline-block; }
+
+.gallery { margin: 0 auto 1rem; list-style-type: none; }
+.gallery:after { content: ""; display: table; clear: both; }
+.gallery > li { display: block; }
+
+@media (min-width: 481px) { .gallery-grid-4 > li, .gallery-grid-5 > li, .gallery-grid-6 > li { float: left; margin: 1% !important; width: 48%; }
+  .gallery-grid-4 > li:nth-child(2n+1), .gallery-grid-5 > li:nth-child(2n+1), .gallery-grid-6 > li:nth-child(2n+1) { clear: left; } }
+@media (min-width: 768px) { .gallery-grid-4 > li, .gallery-grid-5 > li, .gallery-grid-6 > li { width: 31.3333%; }
+  .gallery-grid-4 > li:nth-child(2n+1), .gallery-grid-5 > li:nth-child(2n+1), .gallery-grid-6 > li:nth-child(2n+1) { clear: none; }
+  .gallery-grid-4 > li:nth-child(3n+1), .gallery-grid-5 > li:nth-child(3n+1), .gallery-grid-6 > li:nth-child(3n+1) { clear: left; } }
+@media (min-width: 981px) { .gallery-grid-4 > li, .gallery-grid-5 > li, .gallery-grid-6 > li { width: 23%; }
+  .gallery-grid-4 > li:nth-child(3n+1), .gallery-grid-5 > li:nth-child(3n+1), .gallery-grid-6 > li:nth-child(3n+1) { clear: none; }
+  .gallery-grid-4 > li:nth-child(4n+1), .gallery-grid-5 > li:nth-child(4n+1), .gallery-grid-6 > li:nth-child(4n+1) { clear: left; } }
+
 /*
 CSS Name: Default Styles
 Description: NextGEN Default Gallery Stylesheet
