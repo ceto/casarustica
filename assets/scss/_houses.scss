@@ -3,7 +3,14 @@
    Houses
    ========================================================================== */
 
+
+
+
+
 .single-house {
+	.housevertgallery {
+		padding-top: 4rem;
+	}
 	.house-figure {
 		position:relative;
 		margin:3px 0 0 0;
@@ -135,10 +142,7 @@
 
 
 	.house-datablock {
-		float:right;
-		@include breakpoint($tabletBreak){
-			float:none;
-		}
+
 		h3 {
 			color:$brown-slogan;
 			font-family: $scriptFontFamily;
@@ -167,10 +171,18 @@
 	.house-tabdata {
 		clear:left;
 		margin-left:0;
-		//margin-top:2em;
+		margin-top:4rem;
+		margin-bottom:4rem;
+		.actionblock {
+			margin-top: 4rem;
+		}
 
 		@include breakpoint($tabletBreak){
 			clear:none;
+		}
+
+		.page-header {
+			margin-bottom:4rem;
 		}
 
 		#alap.tab-pane {
@@ -275,6 +287,12 @@
 	}
 
 }
+
+
+
+
+
+
 /*	===========================================
 	House List
 	===========================================   */

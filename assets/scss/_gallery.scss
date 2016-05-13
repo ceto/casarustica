@@ -1,3 +1,18 @@
+.kiskep-carousel {
+  .item {
+    padding:0 1rem;
+  }
+  figcaption {
+    font-size: 87.5%;
+  }
+}
+.thumbnail {
+  background-color: $brown-light;
+  &:hover, &:focus {
+    background-color: $orange-top;
+    border-color: $orange-top !important;
+  }
+}
 figure {
   margin:0;
   padding:0;
@@ -12,7 +27,9 @@ figure {
   list-style-type: none;
   > li {
     display: block;
-
+    &:nth-of-type(n+4) + li {
+      //display: none;
+    }
   }
 }
 

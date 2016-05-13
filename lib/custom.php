@@ -4,6 +4,8 @@ define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS',true);
  * Custom functions
  */
 
+
+
 /************** HOUSES *************/
 add_action( 'init', 'create_house_type' );
 function create_house_type() {
@@ -25,13 +27,19 @@ function create_house_type() {
 	);
 }
 
-add_filter( 'cmb_meta_boxes', 'house_metaboxes0' );
+
+
+
+if ( file_exists(  __DIR__ . '/CMB2/init.php' ) ) { require_once  __DIR__ . '/CMB2/init.php'; }
+
+//add_filter( 'cmb2_admin_init', 'house_metaboxes0' );
+add_filter( 'cmb2_meta_boxes', 'house_metaboxes0' );
 function house_metaboxes0( $meta_boxes ) {
 	$prefix = '_house_'; // Prefix for all fields
 	$meta_boxes[] = array(
 		'id' => 'house_metabox0',
 		'title' => __('Általános adatok'),
-		'pages' => array('house'), // post type
+		'object_types'  => array('house'), // post type
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
@@ -46,7 +54,10 @@ function house_metaboxes0( $meta_boxes ) {
 				'name' => __('A ház leírás rövid kivonata'),
 				'desc' => __('Frappáns 4-5 mondatos leírás, ez jelenik meg a kiemelt helyen'),
 				'id' => $prefix . 'excerpt',
-				'type' => 'wysiwyg'
+				'type' => 'wysiwyg',
+				'options' => array(
+					'textarea_rows' => 7
+				),
 			),
 
             array(
@@ -54,13 +65,13 @@ function house_metaboxes0( $meta_boxes ) {
                     'id'   => $prefix . 'readiness',
                     'type' => 'radio_inline',
                     'options' => array(
-						array('name' => 'Tervasztalon', 'value' => '0'),
-						array('name' => 'Költözhető', 'value' => '1'),
-						array('name' => 'Engedélyeztetve', 'value' => '2'),
-						array('name' => 'Félkész', 'value' => '3'),
-						array('name' => 'Rreferencia ház', 'value' => '4'),
-						array('name' => 'Eladó', 'value' => '5'),
-						array('name' => 'Gazdáját várja', 'value' => '6'),
+						'0' => __('Tervasztalon', 'cr'),
+						'1' => __('Költözhető', 'cr'),
+						'2' => __('Engedélyeztetve', 'cr'),
+						'3' => __('Félkész', 'cr'),
+						'4' => __('Rreferencia ház', 'cr'),
+						'5' => __('Eladó', 'cr'),
+						'6' => __('Gazdáját várja', 'cr'),
 
 					)
             ),
@@ -74,13 +85,13 @@ function house_metaboxes0( $meta_boxes ) {
 
 
 
-add_filter( 'cmb_meta_boxes', 'house_metaboxes' );
+add_filter( 'cmb2_meta_boxes', 'house_metaboxes' );
 function house_metaboxes( $meta_boxes ) {
 	$prefix = '_house_'; // Prefix for all fields
 	$meta_boxes[] = array(
 		'id' => 'house_metabox',
 		'title' => __('Ház részletek'),
-		'pages' => array('house'), // post type
+		'object_types' => array('house'), // post type
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
@@ -131,13 +142,19 @@ function house_metaboxes( $meta_boxes ) {
 				'name' => __('Szobák, helyiségek'),
 				'desc' => __('Szobák, helyisegek száma, típusa és méretének leírása. Konyha, háló, fürdő stb ...'),
 				'id' => $prefix . 'szobak',
-				'type' => 'wysiwyg'
+				'type' => 'wysiwyg',
+				'options' => array(
+					'textarea_rows' => 7
+				),
 			),
 			array(
 				'name' => __('Egyéb információ'),
 				'desc' => __('Egyéb a házhoz kapcsolódó információ'),
 				'id' => $prefix . 'egyebhaz',
-				'type' => 'wysiwyg'
+				'type' => 'wysiwyg',
+				'options' => array(
+					'textarea_rows' => 7
+				),
 			),
 
 
@@ -150,14 +167,14 @@ function house_metaboxes( $meta_boxes ) {
 }
 
 
-add_filter( 'cmb_meta_boxes', 'house_metaboxes3' );
+add_filter( 'cmb2_meta_boxes', 'house_metaboxes3' );
 
 function house_metaboxes3( $meta_boxes ) {
 	$prefix = '_house_'; // Prefix for all fields
 	$meta_boxes[] = array(
 		'id' => 'house_metabox3',
 		'title' => __('Kiegészítő épületrészek'),
-		'pages' => array('house'), // post type
+		'object_types' => array('house'), // post type
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
@@ -167,7 +184,10 @@ function house_metaboxes3( $meta_boxes ) {
 				'name' => __('Terasz és tornác'),
 				'desc' => __('Terasz és tornác leírása'),
 				'id' => $prefix . 'terasz',
-				'type' => 'wysiwyg'
+				'type' => 'wysiwyg',
+				'options' => array(
+					'textarea_rows' => 7
+				),
 			),
 
 
@@ -175,7 +195,10 @@ function house_metaboxes3( $meta_boxes ) {
 				'name' => __('Kiegészítő épületrészek'),
 				'desc' => __('Fatároló, kerti wc, pajta stb ...'),
 				'id' => $prefix . 'kiegeszito',
-				'type' => 'wysiwyg'
+				'type' => 'wysiwyg',
+				'options' => array(
+					'textarea_rows' => 7
+				),
 			),
 			array(
 				'name' => __('Pince'),
@@ -194,7 +217,10 @@ function house_metaboxes3( $meta_boxes ) {
 				'name' => __('Egyéb információ'),
 				'desc' => __('Egyéb a kiegésző épületekhez kapcsolódó információ'),
 				'id' => $prefix . 'egyebkiegeszito',
-				'type' => 'wysiwyg'
+				'type' => 'wysiwyg',
+				'options' => array(
+					'textarea_rows' => 7
+				),
 			),
 
 
@@ -204,14 +230,14 @@ function house_metaboxes3( $meta_boxes ) {
 }
 
 
-add_filter( 'cmb_meta_boxes', 'house_metaboxes2' );
+add_filter( 'cmb2_meta_boxes', 'house_metaboxes2' );
 
 function house_metaboxes2( $meta_boxes ) {
 	$prefix = '_house_'; // Prefix for all fields
 	$meta_boxes[] = array(
 		'id' => 'house_metabox2',
 		'title' => __('Telek részletek'),
-		'pages' => array('house'), // post type
+		'object_types' => array('house'), // post type
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
@@ -239,7 +265,10 @@ function house_metaboxes2( $meta_boxes ) {
 				'name' => __('Egyéb információ'),
 				'desc' => __('Egyéb a telekhez kapcsolódó információ'),
 				'id' => $prefix . 'egyebtelek',
-				'type' => 'wysiwyg'
+				'type' => 'wysiwyg',
+				'options' => array(
+					'textarea_rows' => 7
+				),
 			),
 
 
@@ -250,33 +279,36 @@ function house_metaboxes2( $meta_boxes ) {
 	return $meta_boxes;
 }
 
-add_filter( 'cmb_meta_boxes', 'house_metaboxes4' );
+add_filter( 'cmb2_meta_boxes', 'house_metaboxes4' );
 
 function house_metaboxes4( $meta_boxes ) {
-
-	$fullg=gallery_list();
-	$gallopt=array();
-	$gallopt[]=array('name' => 'Nincs csatolt galéria', 'value' => 0);
-	foreach ($fullg as $key => $value) {
-		$gallopt[]=array('name' => $value, 'value' => $key);
-	}
 
 
 	$prefix = '_house_'; // Prefix for all fields
 	$meta_boxes[] = array(
 		'id' => 'house_metabox4',
 		'title' => __('Fotók'),
-		'pages' => array('house'), // post type
+		'object_types' => array('house'), // post type
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
 		'fields' => array(
+			// array(
+			// 	'name' => __('Fotógaléria'),
+			// 	'desc' => __('Elsősorba WP galéria szúrható be.'),
+			// 	'id' => $prefix . 'gallery',
+			// 	'type' => 'wysiwyg',
+			'options' => array(
+				'textarea_rows' => 7
+			),
+			// ),
 			array(
 				'name' => __('Fotógaléria'),
-				'desc' => __('Elsősorba WP galéria szúrható be.'),
+				'desc' => __('Válassz a médiatárból.'),
 				'id' => $prefix . 'gallery',
-				'type' => 'wysiwyg'
+				'type' => 'file_list'
 			),
+
 			array(
 				'name' => 'Alaprajz I.',
 				'desc' => 'Upload an image or enter an URL.',
@@ -294,19 +326,6 @@ function house_metaboxes4( $meta_boxes ) {
 				'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
 			),
 
-			array(
-                    'name' => __('Fotó/3D galéria csatolása'),
-                    'id'   => $prefix . 'fotogallery',
-                    'type' => 'select',
-                    'options' => $gallopt,
-			),
-
-			array(
-                    'name' => __('Ilyen volt galéria csatolása'),
-                    'id'   => $prefix . 'fotoilyenvolt',
-                    'type' => 'select',
-                    'options' => $gallopt,
-			),
 
 			array(
 				'name' => __('GPS kordináta Észak'),
@@ -350,13 +369,13 @@ function create_slide_type() {
 	);
 }
 
-add_filter( 'cmb_meta_boxes', 'slide_metaboxes' );
+add_filter( 'cmb2_meta_boxes', 'slide_metaboxes' );
 function slide_metaboxes( $meta_boxes ) {
 	$prefix = '_slide_'; // Prefix for all fields
 	$meta_boxes[] = array(
 		'id' => 'slide_metabox',
 		'title' => __('Slide details'),
-		'pages' => array('slide'), // post type
+		'object_types' => array('slide'), // post type
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
@@ -374,16 +393,11 @@ function slide_metaboxes( $meta_boxes ) {
 }
 
 
-add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
-/**
- * Initialize the metabox class.
- */
-function cmb_initialize_cmb_meta_boxes() {
-
-	if ( ! class_exists( 'cmb_Meta_Box' ) )
-		require_once 'cmb/init.php';
-
-}
+// add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
+// function cmb_initialize_cmb_meta_boxes() {
+// 	if ( ! class_exists( 'cmb_Meta_Box' ) )
+// 		require_once 'cmb/init.php';
+// }
 
 
 

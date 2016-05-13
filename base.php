@@ -14,15 +14,15 @@
   ?>
 
  <?php
-    if (is_page_template('template-home.php') ) {
+    if (is_page_template('template-home.php')  ) {
       get_template_part('templates/home','slider'); ?>
       <a name="contenttop"></a>
       <?php get_template_part('templates/house','featured');
-    } else  {
+    } elseif (!is_singular('house'))  {
       get_template_part('templates/header','info'); ?>
       <a name="contenttop"></a>
       <?php
-    }
+    } else {get_template_part('templates/house','head');}
   ?>
   <div class="nagywrap">
     <div class="kwrap-1">
